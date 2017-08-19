@@ -11,7 +11,7 @@ post_date: 2013-05-15 18:40:00
 tags: [ ]
 categories:
   - Mutt
-  - Productivty
+  - Productivity
 ---
 ### Preface
 
