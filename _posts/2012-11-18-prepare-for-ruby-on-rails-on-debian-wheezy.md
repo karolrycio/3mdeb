@@ -12,7 +12,8 @@ published: true
 post_date: 2012-11-18 18:18:00
 tags: [ ]
 categories:
-  - Uncategorized
+  - Ruby
+  - Debian
 ---
 I start to learn Ruby on Rails. As always when you learn new programming language toolchain is required. In this tutorial I will try to go through toolchain preparation for my Debian wheezy. Of course I based on Vim as my editor of choice. Second requirement will be using some parts of toolchain in latest greatest version.
 
