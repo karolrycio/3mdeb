@@ -1,13 +1,18 @@
 ---
-author: Piotr Król
-layout: post
+ID: 62871
 post_title: Linux (Debian Wheezy) on Lenovo y510p
-post_date: 2014-05-16 22:36:27 +0200
-comments: true
-categories: [Linux, Debian]
+author: admin
+post_excerpt: ""
+layout: post
+permalink: >
+  http://3mdeb.kleder.co/linux/linux-debian-wheezy-on-lenovo-y510p/
 published: true
+post_date: 2014-05-16 22:36:27
+tags: [ ]
+categories:
+  - Linux
+  - Debian
 ---
-
 After long analysis I decide to buy new laptop. I had about $1000
 (or 3000PLN) and most important things to me were:
 

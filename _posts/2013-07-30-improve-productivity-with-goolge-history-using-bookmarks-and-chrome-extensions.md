@@ -1,14 +1,21 @@
 ---
-author: Piotr Król
+ID: 62861
+post_title: >
+  Improve productivity with Goolge history
+  using bookmarks and Chrome extensions
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Improve productivity with Goolge history using bookmarks and Chrome extensions"
-post_date: 2013-07-30 02:40
-comments: true
-categories: Productivity
+permalink: >
+  http://3mdeb.kleder.co/productivity/improve-productivity-with-goolge-history-using-bookmarks-and-chrome-extensions/
 published: true
-tags: [google history, productivity]
+post_date: 2013-07-30 02:40:00
+tags:
+  - productivity
+  - google history
+categories:
+  - Productivity
 ---
-
 <p class=intro>
 The idea of this post is very simple (as usually)  and I wonder why I didn't thought
 about it earlier. The point is to use history of your Google queries to improve

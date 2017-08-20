@@ -1,12 +1,24 @@
 ---
-author: Piotr Król
+ID: 62831
+post_title: '0x5: Qemu network configuration and tftp for Virtual Development Board'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x5: Qemu network configuration and tftp for Virtual Development Board"
-post_date: 2013-06-07 10:36
-comments: true
-categories: [QEMU, VDB, Tftp, Networking, Embedded]
+permalink: >
+  http://3mdeb.kleder.co/embedded/0x5-qemu-network-configuration-and-tftp-for-virtual-development-board/
 published: true
-tags: [qemu, virtual development board, tftp, networking]
+post_date: 2013-06-07 10:36:00
+tags:
+  - qemu
+  - virtual development board
+  - tftp
+  - networking
+categories:
+  - Embedded
+  - QEMU
+  - VDB
+  - Tftp
+  - Networking
 ---
 ## Table of contents ##
 
@@ -105,10 +117,10 @@ iface eth0 inet dhcp   # and this
 ```bash
 #!/bin/sh
 
-echo "Executing /etc/qemu-ifup"
-echo "Bringing up $1 for bridged mode..."
+echo &quot;Executing /etc/qemu-ifup&quot;
+echo &quot;Bringing up $1 for bridged mode...&quot;
 sudo /sbin/ifconfig $1 0.0.0.0 promisc up
-echo "Adding $1 to br0..."
+echo &quot;Adding $1 to br0...&quot;
 sudo /sbin/brctl addif br0 $1
 sleep 2
 ```
@@ -199,7 +211,7 @@ SMC91111: PHY auto-negotiate timed out
 SMC91111: MAC 52:54:00:12:34:56
 Using SMC91111-0 device
 TFTP from server 10.0.2.15; our IP address is 10.0.2.16
-Filename 'uImage'.
+Filename &#039;uImage&#039;.
 Load address: 0x7fc0
 Loading: #################################################################
          #################################################################
@@ -243,17 +255,17 @@ mousedev: PS/2 mouse device common for all mice
 TCP: cubic registered
 NET: Registered protocol family 17
 VFP support v0.3: implementor 41 architecture 1 part 10 variant 9 rev 0
-VFS: Cannot open root device "(null)" or unknown-block(0,0): error -6
-Please append a correct "root=" boot option; here are the available partitions:
+VFS: Cannot open root device &quot;(null)&quot; or unknown-block(0,0): error -6
+Please append a correct &quot;root=&quot; boot option; here are the available partitions:
 1f00           65536 mtdblock0  (driver?)
 Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
-[<c0018afc>] (unwind_backtrace+0x0/0xf0) from [<c027af8c>] (panic+0x80/0x1d0)
-[<c027af8c>] (panic+0x80/0x1d0) from [<c0343c64>] (mount_block_root+0x1a0/0x258)
-[<c0343c64>] (mount_block_root+0x1a0/0x258) from [<c0343f08>] (mount_root+0xf0/0x118)
-[<c0343f08>] (mount_root+0xf0/0x118) from [<c0344090>] (prepare_namespace+0x160/0x1b4)
-[<c0344090>] (prepare_namespace+0x160/0x1b4) from [<c03438ec>] (kernel_init_freeable+0x168/0x1ac)
-[<c03438ec>] (kernel_init_freeable+0x168/0x1ac) from [<c027a074>] (kernel_init+0x8/0xe4)
-[<c027a074>] (kernel_init+0x8/0xe4) from [<c0013df0>] (ret_from_fork+0x14/0x24)
+[&lt;c0018afc&gt;] (unwind_backtrace+0x0/0xf0) from [&lt;c027af8c&gt;] (panic+0x80/0x1d0)
+[&lt;c027af8c&gt;] (panic+0x80/0x1d0) from [&lt;c0343c64&gt;] (mount_block_root+0x1a0/0x258)
+[&lt;c0343c64&gt;] (mount_block_root+0x1a0/0x258) from [&lt;c0343f08&gt;] (mount_root+0xf0/0x118)
+[&lt;c0343f08&gt;] (mount_root+0xf0/0x118) from [&lt;c0344090&gt;] (prepare_namespace+0x160/0x1b4)
+[&lt;c0344090&gt;] (prepare_namespace+0x160/0x1b4) from [&lt;c03438ec&gt;] (kernel_init_freeable+0x168/0x1ac)
+[&lt;c03438ec&gt;] (kernel_init_freeable+0x168/0x1ac) from [&lt;c027a074&gt;] (kernel_init+0x8/0xe4)
+[&lt;c027a074&gt;] (kernel_init+0x8/0xe4) from [&lt;c0013df0&gt;] (ret_from_fork+0x14/0x24)
 ```
 This is expected result. 
 
@@ -261,4 +273,3 @@ This is expected result.
 ### What next ?###
 We happily built basic virtual development, what we need right now is some 
 [initial filesystem](/2013/06/07/root-file-system-for-embedded-system).
-

@@ -1,12 +1,24 @@
 ---
-author: Piotr Król
+ID: 62856
+post_title: 'Workflow imporovement with Open Source tools &#8211; part 1'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Workflow imporovement with Open Source tools - part 1"
-post_date: 2013-05-16 22:16
-comments: true
-categories: [Linux, Productivity, Mutt, Taskwarrior]
+permalink: >
+  http://3mdeb.kleder.co/productivity/workflow-imporovement-with-open-source-tools-part-1/
 published: true
-tags: [productivity, open source, workflow, taskwarrior, mutt]
+post_date: 2013-05-16 22:16:00
+tags:
+  - mutt
+  - productivity
+  - open source
+  - workflow
+  - taskwarrior
+categories:
+  - Productivity
+  - Linux
+  - Mutt
+  - Taskwarrior
 ---
 ### Introduction ###
 
@@ -38,7 +50,7 @@ happens mutt by default will not display whole string. To change this behavior
 you can manipulate `index_format` variable. I set mine to 30:
 {% raw %}
 ```
-set index_format="%4C %Z %{%b %d} %-30.30L (%4l) %s"
+set index_format=&quot;%4C %Z %{%b %d} %-30.30L (%4l) %s&quot;
 ```
 {% endraw %}
 
@@ -66,7 +78,7 @@ filename = ~/.mutt/muttrc.mailboxes
 header = "mailboxes "
 peritem = "+%(accountname)s/%(foldername)s"
 sep = " "
-footer = "\n"
+footer = "n"
 
 [general]
 metadata = ~/.offlineimap
@@ -138,7 +150,7 @@ set signature   = "~/.mutt/signature.example"
 * folder hooks for particular account - it cause automatic loading of 
 configurations when folder was changed (in `$HOME/muttrc`):
 ```
-folder-hook 'account1@server.com' 'source $HOME/.mutt/accounts/account1'
+folder-hook &#039;account1@server.com&#039; &#039;source $HOME/.mutt/accounts/account1&#039;
 ```
 
 #### Separate mailing list file ####

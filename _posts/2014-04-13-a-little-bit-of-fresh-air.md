@@ -1,13 +1,17 @@
 ---
-author: Piotr Król
+ID: 62866
+post_title: A little bit of fresh air
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "A little bit of fresh air"
-post_date: 2014-04-13 19:55:18 +0200
-comments: true
-categories: Blog
+permalink: >
+  http://3mdeb.kleder.co/blog/a-little-bit-of-fresh-air/
 published: true
+post_date: 2014-04-13 19:55:18
+tags: [ ]
+categories:
+  - Blog
 ---
-
 It is over 9 months since my last post. As you see since then I refreshed look
 and feel of my blog a little bit. Theme was changed to
 [whitespace](https://github.com/lucaslew/whitespace), because of my

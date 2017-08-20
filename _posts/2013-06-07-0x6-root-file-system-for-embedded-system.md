@@ -1,12 +1,22 @@
 ---
-author: Piotr Król
+ID: 62836
+post_title: '0x6: Root file system for embedded system'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x6: Root file system for embedded system"
-post_date: 2013-06-07 10:40
-comments: true
-categories: [Embedded, Linux, VDB]
+permalink: >
+  http://3mdeb.kleder.co/linux/0x6-root-file-system-for-embedded-system/
 published: true
-tags: [rootfs, busybox, linux, virtual development board]
+post_date: 2013-06-07 10:40:00
+tags:
+  - linux
+  - virtual development board
+  - rootfs
+  - busybox
+categories:
+  - Linux
+  - Embedded
+  - VDB
 ---
 ## Table of contents ##
 
@@ -84,7 +94,7 @@ cp -R /path/to/busybox/_install/* .
 ```
 Now we can try our Virtual Development Board:
 ```
-sudo qemu-system-arm -kernel src/u-boot/u-boot -net nic,vlan=0 -net \
+sudo qemu-system-arm -kernel src/u-boot/u-boot -net nic,vlan=0 -net 
 tap,vlan=0,ifname=tap0,script=/etc/qemu-ifup -nographic -M versatilepb
 ```
 After U-Boot booting:
@@ -106,7 +116,7 @@ SMC91111: PHY auto-negotiate timed out
 SMC91111: MAC 52:54:00:12:34:56
 Using SMC91111-0 device
 TFTP from server 192.168.1.20; our IP address is 192.168.1.13
-Filename 'uImage'.
+Filename &#039;uImage&#039;.
 Load address: 0x7fc0
 Loading: #################################################################
          #################################################################
@@ -120,7 +130,7 @@ Bytes transferred = 1917944 (1d43f8 hex)
 ```
 Right now we will set boot arguments for our kernel:
 ```
-setenv bootargs 'root=/dev/nfs mem=128M ip=dhcp netdev=25,0,0xf1010000,0xf1010010,eth0 nfsroot=192.168.1.20:/srv/homes/rootfs console=ttyAMA0'
+setenv bootargs &#039;root=/dev/nfs mem=128M ip=dhcp netdev=25,0,0xf1010000,0xf1010010,eth0 nfsroot=192.168.1.20:/srv/homes/rootfs console=ttyAMA0&#039;
 ```
 What does it mean:
 
@@ -158,16 +168,16 @@ VFS: Mounted root (nfs filesystem) on device 0:9.
 Freeing unused kernel memory: 112K (c034e000 - c036a000)
 nfs: server 192.168.1.20 not responding, still trying
 nfs: server 192.168.1.20 OK
-can't run '/etc/init.d/rcS': No such file or directory
-can't open /dev/tty2: No such file or directory
-can't open /dev/tty3: No such file or directory
+can&#039;t run &#039;/etc/init.d/rcS&#039;: No such file or directory
+can&#039;t open /dev/tty2: No such file or directory
+can&#039;t open /dev/tty3: No such file or directory
 
-can't open /dev/tty4: No such file or directory
-can't open /dev/tty2: No such file or directory
-can't open /dev/tty3: No such file or directory
-can't open /dev/tty4: No such file or directory
-can't open /dev/tty2: No such file or directory
-can't open /dev/tty3: No such file or directory
+can&#039;t open /dev/tty4: No such file or directory
+can&#039;t open /dev/tty2: No such file or directory
+can&#039;t open /dev/tty3: No such file or directory
+can&#039;t open /dev/tty4: No such file or directory
+can&#039;t open /dev/tty2: No such file or directory
+can&#039;t open /dev/tty3: No such file or directory
 ```
 try to open ttys loop. This is because of default behavior of `BusyBox` when `inittab`
 was not found.

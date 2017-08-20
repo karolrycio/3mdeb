@@ -1,13 +1,20 @@
 ---
-author: Piotr Król
+ID: 62876
+post_title: >
+  Coreboot for QEMU armv7 (vexpress-a9)
+  emulated mainboard
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Coreboot for QEMU armv7 (vexpress-a9) emulated mainboard"
-post_date: 2014-08-07 23:08:39 +0200
-comments: true
-categories: [Coreboot, QEMU]
+permalink: >
+  http://3mdeb.kleder.co/coreboot/coreboot-for-qemu-armv7-vexpress-a9-emulated-mainboard/
 published: true
+post_date: 2014-08-07 23:08:39
+tags: [ ]
+categories:
+  - Coreboot
+  - QEMU
 ---
-
 Recently I came back to look into coreboot. Mainly because low level is fun and
 skills related to firmware (even coreboot) starting get attention on freelance
 portals ([first odesk job](http://bit.ly/1sBSybZ), [second odesk job](http://bit.ly/1sBSR6F)).
@@ -50,7 +57,7 @@ will use 8 parallel jobs.
 git clone git://git.qemu.org/qemu.git
 cd qemu
 git submodule update --init --checkout
-make clean && ./configure --target-list=arm-softmmu && make -j8
+make clean &amp;&amp; ./configure --target-list=arm-softmmu &amp;&amp; make -j8
 sudo make install
 ```
 
@@ -156,14 +163,14 @@ jump to `reset` procedure. After that go through few methods like on below flow:
 
 ```
 _rom
-|-> reset
-    |-> init_stack_loop
-        |-> call_bootblock
-            |-> main
-                |-> armv7_invalidate_caches
-                    |-> icache_invalidate_all
-                    |-> dcache_invalidate_all
-                      |-> dcache_foreach
+|-&gt; reset
+    |-&gt; init_stack_loop
+        |-&gt; call_bootblock
+            |-&gt; main
+                |-&gt; armv7_invalidate_caches
+                    |-&gt; icache_invalidate_all
+                    |-&gt; dcache_invalidate_all
+                      |-&gt; dcache_foreach
 ```
 
 At the end of `dcache_foreach` we experience failure because `ldmia`
@@ -242,11 +249,11 @@ pointers that help to operate on CBFS.
 ```c src/mainboard/emulation/qemu-armv7/media.c
 int init_emu_rom_cbfs_media(struct cbfs_media *media)
 {
-	media->open = emu_rom_open;
-	media->close = emu_rom_close;
-	media->map = emu_rom_map;
-	media->unmap = emu_rom_unmap;
-	media->read = emu_rom_read;
+	media-&gt;open = emu_rom_open;
+	media-&gt;close = emu_rom_close;
+	media-&gt;map = emu_rom_map;
+	media-&gt;unmap = emu_rom_unmap;
+	media-&gt;read = emu_rom_read;
 	return 0;
 }
 ```
@@ -280,8 +287,8 @@ Bad ram pointer 0x3b8
 Problem was with storing registers `stmia` during memcpy. Backtrace:
 ```
 #0  memcpy () at src/arch/armv7/memcpy.S:64
-#1  0x000015b2 in cbfs_decompress (algo=<optimized out>, src=<optimized out>, dst=<optimized out>, len=0x3310) at src/lib/cbfs_core.c:227
-#2  0x00001702 in cbfs_load_stage (media=media@entry=0x0 <_start>, name=name@entry=0x2260 "fallback/romstage") at src/lib/cbfs.c:137
+#1  0x000015b2 in cbfs_decompress (algo=&lt;optimized out&gt;, src=&lt;optimized out&gt;, dst=&lt;optimized out&gt;, len=0x3310) at src/lib/cbfs_core.c:227
+#2  0x00001702 in cbfs_load_stage (media=media@entry=0x0 &lt;_start&gt;, name=name@entry=0x2260 &quot;fallback/romstage&quot;) at src/lib/cbfs.c:137
 #3  0x00002236 in main () at src/arch/armv7/bootblock_simple.c:63
 ```
 
@@ -312,5 +319,3 @@ I think next challenge could be experiment with Linux kernel booting. Coreboot
 can boot kernel directly or through payload with bootloader.
 
 Thanks for reading.
-
-

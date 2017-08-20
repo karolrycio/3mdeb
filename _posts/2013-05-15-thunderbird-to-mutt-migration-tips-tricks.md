@@ -1,12 +1,17 @@
 ---
-author: Piotr Król
+ID: 62846
+post_title: 'Thunderbird to Mutt migration &#8211; tips &amp; tricks'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Thunderbird to Mutt migration - tips & tricks"
-post_date: 2013-05-15 18:40
-comments: true
-categories: [Mutt, Productivty]
+permalink: >
+  http://3mdeb.kleder.co/mutt/thunderbird-to-mutt-migration-tips-tricks/
 published: true
-keywords: [mutt, linux, productivity, mail client]
+post_date: 2013-05-15 18:40:00
+tags: [ ]
+categories:
+  - Mutt
+  - Productivty
 ---
 ### Preface ###
 I migrate with my working environment to laptop. My workstation going older and 
@@ -77,9 +82,9 @@ There are lot of options to prepare Mutt compilation, but right now I can
 suggest this parameters:
 ```
 cd mutt
-./prepare --with-ssl --enable-debug --enable-imap --enable-smtp --enable-pop \
+./prepare --with-ssl --enable-debug --enable-imap --enable-smtp --enable-pop 
 -enable-hcache --with-gss --with-gnutls --with-sasl
-make && sudo make install
+make &amp;&amp; sudo make install
 ```
 
 If make will complain about `gssapi/gssapi.h: No such file or directory` then 

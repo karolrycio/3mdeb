@@ -1,12 +1,22 @@
 ---
-author: Piotr Król
+ID: 62841
+post_title: '0x2: Toolchain for Virtual Development Board'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x2: Toolchain for Virtual Development Board"
-post_date: 2013-06-07 08:42
-comments: true
-categories: [Embedded, Linux, VDB, Toolchain]
+permalink: >
+  http://3mdeb.kleder.co/linux/0x2-toolchain-for-virtual-development-board/
 published: true
-tags: [toolchain, embedded, virtual development board]
+post_date: 2013-06-07 08:42:00
+tags:
+  - embedded
+  - toolchain
+  - virtual development board
+categories:
+  - Linux
+  - Embedded
+  - VDB
+  - Toolchain
 ---
 ## Table of contents ##
 
@@ -143,4 +153,3 @@ bootloader.
 ### Kudos ###
 
 [1] [Toolchains](http://elinux.org/Toolchains)
-

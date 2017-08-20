@@ -1,14 +1,20 @@
 ---
-author: Piotr Król
+ID: 62851
+post_title: 'Octopress depoying problem after migrating to *.github.io'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Octopress depoying problem after migrating to *.github.io"
-post_date: 2013-05-16 22:20
-comments: true
-categories: Github
+permalink: >
+  http://3mdeb.kleder.co/github/octopress-depoying-problem-after-migrating-to-github-io/
 published: true
-tags: [github pages, domain, github]
+post_date: 2013-05-16 22:20:00
+tags:
+  - github pages
+  - domain
+  - github
+categories:
+  - Github
 ---
-
 My story was that I migrate to new environment and want to recover my octopress 
 setup. I thought that it will be as simple as cloning my blog github repository
 and start to work.
