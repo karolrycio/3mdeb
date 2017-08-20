@@ -1,7 +1,7 @@
 ---
 ID: 62707
 post_title: 'Debugging coreboot in qemu environment &#8211; part 1'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
