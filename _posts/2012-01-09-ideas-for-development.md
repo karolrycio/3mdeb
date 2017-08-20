@@ -1,7 +1,7 @@
 ---
 ID: 62655
 post_title: Ideas for development
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
