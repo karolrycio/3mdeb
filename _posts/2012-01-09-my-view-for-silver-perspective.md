@@ -1,7 +1,7 @@
 ---
 ID: 62660
 post_title: My view for silver perspective
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
