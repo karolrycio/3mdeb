@@ -1,7 +1,7 @@
 ---
 ID: 62871
 post_title: Linux (Debian Wheezy) on Lenovo y510p
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
