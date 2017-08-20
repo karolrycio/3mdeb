@@ -1,7 +1,7 @@
 ---
 ID: 63036
 post_title: SAMG55 + OLED1 Xplained Pro Hello World!
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
