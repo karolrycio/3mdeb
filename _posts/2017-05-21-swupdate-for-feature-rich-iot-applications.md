@@ -1,13 +1,22 @@
 ---
-author: Maciej Pijanowski
+ID: 63066
+post_title: >
+  SWUpdate for feature-rich IoT
+  applications
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "SWUpdate for feature-rich IoT applications"
-post_date: 2017-05-21 12:00:00 +0100
-comments: true
-categories: [Update, Swupdate, Linux, IoT]
+permalink: >
+  http://3mdeb.kleder.co/linux/swupdate-for-feature-rich-iot-applications/
 published: true
+post_date: 2017-05-21 12:00:00
+tags: [ ]
+categories:
+  - Linux
+  - IoT
+  - Update
+  - Swupdate
 ---
-
 When you work with embedded systems long enough, sooner or later you realize
 that some sort of update mechanism is required. This is especially true when
 more complex systems, running with an operating system, are taken into account.
@@ -74,15 +83,15 @@ flags in each section.
 ```
 software =
 {
-        version = "1.0.0";
+        version = &quot;1.0.0&quot;;
         stable:
         {
                 mmcblk0p2:
                 {
                         images: (
                         {
-                                filename = "example-rootfs-image.ext4";
-                                device = "/dev/mmcblk0p2";
+                                filename = &quot;example-rootfs-image.ext4&quot;;
+                                device = &quot;/dev/mmcblk0p2&quot;;
                         }
                         );
                 };
@@ -90,8 +99,8 @@ software =
                 {
                         images: (
                         {
-                                filename = "example-rootfs-image.ext4";
-                                device = "/dev/mmcblk0p3";
+                                filename = &quot;example-rootfs-image.ext4&quot;;
+                                device = &quot;/dev/mmcblk0p3&quot;;
                         }
                         );
                 };
@@ -106,7 +115,7 @@ As you can see below, there are two software modes to choose from:
 Selection of given mode is made by using `-e` command line switch, e.g.:
 
 ```
-swupdate -e "stable,mmcblk0p2" -i example.swu-image.swu
+swupdate -e &quot;stable,mmcblk0p2&quot; -i example.swu-image.swu
 ```
 
 In double copy approach we are using software collections mainly to point to
@@ -119,7 +128,7 @@ It can be used to exclude the risk of installing software on the wrong
 platform. `sw-descrption` should contain list of compatible hardware revisions:
 
 ```
-hardware-compatibility = [ "1.0.1", "1.0.0", "1.0.2" ];
+hardware-compatibility = [ &quot;1.0.1&quot;, &quot;1.0.0&quot;, &quot;1.0.2&quot; ];
 ```
 
 Hardware revision is saved in file (by default `/etc/hwrevision`)
@@ -160,7 +169,7 @@ To download image from given URL, following command line parameters should be
 passed:
 
 ```
-swupdate -d "-u http://example.com/mysoftware.swu"
+swupdate -d &quot;-u http://example.com/mysoftware.swu&quot;
 ```
 
 > Note that there's been syntax change a while ago. In previous releases (for
@@ -180,8 +189,8 @@ must be set in corresponding `sw-description` section. It may look like below:
 ```
 images: (
 {
-        filename = "rootfs-image-name.img.gz";
-        device = "/dev/sda3";
+        filename = &quot;rootfs-image-name.img.gz&quot;;
+        device = &quot;/dev/sda3&quot;;
         compressed = TRUE;
 }
 );
@@ -202,8 +211,8 @@ section. In this case it would look like this:
 ```
 images: (
 {
-        filename = "rootfs-image-name.img.gz";
-        device = "/dev/sda3";
+        filename = &quot;rootfs-image-name.img.gz&quot;;
+        device = &quot;/dev/sda3&quot;;
         compressed = TRUE;
         installed-directly = TRUE;
 }
@@ -274,7 +283,7 @@ fi
 
 saveenv
 
-setenv bootargs "console=ttymxc0,115200n8 rootfstype=ext4 rootwait panic=10 root=/dev/mmcblk0p${boot_part}"
+setenv bootargs &quot;console=ttymxc0,115200n8 rootfstype=ext4 rootwait panic=10 root=/dev/mmcblk0p${boot_part}&quot;
 ext4load mmc 0:${boot_part} 0x13000000 boot/${fdtfile}
 ext4load mmc 0:${boot_part} 0x10800000 boot/zImage
 bootz 0x10800000 - 0x13000000
@@ -289,17 +298,17 @@ example of such:
 ```
 software =
 {
-        version = "1.0.0";
+        version = &quot;1.0.0&quot;;
 
-        hardware-compatibility = [ "Hummingboard", "som-v1.5" ];
+        hardware-compatibility = [ &quot;Hummingboard&quot;, &quot;som-v1.5&quot; ];
         confirm =
         {
                 mmcblk0p3:
                 {
                         uboot: (
                         {
-                                name = "fback";
-                                value = "3";
+                                name = &quot;fback&quot;;
+                                value = &quot;3&quot;;
                         }
                         );
                 };
@@ -307,8 +316,8 @@ software =
                 {
                         uboot: (
                         {
-                                name = "fback";
-                                value = "2";
+                                name = &quot;fback&quot;;
+                                value = &quot;2&quot;;
                         }
                         );
                 };
@@ -323,28 +332,28 @@ Below is an example `sw-description` file including features mentioned above:
 ```
 software =
 {
-        version = "1.0.0";
-        hardware-compatibility = [ "Hummingboard", "som-v1.5" ];
+        version = &quot;1.0.0&quot;;
+        hardware-compatibility = [ &quot;Hummingboard&quot;, &quot;som-v1.5&quot; ];
         stable:
         {
                 mmcblk0p2:
                 {
                         images: (
                         {
-                                filename = "example-rootfs-image.ext4.gz";
-                                device = "/dev/mmcblk0p2";
+                                filename = &quot;example-rootfs-image.ext4.gz&quot;;
+                                device = &quot;/dev/mmcblk0p2&quot;;
                                 installed-directly = TRUE;
                                 compressed = TRUE;
                         }
                         );
                         uboot: (
                         {
-                                name = "next_entry";
-                                value = "2";
+                                name = &quot;next_entry&quot;;
+                                value = &quot;2&quot;;
                         },
                         {
-                                name = "fback";
-                                value = "3";
+                                name = &quot;fback&quot;;
+                                value = &quot;3&quot;;
                         }
                         );
                 };
@@ -352,20 +361,20 @@ software =
                 {
                         images: (
                         {
-                                filename = "example-rootfs-image.ext4.gz";
-                                device = "/dev/mmcblk0p3";
+                                filename = &quot;example-rootfs-image.ext4.gz&quot;;
+                                device = &quot;/dev/mmcblk0p3&quot;;
                                 installed-directly = TRUE;
                                 compressed = TRUE;
                         }
                         );
                         uboot: (
                         {
-                                name = "next_entry";
-                                value = "3";
+                                name = &quot;next_entry&quot;;
+                                value = &quot;3&quot;;
                         },
                         {
-                                name = "fback";
-                                value = "2";
+                                name = &quot;fback&quot;;
+                                value = &quot;2&quot;;
                         }
                         );
                 };
@@ -387,36 +396,36 @@ software =
   look like below:
 
 ```
-# Copyright (C) 2015 Unknown User <unknow@user.org>
+# Copyright (C) 2015 Unknown User &lt;unknow@user.org&gt;
 # Released under the MIT license (see COPYING.MIT for the terms)
 
-DESCRIPTION = "Example Compound image for Hummingboard"
-SECTION = ""
+DESCRIPTION = &quot;Example Compound image for Hummingboard&quot;
+SECTION = &quot;&quot;
 
 # Note: sw-description is mandatory
-SRC_URI_hummingboard= "file://sw-description \
-           "
+SRC_URI_hummingboard= &quot;file://sw-description 
+           &quot;
 inherit swupdate
 
-LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690 \
-                    file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
+LICENSE = &quot;MIT&quot;
+LIC_FILES_CHKSUM = &quot;file://${COREBASE}/LICENSE;md5=4d92cd373abda3937c2bc47fbc49d690 
+                    file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420&quot;
 
 # IMAGE_DEPENDS: list of Yocto images that contains a root filesystem
 # it will be ensured they are built before creating swupdate image
-IMAGE_DEPENDS = ""
+IMAGE_DEPENDS = &quot;&quot;
 
 # SWUPDATE_IMAGES: list of images that will be part of the compound image
 # the list can have any binaries - images must be in the DEPLOY directory
-SWUPDATE_IMAGES = " \
-                core-image-full-cmdline \
-                "
+SWUPDATE_IMAGES = &quot; 
+                core-image-full-cmdline 
+                &quot;
 
 # Images can have multiple formats - define which image must be
 # taken to be put in the compound image
-SWUPDATE_IMAGES_FSTYPES[core-image-full-cmdline] = ".ext4"
+SWUPDATE_IMAGES_FSTYPES[core-image-full-cmdline] = &quot;.ext4&quot;
 
-COMPATIBLE = "hummingboard"
+COMPATIBLE = &quot;hummingboard&quot;
 ```
 
 * SWU image can be build with following command:
@@ -439,7 +448,7 @@ Assuming SWU image is already uploaded and current partition is
 `/dev/mmcblk0p2`:
 
 ```
-swupdate -d http://example.com/mysoftware.swu -e "stable,mmcblk0p3"
+swupdate -d http://example.com/mysoftware.swu -e &quot;stable,mmcblk0p3&quot;
 ```
 
 ## Conclusion

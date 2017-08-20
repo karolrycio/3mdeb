@@ -1,13 +1,24 @@
 ---
-author: Piotr Król
+ID: 63051
+post_title: >
+  Nerves project triage on BeagleBone
+  Black
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Nerves project triage on BeagleBone Black"
-post_date: 2017-03-10 22:53:55 +0100
-comments: true
-categories: [Embedded, Beagleboneblack, Linux, Nerves, Elixir, Erlang]
+permalink: >
+  http://3mdeb.kleder.co/linux/nerves-project-triage-on-beaglebone-black/
 published: true
+post_date: 2017-03-10 22:53:55
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - Beagleboneblack
+  - Nerves
+  - Elixir
+  - Erlang
 ---
-
 Recently one of my customers brought to my attention [Nerves](http://nerves-project.org).
 It aims to simplify use of Elixir (functional language leveraging Erlang VM) in
 embedded systems. This system has couple interesting features that are worth of
@@ -32,7 +43,7 @@ If you don't want to go through all [installation steps](https://hexdocs.pm/nerv
 and you use Debian testing, you can run:
 
 ```
-sudo apt-get install erlang elixir ssh-askpass squashfs-tools \
+sudo apt-get install erlang elixir ssh-askpass squashfs-tools 
 git g++ libssl-dev libncurses5-dev bc m4 make unzip cmake
 ```
 
@@ -41,9 +52,9 @@ git g++ libssl-dev libncurses5-dev bc m4 make unzip cmake
 Checking exact Erlang version for non Erlang developers is trivial:
 
 ```
-$ erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), \
-"releases", erlang:system_info(otp_release), "OTP_VERSION"])), \
-io:fwrite(Version), halt().' -noshell
+$ erl -eval &#039;{ok, Version} = file:read_file(filename:join([code:root_dir(), 
+&quot;releases&quot;, erlang:system_info(otp_release), &quot;OTP_VERSION&quot;])), 
+io:fwrite(Version), halt().&#039; -noshell
 19.2.1
 ```
 
@@ -62,7 +73,7 @@ Unfortunately Nerves Project requires at least `1.4.0`, what can be solved by:
 
 ```
 sudo apt-get remove elixir
-wget https://packages.erlang-solutions.com/erlang/elixir/FLAVOUR_2_download/elixir_1.4.1-1\~debian\~jessie_all.deb
+wget https://packages.erlang-solutions.com/erlang/elixir/FLAVOUR_2_download/elixir_1.4.1-1~debian~jessie_all.deb
 sudo dpkg -i elixir_1.4.1-1~debian~jessie_all.deb
 $ elixir --version
 Erlang/OTP 19 [erts-8.2.1] [source] [64-bit] [smp:4:4] [async-threads:10] [kernel-poll:false]
@@ -129,7 +140,7 @@ Reset Source: Power-on reset has occurred.
 MMC:   OMAP SD/MMC: 0, OMAP SD/MMC: 1
 Using default environment
 
-Net:   <ethaddr> not set. Validating first E-fuse MAC
+Net:   &lt;ethaddr&gt; not set. Validating first E-fuse MAC
 cpsw, usb_ether
 Press SPACE to abort autoboot in -2 seconds
 switch to partitions #0, OK
@@ -163,7 +174,7 @@ Starting kernel ...
 Erlang/OTP 19 [erts-8.2] [source] [async-threads:10] [kernel-poll:false]
 
 Interactive Elixir (1.4.1) - press Ctrl+C to exit (type h() ENTER for help)
-iex(1)>
+iex(1)&gt;
 ```
 
 It look that things work out of the box and Elixir started and D2 LED blinks
@@ -233,5 +244,3 @@ Do you plan to use Nerves in your next embedded systems project ? Maybe you
 struggle with adapting similar approach for different VM ? Feel free to share
 your ideas and issues in comments. If you think content valuable please share
 this help us in providing more content to our blog.
-
-

@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62986
+post_title: Emulate Rapberry Pi 2 in QEMU
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Emulate Rapberry Pi 2 in QEMU"
-post_date: 2015-12-30 23:02:30 +0100
-comments: true
-categories: [QEMU, Embedded, Linux]
+permalink: >
+  http://3mdeb.kleder.co/linux/emulate-rapberry-pi-2-in-qemu-2/
 published: true
+post_date: 2015-12-30 23:02:30
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - QEMU
 ---
-
 In the process of planning system testing for one of my clients I found that
 someone from Microsoft published patches with [BCM2836 support](https://lists.gnu.org/archive/html/qemu-arm/2015-12/msg00078.html) to
 QEMU mailing list. I thought it is very interesting, because if it is possible
@@ -66,9 +72,9 @@ cp tmp/bcm2709-rpi-2-b.dtb 2015-11-21-raspbian-boot
 Then if you try to boot `2015-11-21` Rapbian with `0xabu` code: 
 
 ```
-qemu-system-arm -M raspi2 -kernel 2015-11-21-raspbian-boot/kernel7.img \
--sd 2015-11-21-raspbian-jessie.img \
--append "rw earlyprintk loglevel=8 console=ttyAMA0,115200 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2" \
+qemu-system-arm -M raspi2 -kernel 2015-11-21-raspbian-boot/kernel7.img 
+-sd 2015-11-21-raspbian-jessie.img 
+-append &quot;rw earlyprintk loglevel=8 console=ttyAMA0,115200 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2&quot; 
 -dtb 2015-11-21-raspbian-boot/bcm2709-rpi-2-b.dtb -serial stdio
 ```
 
@@ -82,15 +88,15 @@ You will experience kernel crash:
 [    7.383057] 
 [    7.384366] CPU: 0 PID: 1 Comm: systemd Not tainted 4.1.13-v7+ #826
 [    7.384874] Hardware name: BCM2709
-[    7.386615] [<80018444>] (unwind_backtrace) from [<80013e08>] (show_stack+0x20/0x24)
-[    7.387307] [<80013e08>] (show_stack) from [<8055a188>] (dump_stack+0x98/0xe0)
-[    7.387851] [<8055a188>] (dump_stack) from [<80556340>] (panic+0xa4/0x204)
-[    7.388515] [<80556340>] (panic) from [<800293c8>] (do_exit+0xa0c/0xa64)
-[    7.389074] [<800293c8>] (do_exit) from [<800294b8>] (do_group_exit+0x4c/0xcc)
-[    7.389729] [<800294b8>] (do_group_exit) from [<80033f1c>] (get_signal+0x2b0/0x6e0)
-[    7.390388] [<80033f1c>] (get_signal) from [<80013190>] (do_signal+0x98/0x3ac)
-[    7.391021] [<80013190>] (do_signal) from [<8001368c>] (do_work_pending+0xb8/0xc8)
-[    7.391665] [<8001368c>] (do_work_pending) from [<8000f9e4>] (work_pending+0xc/0x20)
+[    7.386615] [&lt;80018444&gt;] (unwind_backtrace) from [&lt;80013e08&gt;] (show_stack+0x20/0x24)
+[    7.387307] [&lt;80013e08&gt;] (show_stack) from [&lt;8055a188&gt;] (dump_stack+0x98/0xe0)
+[    7.387851] [&lt;8055a188&gt;] (dump_stack) from [&lt;80556340&gt;] (panic+0xa4/0x204)
+[    7.388515] [&lt;80556340&gt;] (panic) from [&lt;800293c8&gt;] (do_exit+0xa0c/0xa64)
+[    7.389074] [&lt;800293c8&gt;] (do_exit) from [&lt;800294b8&gt;] (do_group_exit+0x4c/0xcc)
+[    7.389729] [&lt;800294b8&gt;] (do_group_exit) from [&lt;80033f1c&gt;] (get_signal+0x2b0/0x6e0)
+[    7.390388] [&lt;80033f1c&gt;] (get_signal) from [&lt;80013190&gt;] (do_signal+0x98/0x3ac)
+[    7.391021] [&lt;80013190&gt;] (do_signal) from [&lt;8001368c&gt;] (do_work_pending+0xb8/0xc8)
+[    7.391665] [&lt;8001368c&gt;] (do_work_pending) from [&lt;8000f9e4&gt;] (work_pending+0xc/0x20)
 [    7.393209] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000004
 [    7.393209] 
 ```
@@ -125,9 +131,9 @@ sudo umount tmp
 
 
 ```
-qemu-system-arm -M raspi2 -kernel 2015-11-21-raspbian-boot/kernel7.img \
--sd 2015-11-21-raspbian-jessie.img \
--append "rw earlyprintk loglevel=8 console=ttyAMA0,115200 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2" \
+qemu-system-arm -M raspi2 -kernel 2015-11-21-raspbian-boot/kernel7.img 
+-sd 2015-11-21-raspbian-jessie.img 
+-append &quot;rw earlyprintk loglevel=8 console=ttyAMA0,115200 dwc_otg.lpm_enable=0 root=/dev/mmcblk0p2&quot; 
 -dtb 2015-11-21-raspbian-boot/bcm2709-rpi-2-b.dtb -serial stdio
 ```
 

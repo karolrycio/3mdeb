@@ -1,13 +1,23 @@
 ---
-author: Piotr Król
+ID: 63001
+post_title: >
+  PC Engines APU2 netboot Debian
+  installation
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "PC Engines APU2 netboot Debian installation"
-post_date: 2016-03-26 14:27:38 +0100
-comments: true
-categories: [Debian, Embedded, Coreboot, APU2, RaspberryPi]
+permalink: >
+  http://3mdeb.kleder.co/coreboot/pc-engines-apu2-netboot-debian-installation-2/
 published: true
+post_date: 2016-03-26 14:27:38
+tags: [ ]
+categories:
+  - Coreboot
+  - Embedded
+  - Debian
+  - RaspberryPi
+  - APU2
 ---
-
 In [previous post](2016/03/12/pxe-server-with-raspberry-pi-1/) I described how
 to setup PXE server and boot Debian installer using it. I mentioned that
 provided setup is limited and some extensive configuration is needed to make it
@@ -62,22 +72,22 @@ iPXE initialising devices...ok
 
 iPXE 1.0.0+ (e303) -- Open Source Network Boot Firmware -- http://ipxe.org
 Features: DNS FTP HTTP HTTPS iSCSI NFS SLAM TFTP VLAN AoE ELF MBOOT NBI PXE SDI bzImage COMBOOT Menu PXEXT
-iPXE>
+iPXE&gt;
 ```
 
 Then obtain DHCP address:
 
 ```
-iPXE> dhcp net0
+iPXE&gt; dhcp net0
 Configuring (net0 00:0d:b9:3f:9e:58)............... ok
 ```
 
 Now we can boot over the network using RPi PXE server:
 
 ```
-iPXE> set filename /srv/tftp/pxelinux.0
-iPXE> set next-server 192.168.0.100
-iPXE> chain tftp://${next-server}/${filename}
+iPXE&gt; set filename /srv/tftp/pxelinux.0
+iPXE&gt; set next-server 192.168.0.100
+iPXE&gt; chain tftp://${next-server}/${filename}
 ```
 
 Note that `192.168.0.100` is RPi PXE server and `/srv/tftp/pxelinux.0` is path
@@ -93,7 +103,7 @@ Hit `Tab` in the main installer window:
                  | Debian GNU/Linux installer boot menu |
                  |---------------------------------------|
                  | Install                               |
-                 | Advanced options                    > |
+                 | Advanced options                    &gt; |
                  | Help                                  |
                  | Install with speech synthesis         |
                  |                                       |
@@ -112,13 +122,13 @@ Hit `Tab` in the main installer window:
 Change boot command line to print output to serial:
 
 ```
-> debian-installer/i386/linux vga=788 initrd=debian-installer/i386/initrd.gz --- console=ttyS0,115200 earlyprint=serial,ttyS0,115200
+&gt; debian-installer/i386/linux vga=788 initrd=debian-installer/i386/initrd.gz --- console=ttyS0,115200 earlyprint=serial,ttyS0,115200
 ```
 
 Then hit `Enter`. You will see complains about video mode like this:
 
 ```
-Press <ENTER> to see video modes available, <SPACE> to continue, or wait 30 sec
+Press &lt;ENTER&gt; to see video modes available, &lt;SPACE&gt; to continue, or wait 30 sec
 ```
 
 Follow this instruction by waiting or hitting `Space`. Then you should have
@@ -163,4 +173,3 @@ improvements. For example:
 
 I hope this post was useful. If you think that it can be improved please
 comment. Thanks for reading.
-

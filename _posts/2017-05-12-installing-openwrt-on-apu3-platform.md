@@ -1,13 +1,20 @@
 ---
-author: Kamil Wcisło
+ID: 63061
+post_title: Installing OpenWRT on APU3 platform
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Installing OpenWRT on APU3 platform"
-post_date: 2017-05-12 12:00:00 +0100
-comments: true
-categories: [Pcengines, Openwrt, APU3, Rt5370]
+permalink: >
+  http://3mdeb.kleder.co/pcengines/installing-openwrt-on-apu3-platform/
 published: true
+post_date: 2017-05-12 12:00:00
+tags: [ ]
+categories:
+  - Pcengines
+  - Openwrt
+  - APU3
+  - Rt5370
 ---
-
 This guide should be considered as a simple walk-through for using APU3
 platform in some generic use-cases. I'm trying to explain how to work with
 the device and use it in a generic manner. There is a part about the coreboot
@@ -51,7 +58,7 @@ Let's clone the needed version:
 
 ```sh
 $ git clone -b chaos_calmer https://github.com/openwrt/openwrt.git
-Cloning into 'openwrt'...
+Cloning into &#039;openwrt&#039;...
 remote: Counting objects: 360802, done.
 remote: Compressing objects: 100% (5/5), done.
 remote: Total 360802 (delta 4), reused 2 (delta 2), pack-reused 360795
@@ -290,25 +297,25 @@ Here's short example how to change it:
 ```sh
 root@OpenWrt:/# uci show network
 network.loopback=interface
-network.loopback.ifname='lo'
-network.loopback.proto='static'
-network.loopback.ipaddr='127.0.0.1'
-network.loopback.netmask='255.0.0.0'
+network.loopback.ifname=&#039;lo&#039;
+network.loopback.proto=&#039;static&#039;
+network.loopback.ipaddr=&#039;127.0.0.1&#039;
+network.loopback.netmask=&#039;255.0.0.0&#039;
 network.lan=interface
-network.lan.ifname='eth0'
-network.lan.type='bridge'
-network.lan.proto='static'
-network.lan.ipaddr='192.168.1.1'
-network.lan.netmask='255.255.255.0'
-network.lan.ip6assign='60'
+network.lan.ifname=&#039;eth0&#039;
+network.lan.type=&#039;bridge&#039;
+network.lan.proto=&#039;static&#039;
+network.lan.ipaddr=&#039;192.168.1.1&#039;
+network.lan.netmask=&#039;255.255.255.0&#039;
+network.lan.ip6assign=&#039;60&#039;
 network.wan=interface
-network.wan.ifname='eth1'
-network.wan.proto='dhcp'
+network.wan.ifname=&#039;eth1&#039;
+network.wan.proto=&#039;dhcp&#039;
 network.wan6=interface
-network.wan6.ifname='eth1'
-network.wan6.proto='dhcpv6'
+network.wan6.ifname=&#039;eth1&#039;
+network.wan6.proto=&#039;dhcpv6&#039;
 network.globals=globals
-network.globals.ula_prefix='fd0e:a001:d70e::/48'
+network.globals.ula_prefix=&#039;fd0e:a001:d70e::/48&#039;
 root@OpenWrt:/# uci set network.lan.ipaddr=192.168.1.254
 root@OpenWrt:/# uci commit
 root@OpenWrt:/# /etc/init.d/network restart
@@ -354,21 +361,21 @@ Unfortunately we don't have the new interface in OpenWRT's configuration system.
 Right now the `/etc/config/wireless` file looks like that:
 
 ```
-config wifi-device 'radio0'
-	option type 'mac80211'
-	option hwmode '11a'
-	option path 'pci0000:00/0000:00:02.5/0000:04:00.0'
-	option htmode 'VHT80'
-	option disabled '0'
-	option channel '36'
+config wifi-device &#039;radio0&#039;
+	option type &#039;mac80211&#039;
+	option hwmode &#039;11a&#039;
+	option path &#039;pci0000:00/0000:00:02.5/0000:04:00.0&#039;
+	option htmode &#039;VHT80&#039;
+	option disabled &#039;0&#039;
+	option channel &#039;36&#039;
 
 config wifi-iface
-	option device 'radio0'
-	option network 'lan'
-	option mode 'ap'
-	option ssid 'YourSSID'
-	option encryption 'psk2+aes'
-	option key 'key123'
+	option device &#039;radio0&#039;
+	option network &#039;lan&#039;
+	option mode &#039;ap&#039;
+	option ssid &#039;YourSSID&#039;
+	option encryption &#039;psk2+aes&#039;
+	option key &#039;key123&#039;
 ```
 
 In order to add new device, I found that it's easiest to generate generic one,

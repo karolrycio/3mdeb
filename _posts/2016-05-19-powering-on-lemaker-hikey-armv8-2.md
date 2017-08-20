@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 63006
+post_title: Powering on LeMaker HiKey (ARMv8)
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Powering on LeMaker HiKey (ARMv8)"
-post_date: 2016-05-19 00:04:06 +0200
-comments: true
-categories: [Embedded, ARM, UEFI]
+permalink: >
+  http://3mdeb.kleder.co/uefi/powering-on-lemaker-hikey-armv8-2/
 published: true
+post_date: 2016-05-19 00:04:06
+tags: [ ]
+categories:
+  - UEFI
+  - Embedded
+  - ARM
 ---
-
 Embedded Systems Consultants have chance to live in interesting times. ARM
 expansion touch server market and UEFI coming to non-x86 platforms. Firmware
 gaining its importance and because handling real development is harder and

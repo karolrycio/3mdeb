@@ -1,13 +1,27 @@
 ---
-author: Piotr Król
+ID: 63031
+post_title: >
+  Failure of ECC508A crypto coprocessor
+  initial triage with SAM G55 Xplained Pro
+  Evaluation Kit
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Failure of ECC508A crypto coprocessor initial triage with SAM G55 Xplained Pro Evaluation Kit"
-post_date: 2016-11-24 15:37:26 +0100
-comments: true
-categories: [Atmel, Samg55, Ecc508a, Embedded, Firmware, Security, AWS, IoT]
+permalink: >
+  http://3mdeb.kleder.co/embedded/failure-of-ecc508a-crypto-coprocessor-initial-triage-with-sam-g55-xplained-pro-evaluation-kit/
 published: true
+post_date: 2016-11-24 15:37:26
+tags: [ ]
+categories:
+  - Embedded
+  - Atmel
+  - Samg55
+  - Ecc508a
+  - Firmware
+  - Security
+  - AWS
+  - IoT
 ---
-
 Some time ago (around August 2016) embedded community media were hit with hype
 around simplified flow for AWS IoT provisioning
 ([1](http://www.embedded.com/electronics-products/electronic-product-reviews/safety-and-security/4442551/Crypto-chip-simplifies-AWS-IoT-security),
@@ -32,10 +46,10 @@ I'm personally very interested in all categories related to those news:
   we face in technology (especially in security area): 
 
 ```
-mathematics -> 
-proof of concept software -> 
-mature software -> 
-hardware acceleration -> 
+mathematics -&gt; 
+proof of concept software -&gt; 
+mature software -&gt; 
+hardware acceleration -&gt; 
 hardware implementation
 ```
 
@@ -111,8 +125,8 @@ Studio.
 Now we get more compilation errors:
 
 ```
-Error       sam/sleepmgr.h: No such file or directory   node-auth-basic \
-C:\(...)\cryptoauth-node-auth-basic\node-auth-basic\src\ASF\common\services\sleepmgr\sleepmgr.h 53
+Error       sam/sleepmgr.h: No such file or directory   node-auth-basic 
+C:(...)cryptoauth-node-auth-basicnode-auth-basicsrcASFcommonservicessleepmgrsleepmgr.h 53
 ```
 
 With above problem I started to think I'm getting really useless expertise.
@@ -202,4 +216,3 @@ Github repository. Which I will evaluate in next posts.
 If you will struggle with similar problems and pass through some mentioned
 above or you successfully triaged `ECC508A` on `AT88CKECC-AWS-XSTK` please let
 me know. Other comments as always welcome.
-

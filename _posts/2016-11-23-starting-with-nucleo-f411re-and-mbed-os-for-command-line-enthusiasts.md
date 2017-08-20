@@ -1,13 +1,23 @@
 ---
-author: Piotr Król
+ID: 63026
+post_title: >
+  Starting with Nucleo-F411RE and mbed OS
+  for command line enthusiasts
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Starting with Nucleo-F411RE and mbed OS for command line enthusiasts"
-post_date: 2016-11-23 16:01:48 +0100
-comments: true
-categories: [Mbed, Embedded, Linux, Nucleo, Cortex-m4]
+permalink: >
+  http://3mdeb.kleder.co/linux/starting-with-nucleo-f411re-and-mbed-os-for-command-line-enthusiasts/
 published: true
+post_date: 2016-11-23 16:01:48
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - Mbed
+  - Nucleo
+  - Cortex-m4
 ---
-
 When I first time read about mbed OS I was really sceptical, especially idea of
 having web browser as my IDE and compiler in the cloud seems to be very scary
 to me. ARM engineers proved to provide high quality products, but this was not
@@ -89,16 +99,16 @@ So first thing that hit me when trying to move forward was this message:
 
 ```
 $ mbed new mbed-os-program                                                  
-[mbed] Creating new program "mbed-os-program" (git)
-[mbed] Adding library "mbed-os" from "https://github.com/ARMmbed/mbed-os" at branch latest
-[mbed] Updating reference "mbed-os" -> "https://github.com/ARMmbed/mbed-os/#d5de476f74dd4de27012eb74ede078f6330dfc3f"
+[mbed] Creating new program &quot;mbed-os-program&quot; (git)
+[mbed] Adding library &quot;mbed-os&quot; from &quot;https://github.com/ARMmbed/mbed-os&quot; at branch latest
+[mbed] Updating reference &quot;mbed-os&quot; -&gt; &quot;https://github.com/ARMmbed/mbed-os/#d5de476f74dd4de27012eb74ede078f6330dfc3f&quot;
 [mbed] Auto-installing missing Python modules...
 [mbed] WARNING: Unable to auto-install required Python modules.
 ---
 [mbed] WARNING: -----------------------------------------------------------------
 [mbed] WARNING: The mbed OS tools in this program require the following Python modules: prettytable, intelhex, junit_xml, pyyaml, mbed_ls, mbed_host_tests, mbed_greentea, beautifulsoup4, fuzzywuzzy
-[mbed] WARNING: You can install all missing modules by running "pip install -r requirements.txt" in "/home/pietrushnic/tmp/mbed-os-program/mbed-os"
-[mbed] WARNING: On Posix systems (Linux, Mac, etc) you might have to switch to superuser account or use "sudo"
+[mbed] WARNING: You can install all missing modules by running &quot;pip install -r requirements.txt&quot; in &quot;/home/pietrushnic/tmp/mbed-os-program/mbed-os&quot;
+[mbed] WARNING: On Posix systems (Linux, Mac, etc) you might have to switch to superuser account or use &quot;sudo&quot;
 ```
 
 This appeared to be some problem with my distro:
@@ -106,7 +116,7 @@ This appeared to be some problem with my distro:
 ```
 (...)
     ext/_yaml.c:4:20: fatal error: Python.h: No such file or directory
-     #include "Python.h"
+     #include &quot;Python.h&quot;
                         ^
     compilation terminated.
 (...)
@@ -115,7 +125,7 @@ This appeared to be some problem with my distro:
 This indicate lack of `python2.7-dev` package, so:
 
 ```
-sudo aptitude update && sudo aptitude dist-upgrade
+sudo aptitude update &amp;&amp; sudo aptitude dist-upgrade
 sudo aptitude install python2.7-dev
 ```
 
@@ -162,15 +172,15 @@ Compile [  0.4%]: AnalogIn.cpp
 ./mbed-os/platform/platform.h:22:19: fatal error: cstddef: No such file or directory
 compilation terminated.
 
-[mbed] ERROR: "python" returned error code 1.
-[mbed] ERROR: Command "python -u /home/pietrushnic/tmp/mbed-os-example-blinky/mbed-os/tools/make.py -t GCC_ARM -m NUCLEO_F411RE --source . --build ./BUILD/NUCLEO_F411RE/GCC_ARM" in "/home/pietrushnic/tmp/mbed-os-example-blinky"
+[mbed] ERROR: &quot;python&quot; returned error code 1.
+[mbed] ERROR: Command &quot;python -u /home/pietrushnic/tmp/mbed-os-example-blinky/mbed-os/tools/make.py -t GCC_ARM -m NUCLEO_F411RE --source . --build ./BUILD/NUCLEO_F411RE/GCC_ARM&quot; in &quot;/home/pietrushnic/tmp/mbed-os-example-blinky&quot;
 ---
 ```
 
 Toolchain configuration is needed:
 
 ```console
-mbed config --global GCC_ARM_PATH "/usr/bin"
+mbed config --global GCC_ARM_PATH &quot;/usr/bin&quot;
 ```
 
 But then we get another problem:
@@ -202,8 +212,8 @@ Compile [  1.9%]: main.cpp
 ./mbed-os/platform/Callback.h:21:15: fatal error: new: No such file or directory
 compilation terminated.
 
-[mbed] ERROR: "python" returned error code 1.
-[mbed] ERROR: Command "python -u /home/pietrushnic/tmp/mbed-os-example-blinky/mbed-os/tools/make.py -t GCC_ARM -m NUCLEO_F411RE --source . --build ./BUILD/NUCLEO_F411RE/GCC_ARM" in "/home/pietrushnic/tmp/mbed-os-example-blinky"
+[mbed] ERROR: &quot;python&quot; returned error code 1.
+[mbed] ERROR: Command &quot;python -u /home/pietrushnic/tmp/mbed-os-example-blinky/mbed-os/tools/make.py -t GCC_ARM -m NUCLEO_F411RE --source . --build ./BUILD/NUCLEO_F411RE/GCC_ARM&quot; in &quot;/home/pietrushnic/tmp/mbed-os-example-blinky&quot;
 ---
 ```
 
@@ -219,7 +229,7 @@ tar xvf gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2
 Then change your global mbed configuration:
 
 ```console
-mbed config --global GCC_ARM_PATH "/path/to/gcc-arm-none-eabi-5_4-2016q3/bin"
+mbed config --global GCC_ARM_PATH &quot;/path/to/gcc-arm-none-eabi-5_4-2016q3/bin&quot;
 ```
 
 Now compilation works without problems:
@@ -248,12 +258,12 @@ Compile [  2.3%]: AnalogIn.cpp
 Compile [  2.7%]: BusInOut.cpp
 (...)
 Compile [ 99.2%]: serial_api.c
-[Warning] serial_api.c@333,35: unused variable 'tmpval' [-Wunused-variable]
-[Warning] serial_api.c@821,27: unused variable 'tmpval' [-Wunused-variable]
-[Warning] serial_api.c@823,27: unused variable 'tmpval' [-Wunused-variable]
-[Warning] serial_api.c@825,27: unused variable 'tmpval' [-Wunused-variable]
-[Warning] serial_api.c@827,27: unused variable 'tmpval' [-Wunused-variable]
-[Warning] serial_api.c@954,23: unused variable 'tmpval' [-Wunused-variable]
+[Warning] serial_api.c@333,35: unused variable &#039;tmpval&#039; [-Wunused-variable]
+[Warning] serial_api.c@821,27: unused variable &#039;tmpval&#039; [-Wunused-variable]
+[Warning] serial_api.c@823,27: unused variable &#039;tmpval&#039; [-Wunused-variable]
+[Warning] serial_api.c@825,27: unused variable &#039;tmpval&#039; [-Wunused-variable]
+[Warning] serial_api.c@827,27: unused variable &#039;tmpval&#039; [-Wunused-variable]
+[Warning] serial_api.c@954,23: unused variable &#039;tmpval&#039; [-Wunused-variable]
 Compile [ 99.6%]: stm_spi_api.c
 Compile [100.0%]: test_env.cpp
 Link: mbed-os-example-blinky
@@ -300,7 +310,7 @@ This is pretty weird interface for programming, but simplified to the maximum.
 Modify your `main.cpp` with something like:
 
 ```c
-#include "mbed.h"
+#include &quot;mbed.h&quot;
 
 DigitalOut led1(LED1);
 Serial pc(USBTX, USBRX);
@@ -311,7 +321,7 @@ int main() {
     int i = 0;
 
     while (true) {
-        pc.printf("%d\r\n", i);
+        pc.printf(&quot;%drn&quot;, i);
         i++;
         led1 = !led1;
         Thread::wait(1000);

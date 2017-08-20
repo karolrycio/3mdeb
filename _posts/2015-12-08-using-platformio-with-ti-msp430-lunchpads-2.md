@@ -1,13 +1,22 @@
 ---
-author: Piotr Król
+ID: 62981
+post_title: >
+  Using PlatformIO with TI MSP430
+  LunchPads
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Using PlatformIO with TI MSP430 LunchPads"
-post_date: 2015-12-08 13:16:36 +0100
-comments: true
-categories: [Msp430, Embedded, Ti, PlatformIO]
+permalink: >
+  http://3mdeb.kleder.co/embedded/using-platformio-with-ti-msp430-lunchpads-2/
 published: true
+post_date: 2015-12-08 13:16:36
+tags: [ ]
+categories:
+  - Embedded
+  - Msp430
+  - Ti
+  - PlatformIO
 ---
-
 [PlatformIO](http://platformio.org/) is very interesting project that aim to
 solve very important problem of configuring deployment environment for embedded
 systems. IMHO good approach is to focus on modularity (various IDE can be used,
@@ -104,9 +113,9 @@ sudo cp $HOME/.platformio/packages/toolchain-timsp430/bin/libmsp430.so /usr/lib
 If you didn't use your MSP430 for a while there can be problem like this:
 
 ```
-$HOME/.platformio/packages/tool-mspdebug/mspdebug tilib --force-reset "prog .pioenvs/lpmsp430f5529_25/firmware.hex"
+$HOME/.platformio/packages/tool-mspdebug/mspdebug tilib --force-reset &quot;prog .pioenvs/lpmsp430f5529_25/firmware.hex&quot;
 MSPDebug version 0.20 - debugging tool for MSP430 MCUs
-Copyright (C) 2009-2012 Daniel Beer <dlbeer@gmail.com>
+Copyright (C) 2009-2012 Daniel Beer &lt;dlbeer@gmail.com&gt;
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
@@ -143,7 +152,7 @@ I experienced very similar problems with `FR5969`. Unfortunately above procedure
 
 ```
 MSPDebug version 0.23 - debugging tool for MSP430 MCUs
-Copyright (C) 2009-2015 Daniel Beer <dlbeer@gmail.com>
+Copyright (C) 2009-2015 Daniel Beer &lt;dlbeer@gmail.com&gt;
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Chip info database from MSP430.dll v3.3.1.4 Copyright (C) 2013 TI, Inc.
@@ -185,7 +194,7 @@ This improved situation, but give:
 
 ```
 MSPDebug version 0.23 - debugging tool for MSP430 MCUs
-Copyright (C) 2009-2015 Daniel Beer <dlbeer@gmail.com>
+Copyright (C) 2009-2015 Daniel Beer &lt;dlbeer@gmail.com&gt;
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 Chip info database from MSP430.dll v3.3.1.4 Copyright (C) 2013 TI, Inc.

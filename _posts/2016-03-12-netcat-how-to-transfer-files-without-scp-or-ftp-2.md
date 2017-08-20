@@ -1,13 +1,18 @@
 ---
-author: Piotr Król
+ID: 62991
+post_title: 'Netcat &#8211; how to transfer files without scp or ftp'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Netcat - how to transfer files without scp or ftp"
-post_date: 2016-03-12 15:19:44 +0100
-comments: true
-categories: [Networking, Linux]
+permalink: >
+  http://3mdeb.kleder.co/linux/netcat-how-to-transfer-files-without-scp-or-ftp-2/
 published: true
+post_date: 2016-03-12 15:19:44
+tags: [ ]
+categories:
+  - Linux
+  - Networking
 ---
-
 One of my recent customers provided me hardware with custom Linux system.
 Distribution used on this hardware was very limited there was no developers
 tools, file transfer applications (like scp, ftp or even tftp) or communication
@@ -31,7 +36,7 @@ transfer files.
 What have to be done is setting receiving side ie.:
 
 ```
-nc -l -p 2020 > my_file.bin
+nc -l -p 2020 &gt; my_file.bin
 ```
 
 What tell `nc` to listen on inbound connection (`-l`) on port 2020 (`-p 2020`)
@@ -40,7 +45,7 @@ and redirect content of incoming packages to `my_file.bin`.
 On sender side we pipe `my_file.bin` to nc like that:
 
 ```
-cat my_file.bin | nc <dest_ip_addr> 2020
+cat my_file.bin | nc &lt;dest_ip_addr&gt; 2020
 ```
 
 Which cause `nc` to create TCP connection to `<dest_ip_addr>` on port `2020`

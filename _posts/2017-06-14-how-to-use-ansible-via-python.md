@@ -1,13 +1,18 @@
 ---
-author: Maciej Ruciński
+ID: 63071
+post_title: How to use Ansible via Python
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "How to use Ansible via Python"
-post_date: 2017-06-14 12:00:00 +0100
-comments: true
-categories: [Python, Ansible]
+permalink: >
+  http://3mdeb.kleder.co/python/how-to-use-ansible-via-python/
 published: true
+post_date: 2017-06-14 12:00:00
+tags: [ ]
+categories:
+  - Python
+  - Ansible
 ---
-
 ![alt text](https://cub.nobleprog.com/sites/hitramx/files/styles/height50_scale/public/category_image/cursos-de-ansible-en-mexico.png?itok=xPUrGNrA)
 
 **_Ansible is designed around the way people work and the way people work together_**
@@ -140,11 +145,11 @@ OptParser. Since we're not calling it via CLI, we need something to provide
 options.
 
 ```python
-Options = namedtuple('Options', ['connection', 'module_path', 'forks', 'become', 'become_method', 'become_user', 'check'])
+Options = namedtuple(&#039;Options&#039;, [&#039;connection&#039;, &#039;module_path&#039;, &#039;forks&#039;, &#039;become&#039;, &#039;become_method&#039;, &#039;become_user&#039;, &#039;check&#039;])
 variable_manager = VariableManager()
 loader = DataLoader()
-options = Options(connection='local', module_path='/path/to/mymodules', forks=100, become=None, become_method=None, become_user=None, check=False)
-passwords = dict(vault_pass='secret')
+options = Options(connection=&#039;local&#039;, module_path=&#039;/path/to/mymodules&#039;, forks=100, become=None, become_method=None, become_user=None, check=False)
+passwords = dict(vault_pass=&#039;secret&#039;)
 ```
 
 - Instantiate our `ResultCallback` for handling results as they come in
@@ -159,18 +164,18 @@ precedence consistent. Then create play with tasks - basic jobs we want to
 handle by ansible.
 
 ```python
-inventory = Inventory(loader=loader, variable_manager=variable_manager, host_list='localhost')
+inventory = Inventory(loader=loader, variable_manager=variable_manager, host_list=&#039;localhost&#039;)
 variable_manager.set_inventory(inventory)
 ```
 
 ```python
 play_source =  dict(
-        name = "Ansible Play",
-        hosts = 'localhost',
-        gather_facts = 'no',
+        name = &quot;Ansible Play&quot;,
+        hosts = &#039;localhost&#039;,
+        gather_facts = &#039;no&#039;,
         tasks = [
-            dict(action=dict(module='shell', args='ls'), register='shell_out'),
-            dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
+            dict(action=dict(module=&#039;shell&#039;, args=&#039;ls&#039;), register=&#039;shell_out&#039;),
+            dict(action=dict(module=&#039;debug&#039;, args=dict(msg=&#039;{{shell_out.stdout}}&#039;)))
          ]
     )
 play = Play().load(play_source, variable_manager=variable_manager, loader=loader)

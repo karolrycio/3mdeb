@@ -1,13 +1,22 @@
 ---
-author: Piotr Król
+ID: 63041
+post_title: >
+  Zephyr initial triage on Nucleo-64
+  STM32F411RE
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Zephyr initial triage on Nucleo-64 STM32F411RE"
-post_date: 2017-01-14 22:14:10 +0100
-comments: true
-categories: [Zephyr, STM32, Linux, Embedded]
+permalink: >
+  http://3mdeb.kleder.co/linux/zephyr-initial-triage-on-nucleo-64-stm32f411re/
 published: true
+post_date: 2017-01-14 22:14:10
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - Zephyr
+  - STM32
 ---
-
 As I mention in [previous post](2016/11/23/starting-with-mdeb-os-for-linux-and-command-line-enthusiast)
 [Zephyr RTOS](https://www.zephyrproject.org/) is an interesting initiative
 started by Intel, NXP and couple other strong organizations. With so well
@@ -70,8 +79,8 @@ Using OpenOCD I get libusb access error:
 
 ```
 $ make BOARD=nucleo_f411re flash
-make[1]: Entering directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project'
-make[2]: Entering directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re'
+make[1]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project&#039;
+make[2]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re&#039;
   Using /home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project as source for kernel
   GEN     ./Makefile
   CHK     include/generated/version.h
@@ -94,8 +103,8 @@ Info : Unable to match requested speed 2000 kHz, using 1800 kHz
 Info : clock speed 1800 kHz
 Error: libusb_open() failed with LIBUSB_ERROR_ACCESS
 Error: open failed
-in procedure 'init'
-in procedure 'ocd_bouncer'
+in procedure &#039;init&#039;
+in procedure &#039;ocd_bouncer&#039;
 
 Done flashing
 ```
@@ -116,8 +125,8 @@ The result was:
 
 ```
 [0:39:48] pietrushnic:hello_world git:(arm) $ make BOARD=nucleo_f411re flash
-make[1]: Entering directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project'
-make[2]: Entering directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re'
+make[1]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project&#039;
+make[2]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re&#039;
   Using /home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project as source for kernel
   GEN     ./Makefile
   CHK     include/generated/version.h
@@ -161,8 +170,8 @@ xPSR: 0x01000000 pc: 0x0800203c msp: 0x20000750
 verified 12876 bytes in 0.118510s (106.103 KiB/s)
 shutdown command invoked
 Done flashing
-make[2]: Leaving directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re'
-make[1]: Leaving directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project'
+make[2]: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re&#039;
+make[1]: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project&#039;
 ```
 
 ## Hello world verification
@@ -190,8 +199,8 @@ just pulling it cause lot of conflicts.
 After correctly building I flashed binary to board:
 
 ```
-make[1]: Entering directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project'
-make[2]: Entering directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re'
+make[1]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project&#039;
+make[2]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re&#039;
   Using /home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project as source for kernel
   GEN     ./Makefile
   CHK     include/generated/version.h
@@ -234,8 +243,8 @@ xPSR: 0x01000000 pc: 0x08001c84 msp: 0x20000750
 verified 11900 bytes in 0.109678s (105.956 KiB/s)
 shutdown command invoked
 Done flashing
-make[2]: Leaving directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re'
-make[1]: Leaving directory '/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project'
+make[2]: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project/samples/hello_world/outdir/nucleo_f411re&#039;
+make[1]: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/2016/acme/zephyr_support/src/zephyr-project&#039;
 ```
 
 Log looks the same as previously, but this time on `/dev/ttyACM0` I found some

@@ -1,13 +1,24 @@
 ---
-author: Michał Żygowski
+ID: 63076
+post_title: >
+  How to handle a DHT22 sensor using ARM
+  mbed OS?
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "How to handle a DHT22 sensor using ARM mbed OS?"
-post_date: 2017-08-1 14:14:55 +0200
-comments: true
-categories: [Sensors, Measurements, DHT22, 1-wire, Mbed, STM32]
+permalink: >
+  http://3mdeb.kleder.co/mbed/how-to-handle-a-dht22-sensor-using-arm-mbed-os/
 published: true
+post_date: 2017-08-01 14:14:55
+tags: [ ]
+categories:
+  - Mbed
+  - STM32
+  - Sensors
+  - Measurements
+  - DHT22
+  - 1-wire
 ---
-
 Recently I have encountered with temperature and humidity measurements using
 DHT22 sensor. I was developing a driver source code in ARM mbed OS SDK on
 particular STM32 NUCLEO L432KC platform. Thorough analysis of DHT22
@@ -81,26 +92,26 @@ microseconds. To detect it, a do-while loop can be used:
 
 do {
     n = timer.read_us();
-    if(n > TIMEOUT) {
+    if(n &gt; TIMEOUT) {
         timer.stop();
         return DHT_RESPONSE_TIMEOUT;
     }
     // measure the voltage level duration as long 
-    // as data line's state does not change
+    // as data line&#039;s state does not change
 } while(dht_data.read() == 1);
 
 // reset the timer as soon as data line changes state
 // to ensure continuity and validity of voltage level measurement 
 timer.reset();
 // check
-if((n < 20) || (n > 40)) {
+if((n &lt; 20) || (n &gt; 40)) {
     timer.stop();
     return DHT_RESPONSE_ERROR;
 }
 
 do {
     n = timer.read_us();
-    if(n > TIMEOUT) {
+    if(n &gt; TIMEOUT) {
         timer.stop();
         return DHT_RESPONSE_TIMEOUT;
     }
@@ -114,7 +125,7 @@ if(n != 80) {
 
 do {
     n = timer.read_us();
-    if(n > TIMEOUT) {
+    if(n &gt; TIMEOUT) {
         timer.stop();
         return DHT_RESPONSE_TIMEOUT;
     }
@@ -157,7 +168,7 @@ the sensor's read protocol. So the time restrictions should be provided as
 follows:
 
 ```c
-if((n < 70) || (n > 100)) {
+if((n &lt; 70) || (n &gt; 100)) {
     timer.stop();
     return DHT_RESPONSE_ERROR;
 }
@@ -177,11 +188,11 @@ Most significant bit goes first.
 Reading and storing entire data can be done like this:
 
 ```c
-for(int i = 0; i < N_BYTES; i++) {
-    for (int b = 0; b < N_BITS; b++) {
+for(int i = 0; i &lt; N_BYTES; i++) {
+    for (int b = 0; b &lt; N_BITS; b++) {
         do {
             n = timer.read_us();
-            if(n > TIMEOUT) {
+            if(n &gt; TIMEOUT) {
                 timer.stop();
                 return DHT_READ_BIT_TIMEOUT;
             }
@@ -195,19 +206,19 @@ for(int i = 0; i < N_BYTES; i++) {
 
         do {
             n = timer.read_us();
-            if(n > TIMEOUT) {
+            if(n &gt; TIMEOUT) {
                 timer.stop();
                 return DHT_READ_BIT_TIMEOUT;
             }
         } while(dht_data.read() == 1);
         timer.reset();
 
-        if((n > 26) && (n < 28)) {
-            /* Received '0' */
-            buffer[i] <<= 1;
+        if((n &gt; 26) &amp;&amp; (n &lt; 28)) {
+            /* Received &#039;0&#039; */
+            buffer[i] &lt;&lt;= 1;
         } else if (n == 70) {
-            /* Received '1' */
-            buffer[i] = ((buffer[i] << 1) | 1);
+            /* Received &#039;1&#039; */
+            buffer[i] = ((buffer[i] &lt;&lt; 1) | 1);
         }
     }
 }
@@ -230,19 +241,19 @@ all bytes without returning an error, I have adjusted the time restrictions in
 `if` expressions with following values:
 
 ```c
-if((n < 45) || (n > 70)) {
+if((n &lt; 45) || (n &gt; 70)) {
 	timer.stop();
     return DHT_READ_BIT_ERROR;
 }
 
 // ...
 
-if((n > 15) && (n < 35)) {
-    /* Received '0' */
-    buffer[i] <<= 1;
-} else if ((n > 65) && (n < 80)) {
-    /* Received '1' */
-    buffer[i] = ((buffer[i] << 1) | 1);
+if((n &gt; 15) &amp;&amp; (n &lt; 35)) {
+    /* Received &#039;0&#039; */
+    buffer[i] &lt;&lt;= 1;
+} else if ((n &gt; 65) &amp;&amp; (n &lt; 80)) {
+    /* Received &#039;1&#039; */
+    buffer[i] = ((buffer[i] &lt;&lt; 1) | 1);
 }
 
 ```

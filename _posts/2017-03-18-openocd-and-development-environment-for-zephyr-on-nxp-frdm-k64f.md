@@ -1,13 +1,24 @@
 ---
-author: Piotr Król
+ID: 63056
+post_title: >
+  OpenOCD and development environment for
+  Zephyr on NXP FRDM-K64F
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "OpenOCD and development environment for Zephyr on NXP FRDM-K64F"
-post_date: 2017-03-18 15:27:05 +0100
-comments: true
-categories: [NXP, Frdm-k64f, Embedded, Zephyr, Openocd, Segger]
+permalink: >
+  http://3mdeb.kleder.co/embedded/openocd-and-development-environment-for-zephyr-on-nxp-frdm-k64f/
 published: true
+post_date: 2017-03-18 15:27:05
+tags: [ ]
+categories:
+  - Embedded
+  - Zephyr
+  - Openocd
+  - NXP
+  - Frdm-k64f
+  - Segger
 ---
-
 In this post I would like to describe process of setting up NXP FRDM-K64F
 development environment under Linux and start Zephyr development using it.
 
@@ -33,7 +44,7 @@ ability to debug your target platform that's why I wrote this tutorial.
 I started with initial triage if my NXP FRDM-K64F board works:
 
 ```
-git clone https://gerrit.zephyrproject.org/r/zephyr && cd zephyr && git checkout tags/v1.7.0
+git clone https://gerrit.zephyrproject.org/r/zephyr &amp;&amp; cd zephyr &amp;&amp; git checkout tags/v1.7.0
 cd zephyr
 git checkout net
 source zephyr-env.sh
@@ -54,22 +65,22 @@ using typical Zephyr OS command:
 
 ```
 [15:16:13] pietrushnic:hello_world git:(k64f-ethernet) $ make BOARD=frdm_k64f flash
-make[1]: Entering directory '/home/pietrushnic/storage/wdc/projects/2017/acme/src/zephyr'
-make[2]: Entering directory '/home/pietrushnic/storage/wdc/projects/2017/acme/src/zephyr/samples/hello_world/outdir/frdm_k64f'
+make[1]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2017/acme/src/zephyr&#039;
+make[2]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/2017/acme/src/zephyr/samples/hello_world/outdir/frdm_k64f&#039;
   Using /home/pietrushnic/storage/wdc/projects/2017/acme/src/zephyr as source for kernel
   GEN     ./Makefile
   CHK     include/generated/version.h
   CHK     misc/generated/configs.c
   CHK     include/generated/generated_dts_board.h
   CHK     include/generated/offsets.h
-make[3]: 'isr_tables.o' is up to date.
+make[3]: &#039;isr_tables.o&#039; is up to date.
 Flashing frdm_k64f
 Flashing Target Device
 Open On-Chip Debugger 0.9.0-dirty (2016-08-02-16:04)
 Licensed under GNU GPL v2
 For bug reports, read
         http://openocd.org/doc/doxygen/bugs.html
-Info : only one transport option; autoselect 'swd'
+Info : only one transport option; autoselect &#039;swd&#039;
 Info : add flash_bank kinetis k60.flash
 adapter speed: 1000 kHz
 none separate
@@ -151,7 +162,7 @@ OPENOCD=/usr/local/bin/openocd make BOARD=frdm_k64f flash
 On terminal I saw:
 
 ```
-zperf>
+zperf&gt;
 [zperf_init] Setting IP address 2001:db8::1
 [zperf_init] Setting destination IP address 2001:db8::2
 [zperf_init] Setting IP address 192.0.2.1
@@ -167,7 +178,7 @@ in Zephyr development. I tried to debug that problem.
 To debug zpref application I used tui mode of gdb:
 
 ```
-OPENOCD=/usr/local/bin/openocd TUI="--tui" make BOARD=frdm_k64f debug
+OPENOCD=/usr/local/bin/openocd TUI=&quot;--tui&quot; make BOARD=frdm_k64f debug
 ```
 
 Please note that before debugging you have to flash application to your target.
@@ -189,7 +200,7 @@ suggestion was to use KDS IDE.
 In general there were two issues I faced:
 
 ```
-Error: 123323 44739 target.c:2898 target_wait_state(): timed out (>40000) while waiting for target halted
+Error: 123323 44739 target.c:2898 target_wait_state(): timed out (&gt;40000) while waiting for target halted
 (...)
 Error: 123917 44934 armv7m.c:723 armv7m_checksum_memory(): error executing cortex_m crc algorithm (retval=-302)
 ```
@@ -266,7 +277,7 @@ Setting up kinetis-design-studio (3.2.0) ...
 *          packages before building software with these tools.       *
 *                                                                    *
 *          For more details see:                                     *
-*          - KDS_Users_Guide.pdf:"Installing Kinetis Design Studio". *
+*          - KDS_Users_Guide.pdf:&quot;Installing Kinetis Design Studio&quot;. *
 *          - The Kinetis Design Studio release notes.                *
 **********************************************************************
 Processing triggers for gnome-menus (3.13.3-9) ...
@@ -318,8 +329,8 @@ q
 Then you can use `JLinkGDBServer` for debugging purposes:
 
 ```
-/opt/Freescale/KDS_v3/segger/JLinkGDBServer -if swd -device MK64FN1M0VLL12 \
--endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd \
+/opt/Freescale/KDS_v3/segger/JLinkGDBServer -if swd -device MK64FN1M0VLL12 
+-endian little -speed 1000 -port 2331 -swoport 2332 -telnetport 2333 -vd 
 -ir -localhostonly 1 -singlerun -strict -timeout 0
 ```
 
@@ -368,7 +379,7 @@ To debug application you can use debugger provided wit Zephyr SDK that you used
 to compile application.
 
 ```
-cgdb -d $ZEPHYR_SDK_INSTALL_DIR/sysroots/x86_64-pokysdk-linux/usr/bin/arm-zephyr-eabi/arm-zephyr-eabi-gdb \
+cgdb -d $ZEPHYR_SDK_INSTALL_DIR/sysroots/x86_64-pokysdk-linux/usr/bin/arm-zephyr-eabi/arm-zephyr-eabi-gdb 
 outdir/frdm_k64f/zephyr.elf
 ```
 
@@ -384,18 +395,18 @@ For `zperf` same application output should look like that:
 ```
 GNU gdb (GDB) 7.11.0.20160511-git
 Copyright (C) 2016 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
 This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
-and "show warranty" for details.
-This GDB was configured as "--host=x86_64-pokysdk-linux --target=arm-zephyr-eabi".
-Type "show configuration" for configuration details.
+There is NO WARRANTY, to the extent permitted by law.  Type &quot;show copying&quot;
+and &quot;show warranty&quot; for details.
+This GDB was configured as &quot;--host=x86_64-pokysdk-linux --target=arm-zephyr-eabi&quot;.
+Type &quot;show configuration&quot; for configuration details.
 For bug reporting instructions, please see:
-<http://www.gnu.org/software/gdb/bugs/>.
+&lt;http://www.gnu.org/software/gdb/bugs/&gt;.
 Find the GDB manual and other documentation resources online at:
-<http://www.gnu.org/software/gdb/documentation/>.
-For help, type "help".
-Type "apropos word" to search for commands related to "word"...
+&lt;http://www.gnu.org/software/gdb/documentation/&gt;.
+For help, type &quot;help&quot;.
+Type &quot;apropos word&quot; to search for commands related to &quot;word&quot;...
 Reading symbols from outdir/frdm_k64f/zephyr.elf...done.
 (gdb) target remote :2331
 Remote debugging using :2331
@@ -442,4 +453,3 @@ Zephyr what can be good for people starting.
 If you struggle with development on FRDM-K64F or have some issues with Zephyr
 we would be glad help. You can easily contact us via [socialmedia](https://twitter.com/3mdeb_com) or through email
 `contact<at>3mdeb<dot>com`. Please share this post if you feel it has valuable information.
-

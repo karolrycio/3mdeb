@@ -1,13 +1,21 @@
 ---
-author: Kamil Wcisło, Piotr Król
+ID: 63046
+post_title: >
+  nRF51822 programming with OpenOCD under
+  Linux
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "nRF51822 programming with OpenOCD under Linux"
-post_date: 2017-01-22 00:13:00 +0100
-comments: true
-categories: [Nrf51822, Linux, Openocd]
+permalink: >
+  http://3mdeb.kleder.co/linux/nrf51822-programming-with-openocd-under-linux/
 published: true
+post_date: 2017-01-22 00:13:00
+tags: [ ]
+categories:
+  - Linux
+  - Nrf51822
+  - Openocd
 ---
-
 Some time ago we bought [BLE400 from Waveshare] as probably one of the cheapest 
 option to enter nRF51822 market. As our readers know, we prefer to use the Linux 
 environment for embedded systems development. Because of that, we're following the
@@ -74,8 +82,8 @@ Note the `ID's: 0483:3748`. Create rule in
 `/etc/udev/rules.d` (as `root`):
 
 ```
-$ cat > /etc/udev/rules.d/95-usb-stlink-v2.rules << EOF
-SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="3748", GROUP="users", MODE="0666"
+$ cat &gt; /etc/udev/rules.d/95-usb-stlink-v2.rules &lt;&lt; EOF
+SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;0483&quot;, ATTR{idProduct}==&quot;3748&quot;, GROUP=&quot;users&quot;, MODE=&quot;0666&quot;
 EOF
 ```
 
@@ -101,7 +109,7 @@ Open On-Chip Debugger 0.9.0 (2016-04-27-23:18)
 Licensed under GNU GPL v2
 For bug reports, read
 	http://openocd.org/doc/doxygen/bugs.html
-Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : auto-selecting first available session transport &quot;hla_swd&quot;. To override use &#039;transport select &lt;transport&gt;&#039;.
 Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
 adapter speed: 1000 kHz
 Info : Unable to match requested speed 1000 kHz, using 950 kHz
@@ -119,15 +127,15 @@ If you see error like this:
 censed under GNU GPL v2
 For bug reports, read
         http://openocd.org/doc/doxygen/bugs.html
-Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : auto-selecting first available session transport &quot;hla_swd&quot;. To override use &#039;transport select &lt;transport&gt;&#039;.
 Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
 adapter speed: 1000 kHz
 Info : Unable to match requested speed 1000 kHz, using 950 kHz
 Info : Unable to match requested speed 1000 kHz, using 950 kHz
 Info : clock speed 950 kHz
 Error: open failed
-in procedure 'init'
-in procedure 'ocd_bouncer'
+in procedure &#039;init&#039;
+in procedure &#039;ocd_bouncer&#039;
 ```
 
 This means you may have `STLink v2.1`, so your command should look like this:
@@ -138,7 +146,7 @@ Open On-Chip Debugger 0.10.0-dev-00395-g674141e8a7a6 (2016-10-20-15:01)
 Licensed under GNU GPL v2
 For bug reports, read
         http://openocd.org/doc/doxygen/bugs.html
-Info : auto-selecting first available session transport "hla_swd". To override use 'transport select <transport>'.
+Info : auto-selecting first available session transport &quot;hla_swd&quot;. To override use &#039;transport select &lt;transport&gt;&#039;.
 Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
 adapter speed: 1000 kHz
 Info : Unable to match requested speed 1000 kHz, using 950 kHz
@@ -158,13 +166,13 @@ This sample connection, to check everything is ok:
 $ telnet 127.0.0.1 4444
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
-Escape character is '^]'.
+Escape character is &#039;^]&#039;.
 Open On-Chip Debugger
-> halt
+&gt; halt
 target state: halted
 target halted due to debug-request, current mode: Thread
 xPSR: 0x61000000 pc: 0x00011434 msp: 0x200022a8
-> reg
+&gt; reg
 ===== arm v7m registers
 (0) r0 (/32): 0x20000093
 (1) r1 (/32): 0x0000003B
@@ -198,8 +206,8 @@ xPSR: 0x61000000 pc: 0x00011434 msp: 0x200022a8
 (28) dwt_1_comp (/32)
 (29) dwt_1_mask (/4)
 (30) dwt_1_function (/32)
-> reset
-> exit
+&gt; reset
+&gt; exit
 Connection closed by foreign host.
 ```
 
@@ -218,13 +226,13 @@ it:
 $ telnet 127.0.0.1 4444
 Trying 127.0.0.1...
 Connected to 127.0.0.1.
-Escape character is '^]'.
+Escape character is &#039;^]&#039;.
 Open On-Chip Debugger
-> halt
+&gt; halt
 target state: halted
 target halted due to debug-request, current mode: Handler HardFault
 xPSR: 0xc1000003 pc: 0xfffffffe msp: 0xffffffd8
-> program /home/mek/work/nrf51/sdk/examples/peripheral/blinky/hex/blinky_pca10028.hex
+&gt; program /home/mek/work/nrf51/sdk/examples/peripheral/blinky/hex/blinky_pca10028.hex
 target state: halted
 target halted due to debug-request, current mode: Thread
 xPSR: 0xc1000000 pc: 0xfffffffe msp: 0xfffffffc
@@ -232,21 +240,21 @@ xPSR: 0xc1000000 pc: 0xfffffffe msp: 0xfffffffc
 auto erase enabled
 using fast async flash loader. This is currently supported
 only with ST-Link and CMSIS-DAP. If you have issues, add
-"set WORKAREASIZE 0" before sourcing nrf51.cfg to disable it
+&quot;set WORKAREASIZE 0&quot; before sourcing nrf51.cfg to disable it
 target state: halted
 target halted due to breakpoint, current mode: Thread
 xPSR: 0x61000000 pc: 0x2000001e msp: 0xfffffffc
 wrote 2048 bytes from file /path/to/nrf51/sdk/examples/peripheral/blinky/hex/blinky_pca10028.hex in 0.114289s (17.499 KiB/s)
 ** Programming Finished **
-> reset
-> exit
+&gt; reset
+&gt; exit
 Connection closed by foreign host.
 ```
 
 During that procedure you may face this problem:
 
 ```
-> program /path/to/work/nrf51/sdk/examples/peripheral/blinky/hex/blinky_pca10028.hex
+&gt; program /path/to/work/nrf51/sdk/examples/peripheral/blinky/hex/blinky_pca10028.hex
 nrf51.cpu: target state: halted
 target halted due to debug-request, current mode: Thread
 xPSR: 0xc1000000 pc: 0x00012b98 msp: 0x20001c48
@@ -255,9 +263,9 @@ auto erase enabled
 Cannot erase protected sector at 0x0
 failed erasing sectors 0 to 1
 embedded:startup.tcl:454: Error: ** Programming Failed **
-in procedure 'program'
-in procedure 'program_error' called at file "embedded:startup.tcl", line 510
-at file "embedded:startup.tcl", line 454
+in procedure &#039;program&#039;
+in procedure &#039;program_error&#039; called at file &quot;embedded:startup.tcl&quot;, line 510
+at file &quot;embedded:startup.tcl&quot;, line 454
 ```
 
 To solve that please issue `nrf51 mass_erase` and retry program command. This
@@ -273,22 +281,22 @@ I've created this script to simplify the flashing operation:
 #!/bin/bash
 
 if [ $# -lt 1 ]; then
-    echo "Usage: $0 BINARY_HEX"
+    echo &quot;Usage: $0 BINARY_HEX&quot;
     exit 0
 fi
 
 if [ ! -f $1 ]; then
-    echo "$1: file not found"
+    echo &quot;$1: file not found&quot;
     exit 1
 fi
 
-openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg \
--c "init" \
--c "halt" \
--c "nrf51 mass_erase" \
--c "program $1" \
--c "reset" \
--c "exit"
+openocd -f interface/stlink-v2.cfg -f target/nrf51.cfg 
+-c &quot;init&quot; 
+-c &quot;halt&quot; 
+-c &quot;nrf51 mass_erase&quot; 
+-c &quot;program $1&quot; 
+-c &quot;reset&quot; 
+-c &quot;exit&quot;
 ```
 
 Note: `openocd` does not accept filenames containing space in path.
