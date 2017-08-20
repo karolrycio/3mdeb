@@ -3,7 +3,7 @@ ID: 63041
 post_title: >
   Zephyr initial triage on Nucleo-64
   STM32F411RE
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
