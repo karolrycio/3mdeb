@@ -3,7 +3,7 @@ ID: 63046
 post_title: >
   nRF51822 programming with OpenOCD under
   Linux
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
