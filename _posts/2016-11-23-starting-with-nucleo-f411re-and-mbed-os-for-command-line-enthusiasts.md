@@ -3,7 +3,7 @@ ID: 63026
 post_title: >
   Starting with Nucleo-F411RE and mbed OS
   for command line enthusiasts
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
