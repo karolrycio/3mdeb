@@ -1,7 +1,7 @@
 ---
 ID: 62756
 post_title: 'Mutt tutorial part 3 &#8211; sidebar, URLs in e-mails'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
