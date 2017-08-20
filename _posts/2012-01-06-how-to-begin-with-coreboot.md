@@ -1,7 +1,7 @@
 ---
 ID: 62648
 post_title: How to begin with coreboot
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
