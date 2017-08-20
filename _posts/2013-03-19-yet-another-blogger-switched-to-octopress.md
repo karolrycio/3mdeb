@@ -3,7 +3,7 @@ ID: 62791
 post_title: >
   Yet another blogger switched to
   Octopress
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
