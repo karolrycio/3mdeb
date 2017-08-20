@@ -1,7 +1,7 @@
 ---
 ID: 62881
 post_title: Linux, RPi and USB over IP
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
