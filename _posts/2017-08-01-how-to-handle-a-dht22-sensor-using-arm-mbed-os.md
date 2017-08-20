@@ -1,13 +1,24 @@
 ---
-author: Michał Żygowski
+ID: 62540
+post_title: >
+  How to handle a DHT22 sensor using ARM
+  mbed OS?
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "How to handle a DHT22 sensor using ARM mbed OS?"
-post_date: 2017-08-1 14:14:55 +0200
-comments: true
-categories: [Sensors, Measurements, DHT22, 1-wire, Mbed, STM32]
+permalink: >
+  http://3mdeb.kleder.co/mbed/how-to-handle-a-dht22-sensor-using-arm-mbed-os/
 published: true
+post_date: 2017-08-01 14:14:55
+tags: [ ]
+categories:
+  - Mbed
+  - STM32
+  - Sensors
+  - Measurements
+  - DHT22
+  - 1-wire
 ---
-
 Recently I have encountered with temperature and humidity measurements using
 DHT22 sensor. I was developing a driver source code in ARM mbed OS SDK on
 particular STM32 NUCLEO L432KC platform. Thorough analysis of DHT22
