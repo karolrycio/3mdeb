@@ -3,7 +3,7 @@ ID: 62786
 post_title: >
   Short hint for all those who use vim and
   pathogen
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
