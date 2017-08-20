@@ -1,7 +1,7 @@
 ---
 ID: 62665
 post_title: UEFI from Linux enthusiast perspective
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
