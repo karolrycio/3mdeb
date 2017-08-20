@@ -3,7 +3,7 @@ ID: 62911
 post_title: >
   Setup for Linux kernel development on
   Cubietruck
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
