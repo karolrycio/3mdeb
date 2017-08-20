@@ -1,7 +1,7 @@
 ---
 ID: 62891
 post_title: 'virtualbox-dkms: fix alloc_netdev problems when compiling with 3.17.0-rcX headers'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
