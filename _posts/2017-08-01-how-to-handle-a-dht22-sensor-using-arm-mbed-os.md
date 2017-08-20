@@ -18,7 +18,7 @@ categories:
   - Measurements
   - DHT22
   - 1-wire
----
+--- 
 Recently I have encountered with temperature and humidity measurements using
 DHT22 sensor. I was developing a driver source code in ARM mbed OS SDK on
 particular STM32 NUCLEO L432KC platform. Thorough analysis of DHT22
