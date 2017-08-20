@@ -1,7 +1,7 @@
 ---
 ID: 62744
 post_title: Vim as a Blogger editor
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
