@@ -1,7 +1,7 @@
 ---
 ID: 63006
 post_title: Powering on LeMaker HiKey (ARMv8)
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
