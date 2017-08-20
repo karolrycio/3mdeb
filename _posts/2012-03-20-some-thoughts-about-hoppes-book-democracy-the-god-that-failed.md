@@ -1,7 +1,7 @@
 ---
 ID: 62719
 post_title: 'Some thoughts about Hoppe&#8217;s book Democracy &#8211; The God That Failed'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
