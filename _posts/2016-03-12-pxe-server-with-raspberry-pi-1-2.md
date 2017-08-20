@@ -1,7 +1,7 @@
 ---
 ID: 62996
 post_title: PXE server with Raspberry Pi 1
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
