@@ -1,7 +1,7 @@
 ---
 ID: 62751
 post_title: 'Mutt tutorial part 2 &#8211; secure login'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
