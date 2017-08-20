@@ -24,7 +24,7 @@ DHT22 sensor. I was developing a driver source code in ARM mbed OS SDK on
 particular STM32 NUCLEO L432KC platform. Thorough analysis of DHT22
 [documentation](https://cdn-shop.adafruit.com/datasheets/Digital+humidity+and+temperature+sensor+AM2302.pdf)
 led me to the following questions:
-
+ 
 
 - Is it possible to accurately measure voltage-level durations during read 
 process?
