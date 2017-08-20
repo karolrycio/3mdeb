@@ -4,7 +4,7 @@ post_title: >
   Failure of ECC508A crypto coprocessor
   initial triage with SAM G55 Xplained Pro
   Evaluation Kit
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
