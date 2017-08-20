@@ -1,11 +1,16 @@
 ---
-author: Piotr Król
+ID: 62646
+post_title: flashrom and Shuttle AV18E2
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "flashrom and Shuttle AV18E2"
-post_date: 2012-01-06 14:31:00+01:00
-comments: true
-categories: Coreboot
+permalink: >
+  http://3mdeb.kleder.co/coreboot/flashrom-and-shuttle-av18e2/
 published: true
+post_date: 2012-01-06 14:31:00
+tags: [ ]
+categories:
+  - Coreboot
 ---
 During Christmas break I found an old unused motherboard in my home, right away
 I thought that it maybe useful as learning environment for coreboot. First you
@@ -26,13 +31,13 @@ checked if the Winbond W49F002U chip on it is supported by flashrom.
 Fortunately it was. After that I read my BIOS by:
 
 ```
-flashrom -Vr bios\_bckp.bin
+flashrom -Vr bios_bckp.bin
 ```
 
 And write it by:
 
 ```
-flashrom -Vw bios\_bckp.bin
+flashrom -Vw bios_bckp.bin
 ```
 
 At the end I've got VERIFIED message but when I look carefully inside the log

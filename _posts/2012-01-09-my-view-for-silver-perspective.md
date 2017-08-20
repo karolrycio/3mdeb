@@ -1,13 +1,17 @@
 ---
-author: Piotr Król
+ID: 62660
+post_title: My view for silver perspective
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "My view for silver perspective"
-post_date: 2012-01-09 22:31:00+01:00
-comments: true
-categories: Commodity
+permalink: >
+  http://3mdeb.kleder.co/commodity/my-view-for-silver-perspective/
 published: true
+post_date: 2012-01-09 22:31:00
+tags: [ ]
+categories:
+  - Commodity
 ---
-
 In the morning when reading RSS feeds (I should think about placing its list somewhere on the blog) from several sources the information came to me that silver is highly underrated recent times. I try to carefully analyze such information, despite the fact that I use more of niche sources of information and what is in them is served rather carefully selected. Although I looked at this subject a little closer.  
     
     

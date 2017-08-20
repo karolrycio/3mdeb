@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62670
+post_title: >
+  First steps to improve work productivity
+  in Linux environment
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "First steps to improve work productivity in Linux environment"
-post_date: 2012-02-05 03:08:00+01:00
-comments: true
-categories: Productivity
+permalink: >
+  http://3mdeb.kleder.co/productivity/first-steps-to-improve-work-productivity-in-linux-environment/
 published: true
+post_date: 2012-02-05 03:08:00
+tags: [ ]
+categories:
+  - Productivity
 ---
-
 The problem encountered on several occasions over several months. Now it is time to deal with it. How did this happen? As always, resources were not sufficient, and if we can not increase the amount of resources we must strive to optimize their use.In this case, it was about time.  
     
     
@@ -19,4 +25,3 @@ How this process looks like? First we need new account, it should get automatica
     
 
   ![](http://4.bp.blogspot.com/-JCXeznxAkyM/Ty3jqvKH1UI/AAAAAAAAAD8/6Rye6fkesjM/s640/improve_productivity.png)
-    

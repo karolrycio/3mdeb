@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62680
+post_title: >
+  Set irssi under debian to use freenode
+  server
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Set irssi under debian to use freenode server"
-post_date: 2012-02-15 20:25:00+01:00
-comments: true
-categories: Linux
+permalink: >
+  http://3mdeb.kleder.co/linux/set-irssi-under-debian-to-use-freenode-server/
 published: true
+post_date: 2012-02-15 20:25:00
+tags: [ ]
+categories:
+  - Linux
 ---
-
 Very short manual on how to set up irssi to work with freenode servers.  
 Fist, install irssi:  
 
@@ -27,6 +33,4 @@ irssi For freenode write:
 
 /channel ADD -auto #debian freenode After all we should save settings:  
 
-/save That's all, enjoy!  
-
-    
+/save That's all, enjoy!

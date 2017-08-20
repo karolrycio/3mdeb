@@ -1,13 +1,17 @@
 ---
-author: Piotr Król
+ID: 62665
+post_title: UEFI from Linux enthusiast perspective
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "UEFI from Linux enthusiast perspective"
-post_date: 2012-01-15 23:04:00+01:00
-comments: true
-categories: UEFI
+permalink: >
+  http://3mdeb.kleder.co/uefi/uefi-from-linux-enthusiast-perspective/
 published: true
+post_date: 2012-01-15 23:04:00
+tags: [ ]
+categories:
+  - UEFI
 ---
-
 Another interesting topic with which I am dealing with recently is the
 [UEFI](http://www.uefi.org/home/). As we read on wikipedia: "The Unified
 Extensible Firmware Interface (UEFI) is a specification that defines a software

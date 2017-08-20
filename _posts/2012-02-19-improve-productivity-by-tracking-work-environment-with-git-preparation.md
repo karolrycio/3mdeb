@@ -1,11 +1,17 @@
 ---
-author: Piotr Król
+ID: 62685
+post_title: 'Improve productivity by tracking work environment with git &#8211; preparation'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Improve productivity by tracking work environment with git - preparation"
-post_date: 2012-02-19 21:12:00+01:00
-comments: true
-categories: [Productivity, Linux]
+permalink: >
+  http://3mdeb.kleder.co/productivity/improve-productivity-by-tracking-work-environment-with-git-preparation/
 published: true
+post_date: 2012-02-19 21:12:00
+tags: [ ]
+categories:
+  - Productivity
+  - Linux
 ---
 _Update_: My repository is available 
 [here](https://github.com/pietrushnic/workspace.git).
@@ -28,7 +34,7 @@ Write some files (i.e. for your blog) with your favourite editor, initialize
 repository and prepare first commit  
 ```
 git init
-git add .;git commit -m "Initial commit for environment tracking" 
+git add .;git commit -m &quot;Initial commit for environment tracking&quot; 
 ```
 
 To avoid information about untracked vim swp files add $HOME/workspace/.gitignore with following content:  

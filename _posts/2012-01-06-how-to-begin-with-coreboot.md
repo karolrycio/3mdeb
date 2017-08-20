@@ -1,13 +1,17 @@
 ---
-author: Piotr Król
+ID: 62648
+post_title: How to begin with coreboot
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "How to begin with coreboot"
-post_date: 2012-01-06 14:23:00+01:00
-comments: true
-categories: Coreboot
+permalink: >
+  http://3mdeb.kleder.co/coreboot/how-to-begin-with-coreboot/
 published: true
+post_date: 2012-01-06 14:23:00
+tags: [ ]
+categories:
+  - Coreboot
 ---
-
 About a month ago I started my adventure with coreboot. As [coreboot
 home](http://www.coreboot.org/) page says "coreboot is a Free Software project
 aimed at replacing the proprietary BIOS (firmware) found in most
