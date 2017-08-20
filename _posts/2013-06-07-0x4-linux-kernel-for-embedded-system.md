@@ -1,7 +1,7 @@
 ---
 ID: 62821
 post_title: '0x4: Linux kernel for embedded system'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
