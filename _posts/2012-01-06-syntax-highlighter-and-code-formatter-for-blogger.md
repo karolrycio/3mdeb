@@ -3,7 +3,7 @@ ID: 62651
 post_title: >
   Syntax highlighter and code formatter
   for Blogger
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
