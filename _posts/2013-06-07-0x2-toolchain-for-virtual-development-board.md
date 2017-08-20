@@ -1,7 +1,7 @@
 ---
 ID: 62841
 post_title: '0x2: Toolchain for Virtual Development Board'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
