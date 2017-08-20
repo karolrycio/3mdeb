@@ -1,13 +1,20 @@
 ---
-author: Piotr Król
+ID: 62921
+post_title: Linux, RPi and USB over IP updated
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Linux, RPi and USB over IP updated"
-post_date: 2015-10-27 12:50:03 +0100
-comments: true
-categories: [Usbip, RaspberryPi, Linux, Embedded]
+permalink: >
+  http://3mdeb.kleder.co/linux/linux-rpi-and-usb-over-ip-updated/
 published: true
+post_date: 2015-10-27 12:50:03
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - RaspberryPi
+  - Usbip
 ---
-
 Because of increasing interesting in USB over IP topic I decided to refresh my
 [old post](2014/08/18/linux-rpi-and-usb-over-ip/). I will focus on doing the
 same thing with more recent version of Raspabian. If you need more information
@@ -27,7 +34,7 @@ If you are impatient and want to know what happen in background you can use
 this method of tracking dd progress:
 
 ```
-sudo sh -c "while true; do killall -USR1 dd; sleep 1; done"
+sudo sh -c &quot;while true; do killall -USR1 dd; sleep 1; done&quot;
 ```
 
 Before removing card we have to be sure that all data were wrote to card:
@@ -87,7 +94,7 @@ pi@raspberrypi ~ $ usbip list -l
     Standard Microsystems Corp. : SMSC9512/9514 Fast Ethernet Adapter (0424:ec00)
 ```
 
-Let's put some memory stick and check again:
+Let&#039;s put some memory stick and check again:
 
 ```
 pi@raspberrypi ~ $ usbip list -l
@@ -134,7 +141,7 @@ CONFIG_USBIP_HOST=m
 # CONFIG_USBIP_DEBUG is not set
 ```
 
-Everything looks ok. Let's load hos module:
+Everything looks ok. Let&#039;s load hos module:
 
 ```
 sudo modprobe vhci-hcd
@@ -163,7 +170,7 @@ Device     Start   End Sectors  Size Type
 EFI  shellia32.efi  shellx64.efi  shellx64-refind-signed.efi
 ```
 
-Let's left some signs:
+Let&#039;s left some signs:
 
 ```
 [13:30:55] pietrushnic:~ $ sudo sh -c "echo DEADBEEF > tmp/foobar"
@@ -184,7 +191,7 @@ Port 00: <Port in Use> at High Speed(480Mbps)
 [13:33:39] pietrushnic:~ $ sudo usbip detach -p 0
 ```
 
-First let's unbind:
+First let&#039;s unbind:
 
 ```
 pi@raspberrypi ~ $ sudo usbip unbind -b 1-1.3
@@ -214,5 +221,3 @@ please let me know in comments. If you think this post can be useful for others
 please share.
 
 Thanks for reading.
-
-

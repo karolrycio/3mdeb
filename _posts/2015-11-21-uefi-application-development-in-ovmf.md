@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62926
+post_title: UEFI Application development in OVMF
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "UEFI Application development in OVMF"
-post_date: 2015-11-21 11:18:52 +0100
-comments: true
-categories: [UEFI, OVMF, QEMU]
+permalink: >
+  http://3mdeb.kleder.co/uefi/uefi-application-development-in-ovmf/
 published: true
+post_date: 2015-11-21 11:18:52
+tags: [ ]
+categories:
+  - UEFI
+  - QEMU
+  - OVMF
 ---
-
 OVMF (_Open Virtual Machine Firmware_) is a project that aim is to enable UEFI
 support in various virutal machines. According to
 [whitepaper](http://www.linux-kvm.org/downloads/lersek/ovmf-whitepaper-c770f8c.txt)

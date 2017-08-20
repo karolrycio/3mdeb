@@ -1,13 +1,22 @@
 ---
-author: Piotr Król
+ID: 62916
+post_title: >
+  Building Android 4.2 LiveSuit image for
+  Cubietruck (Allwinner A20)
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Building Android 4.2 LiveSuit image for Cubietruck (Allwinner A20)"
-post_date: 2015-09-16 23:02:57 +0200
-comments: true
-categories: [Android, Cubietruck, Linux, Embedded]
+permalink: >
+  http://3mdeb.kleder.co/linux/building-android-4-2-livesuit-image-for-cubietruck-allwinner-a20/
 published: true
+post_date: 2015-09-16 23:02:57
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - Cubietruck
+  - Android
 ---
-
 Treating A20 boards like outdated piece of HW by vendors makes building Android
 for Cubietruck not trivial task. Finding documentation, mailing list or blog
 post that clearly describe steps is almost impossible. Most of links to SDK are
@@ -42,26 +51,26 @@ World would be too beautiful if everything would work right out of the box, so
 I hit this very informative build error:
 
 ```
-make: Entering directory '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali'
+make: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali&#039;
 /home/pietrushnic/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4
 make -C DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump CONFIG=ca8-virtex820-m400-1 BUILD=release KDIR=/home/pietrushnic/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4
-make[1]: Entering directory '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump'
+make[1]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump&#039;
 make -C /home/pietrushnic/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4 M=/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump modules
-make[2]: Entering directory '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4'
+make[2]: Entering directory &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4&#039;
   CC [M]  /home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump/common/ump_kernel_common.o
 arm-linux-gnueabi-gcc: error: directory: No such file or directory
-arm-linux-gnueabi-gcc: error: directory": No such file or directory
-scripts/Makefile.build:307: recipe for target '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump/common/ump_kernel_common.o' failed
+arm-linux-gnueabi-gcc: error: directory&quot;: No such file or directory
+scripts/Makefile.build:307: recipe for target &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump/common/ump_kernel_common.o&#039; failed
 make[3]: *** [/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump/common/ump_kernel_common.o] Error 1
-Makefile:1365: recipe for target '_module_/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump' failed
+Makefile:1365: recipe for target &#039;_module_/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump&#039; failed
 make[2]: *** [_module_/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump] Error 2
-make[2]: Leaving directory '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4'
-Makefile:60: recipe for target 'all' failed
+make[2]: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4&#039;
+Makefile:60: recipe for target &#039;all&#039; failed
 make[1]: *** [all] Error 2
-make[1]: Leaving directory '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump'
-Makefile:15: recipe for target 'build' failed
+make[1]: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump&#039;
+Makefile:15: recipe for target &#039;build&#039; failed
 make: *** [build] Error 2
-make: Leaving directory '/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali'
+make: Leaving directory &#039;/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_lichee/linux-3.4/modules/mali&#039;
 ERROR: build kernel Failed
 ```
 
@@ -80,13 +89,13 @@ index 042745d0c757..608a7ba97f95 100755
  UDD_FILE_PREFIX = ../mali/
  
  # Get subversion revision number, fall back to 0000 if no svn info is available
--SVN_REV := $(shell ((svnversion | grep -qv exported && echo -n 'Revision: ' && svnversion) || git svn info | sed -e 's/$$$$/M/' | grep '^Revision: ' || echo ${MALI_RELEASE_NAME}) 2>/dev/null | sed -e 's/^Revision: //')
-+# SVN_REV := $(shell ((svnversion | grep -qv exported && echo -n 'Revision: ' && svnversion) || git svn info | sed -e 's/$$$$/M/' | grep '^Revision: ' || echo ${MALI_RELEASE_NAME}) 2>/dev/null | sed -e 's/^Revision: //')
+-SVN_REV := $(shell ((svnversion | grep -qv exported &amp;&amp; echo -n &#039;Revision: &#039; &amp;&amp; svnversion) || git svn info | sed -e &#039;s/$$$$/M/&#039; | grep &#039;^Revision: &#039; || echo ${MALI_RELEASE_NAME}) 2&gt;/dev/null | sed -e &#039;s/^Revision: //&#039;)
++# SVN_REV := $(shell ((svnversion | grep -qv exported &amp;&amp; echo -n &#039;Revision: &#039; &amp;&amp; svnversion) || git svn info | sed -e &#039;s/$$$$/M/&#039; | grep &#039;^Revision: &#039; || echo ${MALI_RELEASE_NAME}) 2&gt;/dev/null | sed -e &#039;s/^Revision: //&#039;)
  
 -ccflags-y += -DSVN_REV=$(SVN_REV)
--ccflags-y += -DSVN_REV_STRING=\"$(SVN_REV)\"
+-ccflags-y += -DSVN_REV_STRING=&quot;$(SVN_REV)&quot;
 +#ccflags-y += -DSVN_REV=$(SVN_REV)
-+ccflags-y += -DSVN_REV_STRING=\"r3p2-01rel2\"
++ccflags-y += -DSVN_REV_STRING=&quot;r3p2-01rel2&quot;
  
  ccflags-y += -I$(src) -I$(src)/common -I$(src)/linux -I$(src)/../mali/common -I$(src)/../mali/linux -I$(src)/../../ump/include/ump
  ccflags-y += -DMALI_STATE_TRACKING=0
@@ -122,7 +131,7 @@ lunch
 You will get menu which will look like this:
 
 ```
-You're building on Linux
+You&#039;re building on Linux
 
 Lunch menu... pick a combo:
      1. full-eng
@@ -179,11 +188,11 @@ index 87488f452a9d..ce366bee6ced 100644
 +++ b/build/core/main.mk
 @@ -40,8 +40,7 @@ endif
  # Check for broken versions of make.
- # (Allow any version under Cygwin since we don't actually build the platform there.)
+ # (Allow any version under Cygwin since we don&#039;t actually build the platform there.)
  ifeq (,$(findstring CYGWIN,$(shell uname -sm)))
--ifeq (0,$(shell expr $$(echo $(MAKE_VERSION) | sed "s/[^0-9\.].*//") = 3.81))
--ifeq (0,$(shell expr $$(echo $(MAKE_VERSION) | sed "s/[^0-9\.].*//") = 3.82))
-+ifeq (0,$(shell expr $$(echo $(MAKE_VERSION) | sed "s/[^0-9\.].*//") = 4.0))
+-ifeq (0,$(shell expr $$(echo $(MAKE_VERSION) | sed &quot;s/[^0-9.].*//&quot;) = 3.81))
+-ifeq (0,$(shell expr $$(echo $(MAKE_VERSION) | sed &quot;s/[^0-9.].*//&quot;) = 3.82))
++ifeq (0,$(shell expr $$(echo $(MAKE_VERSION) | sed &quot;s/[^0-9.].*//&quot;) = 4.0))
  $(warning ********************************************************************************)
  $(warning *  You are using version $(MAKE_VERSION) of make.)
  $(warning *  Android can only be built by versions 3.81 and 3.82.)
@@ -205,7 +214,7 @@ If your distro is not prepared you can hit something like this:
 You are attempting to build with the incorrect version
 of java.
  
-Your version is: java version "1.7.0_85".
+Your version is: java version &quot;1.7.0_85&quot;.
 The correct version is: Java SE 1.6.
  
 Please follow the machine setup instructions at
@@ -242,8 +251,8 @@ If you will hit some weird compiler errors like this:
 In file included from /usr/include/endian.h:60:0,
                  from /home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_android/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6/bin/../sysroot/usr/include/sys/types.h:217,
                  from cts/suite/audio_quality/lib/src/FileUtil.cpp:18:
-/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_android/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6/bin/../sysroot/usr/include/bits/byteswap.h:22:3: error: #error "Never use <bits/bytesw
-ap.h> directly; include <byteswap.h> instead."
+/home/pietrushnic/storage/wdc/projects/3mdeb/cubietruck/cubietruck_android/a20-android4.2_android/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6/bin/../sysroot/usr/include/bits/byteswap.h:22:3: error: #error &quot;Never use &lt;bits/bytesw
+ap.h&gt; directly; include &lt;byteswap.h&gt; instead.&quot;
 In file included from frameworks/native/include/utils/RefBase.h:24:0,
                  from frameworks/native/include/utils/Thread.h:31,
                  from frameworks/native/include/utils/threads.h:35,

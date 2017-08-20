@@ -1,13 +1,22 @@
 ---
-author: Piotr Król
+ID: 62911
+post_title: >
+  Setup for Linux kernel development on
+  Cubietruck
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Setup for Linux kernel development on Cubietruck"
-post_date: 2015-09-01 21:48:55 +0200
-comments: true
-categories: [Linux, Embedded, Cubietruck, A20]
+permalink: >
+  http://3mdeb.kleder.co/linux/setup-for-linux-kernel-development-on-cubietruck/
 published: true
+post_date: 2015-09-01 21:48:55
+tags: [ ]
+categories:
+  - Linux
+  - Embedded
+  - Cubietruck
+  - A20
 ---
-
 During last couple of months I see quite big interest in building products on
 [A20](http://linux-sunxi.org/A20) SoC. This chip can be bought for 6USD in
 quantity. Most important features are:
@@ -94,7 +103,7 @@ It would be useful to have separate directory if in future setup will be enhance
 sudo mkdir -p /srv/tftp/ct/{ml,sunxi}
 ```
 
-<a name="nfs"></a>
+&lt;a name=&quot;nfs&quot;&gt;&lt;/a&gt;
 ##Quick NFS setup
 
 ```
@@ -120,10 +129,10 @@ Restart NFS:
 sudo service nfs-kernel-server restart
 ```
 
-<a name="toolchain"></a>
+&lt;a name=&quot;toolchain&quot;&gt;&lt;/a&gt;
 ## Toolchain
 
-I'm using Linaro toolchain based on GCC4.9 you can download package
+I&#039;m using Linaro toolchain based on GCC4.9 you can download package
 [here](http://releases.linaro.org/15.05/components/toolchain/binaries/arm-linux-gnueabihf/).
 
 ```
@@ -139,7 +148,7 @@ arm-linux-gnueabihf-gcc: fatal error: no input files
 compilation terminated.
 ```
 
-<a name="uboot"></a>
+&lt;a name=&quot;uboot&quot;&gt;&lt;/a&gt;
 ##U-Boot (2015.10-rc2)
 
 ```
@@ -163,7 +172,7 @@ Log like this:
 make: arm-linux-gnueabihf-gcc: Command not found
 /bin/sh: 1: arm-linux-gnueabihf-gcc: not found
 dirname: missing operand
-Try 'dirname --help' for more information.
+Try &#039;dirname --help&#039; for more information.
 scripts/kconfig/conf  --silentoldconfig Kconfig
   CHK     include/config.h
   UPD     include/config.h
@@ -171,16 +180,16 @@ scripts/kconfig/conf  --silentoldconfig Kconfig
 /bin/sh: 1: arm-linux-gnueabihf-gcc: not found
   GEN     include/autoconf.mk.dep
 /bin/sh: 1: arm-linux-gnueabihf-gcc: not found
-scripts/Makefile.autoconf:47: recipe for target 'include/autoconf.mk.dep' failed
+scripts/Makefile.autoconf:47: recipe for target &#039;include/autoconf.mk.dep&#039; failed
 make[1]: *** [include/autoconf.mk.dep] Error 1
 make[1]: *** Waiting for unfinished jobs....
-scripts/Makefile.autoconf:72: recipe for target 'include/autoconf.mk' failed
+scripts/Makefile.autoconf:72: recipe for target &#039;include/autoconf.mk&#039; failed
 make[1]: *** [include/autoconf.mk] Error 1
   GEN     spl/include/autoconf.mk
 /bin/sh: 1: arm-linux-gnueabihf-gcc: not found
-scripts/Makefile.autoconf:75: recipe for target 'spl/include/autoconf.mk' failed
+scripts/Makefile.autoconf:75: recipe for target &#039;spl/include/autoconf.mk&#039; failed
 make[1]: *** [spl/include/autoconf.mk] Error 1
-make: *** No rule to make target 'include/config/auto.conf', needed by 'include/config/uboot.release'.  Stop.
+make: *** No rule to make target &#039;include/config/auto.conf&#039;, needed by &#039;include/config/uboot.release&#039;.  Stop.
 ```
 means that you incorrectly set [toolchain](#toolchain).
 
@@ -199,7 +208,7 @@ Ethernet driver have to be built-in, because when included as module do not
 start early enough to mount rootfs over NFS.
 
 ```
-sed -i 's:CONFIG_SUNXI_GMAC=m:CONFIG_SUNXI_GMAC=y:g' .config
+sed -i &#039;s:CONFIG_SUNXI_GMAC=m:CONFIG_SUNXI_GMAC=y:g&#039; .config
 make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage modules
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=output modules_install
 cd ..
@@ -227,7 +236,7 @@ index 7f8ec02911d6..d86dc5cb23a0 100644
  LV7_volt = 1050
  
 +[dynamic]
-+MAC = "FEEDDEADBEEF"
++MAC = &quot;FEEDDEADBEEF&quot;
 ```
 
 To generate MAC you can use [this tool](http://www.miniwebtool.com/mac-address-generator/) or you can give your
@@ -270,7 +279,7 @@ sudo chroot $targetdir /bin/bash -i
 distro=wheezy
 export LANG=C
 /debootstrap/debootstrap --second-stage
-cat <<EOT > /etc/apt/sources.list
+cat &lt;&lt;EOT &gt; /etc/apt/sources.list
 deb http://httpredir.debian.org/debian $distro main contrib non-free
 deb-src http://httpredir.debian.org/debian $distro main contrib non-free
 EOT
@@ -285,13 +294,13 @@ Next we will install couple of tools that are almost always useful.
 ```
 apt-get install openssh-server ntpdate git vim
 passwd
-cat <<EOT >> /etc/network/interfaces
+cat &lt;&lt;EOT &gt;&gt; /etc/network/interfaces
 auto eth0
 allow-hotplug eth0
 iface eth0 inet dhcp
 EOT
-echo cubietruck > /etc/hostname
-echo T0:2345:respawn:/sbin/getty -L ttyS0 115200 vt100 >> /etc/inittab
+echo cubietruck &gt; /etc/hostname
+echo T0:2345:respawn:/sbin/getty -L ttyS0 115200 vt100 &gt;&gt; /etc/inittab
 exit
 sudo rm $targetdir/etc/resolv.conf
 sudo rm $targetdir/usr/bin/qemu-arm-static
@@ -321,7 +330,7 @@ sudo dd if=/dev/zero of=${card} bs=1M count=1 #clean partition table
 Partitioning:
 
 ```
-cat << EOT | sudo sfdisk ${card}
+cat &lt;&lt; EOT | sudo sfdisk ${card}
 2048,1024,c
 EOT
 ```
@@ -344,9 +353,9 @@ server `boot.scr`. This makes Cubietruck able to dual boot `sunxi-3.4` and
 `mainline` kernel. Please replace `<my_tftp_server_ip>` with your TFTP address.
 
 ```
-cat <<EOT > boot.cmd
+cat &lt;&lt;EOT &gt; boot.cmd
 # this file should be placed on boot SD card partition 
-setenv serverip <my_tftp_server_ip>
+setenv serverip &lt;my_tftp_server_ip&gt;
 setenv autoload no
 dhcp
 tftp 0x44000000 ct/boot.scr
@@ -392,15 +401,15 @@ sudo cp -r linux/output/lib /srv/nfs/ct/rootfs
 
 Sunxi script will look like this:
 ```
-cat <<EOT > boot.cmd.sunxi
+cat &lt;&lt;EOT &gt; boot.cmd.sunxi
 setenv bootm_boot_mode sec
 tftp 0x43000000 ct/sunxi/script.bin
 tftp 0x48000000 ct/sunxi/zImage
-setenv bootargs "root=/dev/nfs init=/sbin/init \
-nfsroot=\${serverip}:/srv/nfs/ct/rootfs rw ip=dhcp console=ttyS0,115200 \
-rootwait sunxi_ve_mem_reserve=0 sunxi_g2d_mem_reserve=0 \
-sunxi_no_mali_mem_reserve sunxi_fb_mem_reserve=16 hdmi.audio=EDID:0 \
-disp.screen0_output_mode=EDID:1280x720p60 panic=10 consoleblank=0 debug"
+setenv bootargs &quot;root=/dev/nfs init=/sbin/init 
+nfsroot=${serverip}:/srv/nfs/ct/rootfs rw ip=dhcp console=ttyS0,115200 
+rootwait sunxi_ve_mem_reserve=0 sunxi_g2d_mem_reserve=0 
+sunxi_no_mali_mem_reserve sunxi_fb_mem_reserve=16 hdmi.audio=EDID:0 
+disp.screen0_output_mode=EDID:1280x720p60 panic=10 consoleblank=0 debug&quot;
 bootz 0x48000000
 EOT
 ```
@@ -414,12 +423,12 @@ sudo cp boot.scr.sunxi /srv/tftp/ct/sunxi
  
 Mainline script will look like this:
 ```
-cat <<EOT > boot.cmd.ml
+cat &lt;&lt;EOT &gt; boot.cmd.ml
 tftp 0x46000000 ct/ml/zImage
 tftp 0x49000000 ct/ml/sun7i-a20-cubietruck.dtb
-setenv bootargs "root=/dev/nfs init=/sbin/init \
-nfsroot=\${serverip}:/srv/nfs/ct/rootfs rw ip=dhcp console=ttyS0,115200 \
-rootwait panic=10 consoleblank=0 debug"
+setenv bootargs &quot;root=/dev/nfs init=/sbin/init 
+nfsroot=${serverip}:/srv/nfs/ct/rootfs rw ip=dhcp console=ttyS0,115200 
+rootwait panic=10 consoleblank=0 debug&quot;
 env set fdt_high ffffffff
 bootz 0x46000000 - 0x49000000
 EOT

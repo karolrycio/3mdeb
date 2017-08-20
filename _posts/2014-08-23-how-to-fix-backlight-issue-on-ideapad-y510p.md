@@ -1,13 +1,20 @@
 ---
-author: Piotr Król
+ID: 62886
+post_title: >
+  How to fix backlight issue on IdeaPad
+  y510p
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "How to fix backlight issue on IdeaPad y510p"
-post_date: 2014-08-23 23:49:03 +0200
-comments: true
-categories: [Linux, Debian]
+permalink: >
+  http://3mdeb.kleder.co/linux/how-to-fix-backlight-issue-on-ideapad-y510p/
 published: true
+post_date: 2014-08-23 23:49:03
+tags: [ ]
+categories:
+  - Linux
+  - Debian
 ---
-
 Today I decide to switch to latest kernel (`3.17-rc1`) on my IdeaPad y510p. I
 hit only one annoying problem until now - after booting my main screen was dimmed. I
 tried all instructions from top google hits for all possible configurations of
@@ -19,9 +26,9 @@ Finally I found solution, by greping `modinfo` for my Intel graphics card:
 
 ```
 [23:55:24] pietrushnic:~ $ sudo modinfo i915|grep backlight
-parm:           invert_brightness:Invert backlight brightness (-1 force normal, \
- 0 machine defaults, 1 force inversion), please report PCI device ID, subsystem \
-vendor and subsystem device ID to dri-devel@lists.freedesktop.org, if your \
+parm:           invert_brightness:Invert backlight brightness (-1 force normal, 
+ 0 machine defaults, 1 force inversion), please report PCI device ID, subsystem 
+vendor and subsystem device ID to dri-devel@lists.freedesktop.org, if your 
 machine needs it. It will then be included in an upcoming module version. (int)
 ```
 
@@ -49,5 +56,3 @@ sudo update-grub
 ```
 
 And all things should work fine.
-
-

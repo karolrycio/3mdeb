@@ -1,13 +1,20 @@
 ---
-author: Piotr Król
+ID: 62896
+post_title: >
+  Raspberry Pi kernel repository
+  aggregating patches for Linux mainline
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Raspberry Pi kernel repository aggregating patches for Linux mainline"
-post_date: 2014-10-15 23:23:11 +0200
-comments: true
-categories: [RaspberryPi, Linux]
+permalink: >
+  http://3mdeb.kleder.co/linux/raspberry-pi-kernel-repository-aggregating-patches-for-linux-mainline/
 published: true
+post_date: 2014-10-15 23:23:11
+tags: [ ]
+categories:
+  - Linux
+  - RaspberryPi
 ---
-
 Since several months I'm trying to find my way to embedded Linux programming.
 My hardware set was very limited I had only one board that can be called
 "embedded" and it was Raspberry Pi. Because I am more interested in firmware/OS
@@ -101,7 +108,7 @@ You can install already built kernel on your machine over ssh (replace
 `<RPI_IP>` with your Pi IP address):
 
 ```
-rpi-build rpi-dt-linux install SSHIP=<RPI_IP>
+rpi-build rpi-dt-linux install SSHIP=&lt;RPI_IP&gt;
 ```
 
 If you want to use your own kernel repository just use `rpi-bcm2835` with local
@@ -141,5 +148,3 @@ Summary
 
 Of course we are happy with every contribution small and big, critique and
 process improvement hints. Let us know what you think about this effort.
-
-

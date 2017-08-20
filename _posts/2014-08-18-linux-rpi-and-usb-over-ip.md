@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62881
+post_title: Linux, RPi and USB over IP
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Linux, RPi and USB over IP"
-post_date: 2014-08-18 21:26:37 +0200
-comments: true
-categories: [RaspberryPi, Linux, USB]
+permalink: >
+  http://3mdeb.kleder.co/linux/linux-rpi-and-usb-over-ip/
 published: true
+post_date: 2014-08-18 21:26:37
+tags: [ ]
+categories:
+  - Linux
+  - RaspberryPi
+  - USB
 ---
-
 Trying to google 'USB over IP' doesn't give much except some business web pages that give
 you it as a service. This brings some information about potential on the
 market IMHO. Main idea is well presented on open source project page for [usbip](http://usbip.sourceforge.net/).
@@ -135,13 +141,13 @@ This will show output similar to this:
 Local USB devices
 =================
  - busid 1-1 (0424:9514)
-         1-1:1.0 -> hub
+         1-1:1.0 -&gt; hub
 
  - busid 1-1.1 (0424:ec00)
-         1-1.1:1.0 -> smsc95xx
+         1-1.1:1.0 -&gt; smsc95xx
 
  - busid 1-1.2 (0951:1625)
-         1-1.2:1.0 -> usbip-host
+         1-1.2:1.0 -&gt; usbip-host
 ```
 
 `busid 1-1.2 (0951:1625)` is my Kingstone pendrive. If you are unsure which
@@ -171,7 +177,7 @@ usbip: error: unable to bind device on 1-1.2
 
 ### usbip - client side 
 
-Our device should wait for communication. Let's go to client side of our LAN
+Our device should wait for communication. Let&#039;s go to client side of our LAN
 and try to check if we can use our USB device. To check if device is available:
 
 ```
@@ -194,7 +200,7 @@ usbip: error: open vhci_driver
 usbip: error: query
 ```
 
-Oops, looks like we don't have driver for client side. Let's see if it is
+Oops, looks like we don&#039;t have driver for client side. Let&#039;s see if it is
 compiled in my kernel as module:
 
 ```
@@ -228,7 +234,7 @@ In dmesg we can find information about our device.
 [  676.128499] usb usb5: SerialNumber: vhci_hcd
 [  676.128603] hub 5-0:1.0: USB hub found
 [  676.128607] hub 5-0:1.0: 8 ports detected
-[  676.128732] vhci_hcd: USB/IP 'Virtual' Host Controller (VHCI) Driver v1.0.0
+[  676.128732] vhci_hcd: USB/IP &#039;Virtual&#039; Host Controller (VHCI) Driver v1.0.0
 [  676.228522] vhci_hcd: changed 0
 [  694.052076] vhci_hcd vhci_hcd: rhport(0) sockfd(3) devid(65540) speed(3)
 [  694.052289] vhci_hcd: changed 1
@@ -254,7 +260,7 @@ In dmesg we can find information about our device.
 [  695.841440] sd 6:0:0:0: [sdb] Assuming drive cache: write through
 [  695.883028] sd 6:0:0:0: [sdb] No Caching mode page found
 [  695.883044] sd 6:0:0:0: [sdb] Assuming drive cache: write through
-[  695.903869]  sdb: sdb1 sdb2 < sdb5 >
+[  695.903869]  sdb: sdb1 sdb2 &lt; sdb5 &gt;
 [  695.941208] sd 6:0:0:0: [sdb] No Caching mode page found
 [  695.941211] sd 6:0:0:0: [sdb] Assuming drive cache: write through
 [  695.941214] sd 6:0:0:0: [sdb] Attached SCSI removable disk
@@ -338,9 +344,9 @@ devices over one USB connection. What can be observed on `usbip` list:
 
 ```
  - busid 1-1.2 (04e8:6860)
-         1-1.2:1.0 -> unknown
-         1-1.2:1.1 -> cdc_acm
-         1-1.2:1.2 -> cdc_acm
+         1-1.2:1.0 -&gt; unknown
+         1-1.2:1.1 -&gt; cdc_acm
+         1-1.2:1.2 -&gt; cdc_acm
 ```
 I see this as opportunity to debug, understand
 and fix the driver.

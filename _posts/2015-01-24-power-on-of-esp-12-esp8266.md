@@ -1,13 +1,18 @@
 ---
-author: Piotr Król
+ID: 62901
+post_title: Power on of ESP-12 (ESP8266)
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Power on of ESP-12 (ESP8266)"
-post_date: 2015-01-24 00:25:05 +0100
-comments: true
-categories: [Esp8266, Embedded]
+permalink: >
+  http://3mdeb.kleder.co/embedded/power-on-of-esp-12-esp8266/
 published: true
+post_date: 2015-01-24 00:25:05
+tags: [ ]
+categories:
+  - Embedded
+  - Esp8266
 ---
-
 ESP8266 is a SoC made by [Espressif](https://espressif.com). For last couple of
 months this chip is a rockstar of [HackADay](http://hackaday.com/) and makers
 community around the Internet. Mostly because of WiFi modules built based on it

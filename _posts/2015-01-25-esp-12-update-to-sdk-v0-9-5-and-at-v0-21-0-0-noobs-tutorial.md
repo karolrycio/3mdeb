@@ -1,13 +1,18 @@
 ---
-author: Piotr Król
+ID: 62906
+post_title: 'ESP-12 update to SDK v0.9.5 and AT v0.21.0.0 &#8211; noobs tutorial'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "ESP-12 update to SDK v0.9.5 and AT v0.21.0.0 - noobs tutorial"
-post_date: 2015-01-25 22:32:01 +0100
-comments: true
-categories: [Esp8266, Embedded]
+permalink: >
+  http://3mdeb.kleder.co/embedded/esp-12-update-to-sdk-v0-9-5-and-at-v0-21-0-0-noobs-tutorial/
 published: true
+post_date: 2015-01-25 22:32:01
+tags: [ ]
+categories:
+  - Embedded
+  - Esp8266
 ---
-
 January 23th Espressif published new ESP IOT SDK on their forum
 [v0.9.5](http://bbs.espressif.com/viewtopic.php?f=5&t=154). My ESP-12 came with
 with pretty old version so I decide to update it to latest one:
@@ -38,7 +43,7 @@ To upgrade you can use binaries that where delivered in zip packaged and python 
 
 ```
 git clone git@github.com:themadinventor/esptool.git
-wget --content-disposition "http://bbs.espressif.com/download/file.php?id=189"
+wget --content-disposition &quot;http://bbs.espressif.com/download/file.php?id=189&quot;
 unzip esp_iot_sdk_v0.9.5_15_01_23.zip
 cd esp_iot_sdk_v0.9.5/bin
 ../../esptool/esptool.py write_flash 0x00000 boot_v1.2.bin 0x01000 at/user1.512.new.bin 0x3e000 blank.bin 0x7e000 blank.bin
@@ -52,10 +57,10 @@ If you will get something like this:
 ```
 Connecting...
 Traceback (most recent call last):
-  File "../../esptool/esptool.py", line 408, in <module>
+  File &quot;../../esptool/esptool.py&quot;, line 408, in &lt;module&gt;
     esp.connect()
-  File "../../esptool/esptool.py", line 143, in connect
-    raise Exception('Failed to connect')
+  File &quot;../../esptool/esptool.py&quot;, line 143, in connect
+    raise Exception(&#039;Failed to connect&#039;)
 Exception: Failed to connect
 ```
 
@@ -137,7 +142,7 @@ Procedure is straight forward to follow:
 git clone git@github.com:pietrushnic/esp-open-sdk.git #or use https with https://github.com/pietrushnic/esp-open-sdk.git
 cd esp-open-sdk
 git co v0.9.5-support
-sed -i -e '/\s0.9.4/s/^/#/g' -e '/\s0.9.5/s/^#//g' Makefile
+sed -i -e &#039;/s0.9.4/s/^/#/g&#039; -e &#039;/s0.9.5/s/^#//g&#039; Makefile
 make
 ```
 
@@ -168,13 +173,13 @@ cd esp_iot_sdk_v0.9.5
 Use package like it was presented in "Upgrade using binaries from Espressif" section. Trying to compile exmaples in `esp-open-sdk` will give you error like this:
 
 ```
-../../Makefile:154: warning: overriding recipe for target 'clean'
-../Makefile:258: warning: ignoring old recipe for target 'clean'
+../../Makefile:154: warning: overriding recipe for target &#039;clean&#039;
+../Makefile:258: warning: ignoring old recipe for target &#039;clean&#039;
 You cloned without --recursive, fetching submodules for you.
 git submodule update --init --recursive
 make -C crosstool-NG -f ../Makefile _ct-ng
 make[1]: *** crosstool-NG: No such file or directory.  Stop.
-../../Makefile:140: recipe for target 'crosstool-NG/ct-ng' failed
+../../Makefile:140: recipe for target &#039;crosstool-NG/ct-ng&#039; failed
 make: *** [crosstool-NG/ct-ng] Error 2
 ```
 
@@ -188,34 +193,34 @@ make COMPILE=gcc
 Ommiting `COMPILE=gcc` will result in error caused by using differen compiler name:
 
 ```
-make[1]: Entering directory '/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user'
+make[1]: Entering directory &#039;/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user&#039;
 DEPEND: xt-xcc -M -Os -g -O2 -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -DICACHE_FLASH -I include -I ./ -I ../../include/ets -I ../include -I ../../include -I ../../include/eagle user_main.c
 /bin/sh: 2: xt-xcc: not found
 xt-xcc -Os -g -O2 -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals  -DICACHE_FLASH   -I include -I ./ -I ../../include/ets -I ../include -I ../../include -I ../../include/eagle  -o .output/eagle/debug/obj/user_main.o -c user_main.c
 make[1]: xt-xcc: Command not found
-../../Makefile:280: recipe for target '.output/eagle/debug/obj/user_main.o' failed
+../../Makefile:280: recipe for target &#039;.output/eagle/debug/obj/user_main.o&#039; failed
 make[1]: *** [.output/eagle/debug/obj/user_main.o] Error 127
-make[1]: Leaving directory '/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user'
-../Makefile:266: recipe for target '.subdirs' failed
+make[1]: Leaving directory &#039;/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user&#039;
+../Makefile:266: recipe for target &#039;.subdirs&#039; failed
 make: *** [.subdirs] Error 2
 ```
 
 Correct output looks like this:
 
 ```
-make[1]: Entering directory '/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user'
+make[1]: Entering directory &#039;/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user&#039;
 DEPEND: xtensa-lx106-elf-gcc -M -Os -g -O2 -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals -DICACHE_FLASH -I include -I ./ -I ../../include/ets -I ../include -I ../../include -I ../../include/eagle user_main.c
 xtensa-lx106-elf-gcc -Os -g -O2 -Wpointer-arith -Wundef -Werror -Wl,-EL -fno-inline-functions -nostdlib -mlongcalls -mtext-section-literals  -DICACHE_FLASH   -I include -I ./ -I ../../include/ets -I ../include -I ../../include -I ../../include/eagle  -o .output/eagle/debug/obj/user_main.o -c user_main.c
 xtensa-lx106-elf-ar ru .output/eagle/debug/lib/libuser.a .output/eagle/debug/obj/user_main.o 
 xtensa-lx106-elf-ar: creating .output/eagle/debug/lib/libuser.a
-make[1]: Leaving directory '/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user'
+make[1]: Leaving directory &#039;/home/pietrushnic/src/espressif/esp_iot_sdk_v0.9.5/at/user&#039;
 xtensa-lx106-elf-gcc  -L../lib -nostdlib -T../ld/eagle.app.v6.ld -Wl,--no-check-sections -u call_user_start -Wl,-static -Wl,--start-group -lc -lgcc -lhal -lphy -lpp -lnet80211 -llwip -lwpa -lmain -ljson -lupgrade user/.output/eagle/debug/lib/libuser.a                                    -lat -Wl,--end-group -o .output/eagle/debug/image/eagle.app.v6.out 
 
 !!!
 No boot needed.
 Generate eagle.flash.bin and eagle.irom0text.bin successully in folder bin.
-eagle.flash.bin-------->0x00000
-eagle.irom0text.bin---->0x40000
+eagle.flash.bin--------&gt;0x00000
+eagle.irom0text.bin----&gt;0x40000
 !!!
 ```
 
