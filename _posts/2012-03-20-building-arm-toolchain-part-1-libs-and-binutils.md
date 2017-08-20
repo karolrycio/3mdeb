@@ -1,7 +1,7 @@
 ---
 ID: 62724
 post_title: 'Building ARM toolchain &#8211; part 1: libs and binutils'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
