@@ -1,7 +1,7 @@
 ---
 ID: 62776
 post_title: Sqlite3 gem not supported on Heroku
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
