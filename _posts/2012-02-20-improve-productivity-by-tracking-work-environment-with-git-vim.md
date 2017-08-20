@@ -1,7 +1,7 @@
 ---
 ID: 62695
 post_title: 'Improve productivity by tracking work environment with git &#8211; vim'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
