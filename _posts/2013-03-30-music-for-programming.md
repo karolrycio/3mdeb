@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62801
+post_title: Music for programming
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Music for programming"
-post_date: 2013-03-30 03:27:00+01:00
-categories: Productivity
+permalink: >
+  http://3mdeb.kleder.co/productivity/music-for-programming/
 published: true
-tags: [music, programming]
+post_date: 2013-03-30 03:27:00
+tags:
+  - Music
+  - programming
+categories:
+  - Productivity
 ---
-
 Of course this is strongly associated with personal taste but I will write my 
 experience. 
 

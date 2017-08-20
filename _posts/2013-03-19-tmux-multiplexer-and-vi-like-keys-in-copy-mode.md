@@ -1,14 +1,22 @@
 ---
-author: Piotr Król
+ID: 62796
+post_title: >
+  Tmux multiplexer and vi-like keys in
+  copy-mode
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Tmux multiplexer and vi-like keys in copy-mode"
-post_date: 2013-03-19 16:30
-comments: true
-categories: [Linux, Tmux]
+permalink: >
+  http://3mdeb.kleder.co/linux/tmux-multiplexer-and-vi-like-keys-in-copy-mode/
 published: true
-tags: [tmux, copy-mode]
+post_date: 2013-03-19 16:30:00
+tags:
+  - tmux
+  - copy-mode
+categories:
+  - Linux
+  - Tmux
 ---
-
 So I tried to write second post for my new blog but to effectively work using 
 terminal I need terminal multiplexer. I switched to tmux from screen 
 because I reach point that I can't do some things in it in easy way and

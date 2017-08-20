@@ -1,14 +1,25 @@
 ---
-author: Piotr Król
+ID: 62791
+post_title: >
+  Yet another blogger switched to
+  Octopress
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Yet another blogger switched to Octopress"
-post_date: 2013-03-19 03:01
-comments: true
-categories: Blog
+permalink: >
+  http://3mdeb.kleder.co/blog/yet-another-blogger-switched-to-octopress/
 published: true
-tags: [blog, octopress, blogger, configuration, seo, tricks]
+post_date: 2013-03-19 03:01:00
+tags:
+  - blog
+  - octopress
+  - blogger
+  - configuration
+  - seo
+  - tricks
+categories:
+  - Blog
 ---
-
 ### 1. Introduction ###
 It's been over 3 months when I published my last post. In chaos of daily jobs I 
 realize that there is so much things that I don't like in Google Blogger that I 
@@ -44,7 +55,7 @@ but you probably can find better solution.
 ```bash
 sudo gem install reverse_markdown
 d path/with/your/html/files
-find -name "*.html" | sed -e 's/\.html//' | xargs -n 1 -I @ sh -c 'reverse_markdown @.html > @.markdown'
+find -name &quot;*.html&quot; | sed -e &#039;s/.html//&#039; | xargs -n 1 -I @ sh -c &#039;reverse_markdown @.html &gt; @.markdown&#039;
 mv *.markdown path/to/your/octopress/source/_posts/
 ```
 * At the end of this process you should take a look at generated code, so setup 
@@ -57,7 +68,7 @@ mv *.markdown path/to/your/octopress/source/_posts/
     and you will get spell cheking with en_us dictionary and word wraping on 80 
     character:
 ```
-" blogging with markdown
+&quot; blogging with markdown
 au BufRead,BufEnter *.markdown setlocal textwidth=80 formatoptions+=w spell spelllang=en_us
 ```
 ### 3. Octopress configuration - tricks that I used for this blog ###
@@ -72,7 +83,7 @@ because there is lack of information about it in google.
 * Header background image can be changed by dealing with sass files. I did this 
 in `sass/custom/_layout.scss` using below lines:
 ```css
-body > header[role="banner"] {
+body &gt; header[role=&quot;banner&quot;] {
     background-image: url(/images/header_bg2_1200x168.png);
     background-repeat: no-repeat;
 }
@@ -81,12 +92,12 @@ body > header[role="banner"] {
   subtitle. You can do this in the same file as background image using something 
   like this:
 ```css
-body > header h2 {
+body &gt; header h2 {
     position:relative;
     padding-left:6.6em;
 }
 
-body > header h1 {
+body &gt; header h1 {
     font-weight:bold;
     position:relative;
     padding-left:3em;
@@ -103,10 +114,10 @@ for example:
 ```
 ---
 layout: post
-post_title: "Another blogger switched to Octopress"
+post_title: &quot;Another blogger switched to Octopress&quot;
 post_date: 2013-03-19 03:01
 comments: true
-categories: "about this blog"
+categories: &quot;about this blog&quot;
 published: false
 keywords: blog,octopress,blogger,configuration,seo,tricks
 description: Octopress configuration
@@ -122,13 +133,13 @@ index d3a1cb0..3e2ced7 100644
 --- a/Rakefile
 +++ b/Rakefile
 @@ -111,6 +111,9 @@ task :new_post, :title do |t, args|
-     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
-     post.puts "comments: true"
-     post.puts "categories: "
-+    post.puts "published: false"
-+    post.puts "keywords:"
-+    post.puts "description:"
-     post.puts "---"
+     post.puts &quot;date: #{Time.now.strftime(&#039;%Y-%m-%d %H:%M&#039;)}&quot;
+     post.puts &quot;comments: true&quot;
+     post.puts &quot;categories: &quot;
++    post.puts &quot;published: false&quot;
++    post.puts &quot;keywords:&quot;
++    post.puts &quot;description:&quot;
+     post.puts &quot;---&quot;
    end
  end
 ```
@@ -144,7 +155,7 @@ categories:
 ```
 not like this:
 ```
-categories: about this blog # or "about this blog"
+categories: about this blog # or &quot;about this blog&quot;
 ```
 * ordered and unordered lists are not indented by default, this code in `sass/custom/_layout.scss`
 fix this behavior:

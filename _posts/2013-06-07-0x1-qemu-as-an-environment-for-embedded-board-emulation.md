@@ -1,12 +1,23 @@
 ---
-author: Piotr Król
+ID: 62826
+post_title: '0x1: Qemu as an environment for embedded board emulation'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x1: Qemu as an environment for embedded board emulation"
-post_date: 2013-06-07 08:27
-comments: true
-categories: [Embedded, Linux, VDB, QEMU]
+permalink: >
+  http://3mdeb.kleder.co/linux/0x1-qemu-as-an-environment-for-embedded-board-emulation/
 published: true
-tags: [virtual development board, Qemu, Linux, Emulation]
+post_date: 2013-06-07 08:27:00
+tags:
+  - qemu
+  - linux
+  - virtual development board
+  - Emulation
+categories:
+  - Linux
+  - Embedded
+  - QEMU
+  - VDB
 ---
 ## Table of contents ##
 
@@ -58,4 +69,4 @@ of emulated machines by `-M ?`. Now, let's talk about [toolchains](/2013/06/07/t
 
 <a id="kudos"></a>
 ### Kudos ###
-[1] [Dynamically Translating x86 to LLVM using QEMU](http://infoscience.epfl.ch/record/149975/files/x86-llvm-translator-chipounov_2.pdf) 
+[1] [Dynamically Translating x86 to LLVM using QEMU](http://infoscience.epfl.ch/record/149975/files/x86-llvm-translator-chipounov_2.pdf)

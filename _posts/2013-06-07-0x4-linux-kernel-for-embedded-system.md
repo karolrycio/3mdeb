@@ -1,12 +1,23 @@
 ---
-author: Piotr Król
+ID: 62821
+post_title: '0x4: Linux kernel for embedded system'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x4: Linux kernel for embedded system"
-post_date: 2013-06-07 10:33
-comments: true
-categories: [Embedded, Linux, VDB, QEMU]
+permalink: >
+  http://3mdeb.kleder.co/linux/0x4-linux-kernel-for-embedded-system/
 published: true
-tags: [kernel, virtual development board, embedded, linux]
+post_date: 2013-06-07 10:33:00
+tags:
+  - embedded
+  - linux
+  - virtual development board
+  - kernel
+categories:
+  - Linux
+  - Embedded
+  - QEMU
+  - VDB
 ---
 ## Table of contents ##
 
@@ -58,20 +69,20 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- menuconfig
 ```
 and go to:
 ```
-Kernel Features -> Use the ARM EABI to compile the kernel
+Kernel Features -&gt; Use the ARM EABI to compile the kernel
 ```
 We will also need DHCP and NFS support (CONFIG_IP_PNP_DHCP and CONFIG_ROOT_NFS).
 First is `IP: DHCP support` and can be found under:
 ```
--> Networking support (NET [=y])
-  -> Networking options
-    -> TCP/IP networking (INET [=y])
-      -> IP: kernel level autoconfiguration (IP_PNP [=y])
+-&gt; Networking support (NET [=y])
+  -&gt; Networking options
+    -&gt; TCP/IP networking (INET [=y])
+      -&gt; IP: kernel level autoconfiguration (IP_PNP [=y])
 ```
 Second is :
 ```
--> File systems
-  -> Network File Systems (NETWORK_FILESYSTEMS [=y])  
+-&gt; File systems
+  -&gt; Network File Systems (NETWORK_FILESYSTEMS [=y])  
 ```
 let's build image with U-Boot support.
 ```
@@ -93,7 +104,7 @@ _NOTE_: During compilation process you can encounter error like this:
 ```
 (...)
   UIMAGE  arch/arm/boot/uImage
-  "mkimage" command not found - U-Boot images will not be built
+  &quot;mkimage&quot; command not found - U-Boot images will not be built
   make[1]: *** [arch/arm/boot/uImage] Error 1
   make: *** [uImage] Error 2
 ```

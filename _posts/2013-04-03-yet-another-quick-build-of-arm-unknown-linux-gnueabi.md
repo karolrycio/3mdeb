@@ -1,14 +1,25 @@
 ---
-author: Piotr Król
+ID: 62806
+post_title: >
+  Yet another quick build of
+  arm-unknown-linux-gnueabi
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Yet another quick build of arm-unknown-linux-gnueabi"
-post_date: 2013-04-03 19:00
-comments: true
-categories: [Embedded, Linux]
+permalink: >
+  http://3mdeb.kleder.co/linux/yet-another-quick-build-of-arm-unknown-linux-gnueabi/
 published: true
-tags: [arm-unknown-linux-gnueabi, linux, arm, toolchain, crosstool-ng]
+post_date: 2013-04-03 19:00:00
+tags:
+  - crosstool-ng
+  - linux
+  - toolchain
+  - arm-unknown-linux-gnueabi
+  - arm
+categories:
+  - Linux
+  - Embedded
 ---
-
 So I decide to check what is going on with 
 [crosstool-ng](http://crosstool-ng.org) and refresh my [old post](/2012/03/14/quick-build-of-arm-unknown-linux)
 about building `arm-unknown-linux-gnueabi` toolchain. Last post was pretty 
@@ -41,13 +52,13 @@ make install
 No problems on my up to date Debian wheezy.
 You will probably want to add `$HOME/ct-ng` to your `PATH`
 ```
-export PATH="$HOME/ct-ng/bin:${PATH}"
+export PATH=&quot;$HOME/ct-ng/bin:${PATH}&quot;
 ```
 Add bash completion as it is advised in message at the end of compilation process. My `.bashrc`
 automatically sources `$HOME/.bash_completion` so there is a place for local 
 code completion.
 ```
-cat ct-ng.comp >> $HOME/.bash_completion
+cat ct-ng.comp &gt;&gt; $HOME/.bash_completion
 ```
 
 ### Build sample toolchain ###
@@ -79,7 +90,7 @@ ls -lt .build/arm-unknown-linux-gnueabi/state
 Directory on top with the latest modification date is now your first state where you 
 should restart after fail. To restart build in given point:
 ```
-ct-ng <state>+ #assuming that <state> is where we fail last time
+ct-ng &lt;state&gt;+ #assuming that &lt;state&gt; is where we fail last time
 ```
 Ordered list of possible states can be retrieved by `ct-ng list-steps`.
 

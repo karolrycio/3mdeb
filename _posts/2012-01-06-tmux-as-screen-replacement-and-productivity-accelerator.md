@@ -1,13 +1,26 @@
 ---
-author: Piotr Król
+ID: 62781
+post_title: >
+  Tmux as screen replacement and
+  productivity accelerator
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Tmux as screen replacement and productivity accelerator"
-post_date: 2012-01-06 14:31:00+01:00
-categories: [Productivity, Linux, Tmux]
+permalink: >
+  http://3mdeb.kleder.co/productivity/tmux-as-screen-replacement-and-productivity-accelerator/
 published: true
-tags: [tmux, productivity, termianl multiplexer, solarized, pipe-pane]
+post_date: 2012-01-06 14:31:00
+tags:
+  - tmux
+  - productivity
+  - termianl multiplexer
+  - solarized
+  - pipe-pane
+categories:
+  - Productivity
+  - Linux
+  - Tmux
 ---
-
 As I wrote in [previous post](/2013/03/19/debian-switching-to-unstable) I 
 switched from GNU screen to [tmux](http://tmux.sourceforge.net). I use it for a 
 few moths and have to said that I'm really impressed by simplicity, performance
@@ -77,7 +90,7 @@ set -g base-index 1
 set -g set-titles on
 
 # wm window title string (uses statusbar variables)
-set -g set-titles-string "tmux.#I.#W"
+set -g set-titles-string &quot;tmux.#I.#W&quot;
 
 # statusbar 
 set -g display-time 2000
@@ -130,11 +143,11 @@ set -g status-justify centre
 
 # show some useful stats but only when tmux is started 
 # outside of Xorg, otherwise dwm statusbar shows these already
-set -g status-right ""
-set -g status-left ""
-if '[ -z "$DISPLAY" ]' 'set -g status-left "[#[fg=green] #H ][#[default]]"'
-if '[ -z "$DISPLAY" ]' 'set -g status-right "[ #[fg=magenta]#(cat /proc/loadavg | cut -d \" \" -f 1,2,3)#[default] ][ #[fg=cyan,bright]%a %Y-%m-%d %H:%M #[default]]"'
-if '[ -z "$DISPLAY" ]' 'set -g status-right-length 50'
+set -g status-right &quot;&quot;
+set -g status-left &quot;&quot;
+if &#039;[ -z &quot;$DISPLAY&quot; ]&#039; &#039;set -g status-left &quot;[#[fg=green] #H ][#[default]]&quot;&#039;
+if &#039;[ -z &quot;$DISPLAY&quot; ]&#039; &#039;set -g status-right &quot;[ #[fg=magenta]#(cat /proc/loadavg | cut -d &quot; &quot; -f 1,2,3)#[default] ][ #[fg=cyan,bright]%a %Y-%m-%d %H:%M #[default]]&quot;&#039;
+if &#039;[ -z &quot;$DISPLAY&quot; ]&#039; &#039;set -g status-right-length 50&#039;
 ```
 I think that mostly this is self explanatory. This how it look in work:
 [{% img center /assets/images/tmux-screen.png 300 400 %}](/assets/images/tmux-screen.png)

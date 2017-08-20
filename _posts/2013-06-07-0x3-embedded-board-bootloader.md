@@ -1,12 +1,24 @@
 ---
-author: Piotr Król
+ID: 62811
+post_title: '0x3: Embedded board bootloader'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x3: Embedded board bootloader"
-post_date: 2013-06-07 10:32
-comments: true
-categories: [Embedded, Linux, VDB, U-boot, QEMU]
+permalink: >
+  http://3mdeb.kleder.co/linux/0x3-embedded-board-bootloader/
 published: true
-tags: [u-boot, embedded, linux, virtual development board]
+post_date: 2013-06-07 10:32:00
+tags:
+  - embedded
+  - linux
+  - u-boot
+  - virtual development board
+categories:
+  - Linux
+  - Embedded
+  - QEMU
+  - VDB
+  - U-boot
 ---
 ## Table of contents ##
 
@@ -101,4 +113,3 @@ _Note_: If you wonder what is the convention for cross-toolchain prefix:
 [3] [U-boot for the multi-boot support](http://forum.xda-developers.com/showthread.php?t=2201146)</br>
 [4] [Booting Linux with U-Boot on QEMU ARM](http://balau82.wordpress.com/2010/04/12/booting-linux-with-u-boot-on-qemu-arm/)</br>
 [5] [Bootloader](http://wiki.osdev.org/Bootloader)</br>
-

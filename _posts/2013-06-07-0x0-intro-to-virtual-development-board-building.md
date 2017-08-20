@@ -1,15 +1,24 @@
 ---
-author: Piotr Król
+ID: 62816
+post_title: '0x0: Intro to Virtual Development Board building'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "0x0: Intro to Virtual Development Board building"
-post_date: 2013-06-07 01:27
-comments: true
-categories: [Embedded, Linux, VDB, QEMU]
+permalink: >
+  http://3mdeb.kleder.co/linux/0x0-intro-to-virtual-development-board-building/
 published: true
-tags: [virtual development board, qemu, linux, embedded]
-description: Intrudction to virtual embedded development board building
+post_date: 2013-06-07 01:27:00
+tags:
+  - qemu
+  - embedded
+  - linux
+  - virtual development board
+categories:
+  - Linux
+  - Embedded
+  - QEMU
+  - VDB
 ---
-
 * [Preface](/2013/06/07/intro-to-virtual-development-board-building/#preface)
 * [First question: How to start ?](/2013/06/07/intro-to-virtual-development-board-building/#first-question)
 * [Virtual Development Board - table of contents](/2013/06/07/intro-to-virtual-development-board-building/#virtual-development-board)
