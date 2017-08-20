@@ -1,7 +1,7 @@
 ---
 ID: 62700
 post_title: Nice small additions for my blog
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
