@@ -1,7 +1,7 @@
 ---
 ID: 62856
 post_title: 'Workflow imporovement with Open Source tools &#8211; part 1'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
