@@ -3,7 +3,7 @@ ID: 62916
 post_title: >
   Building Android 4.2 LiveSuit image for
   Cubietruck (Allwinner A20)
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
