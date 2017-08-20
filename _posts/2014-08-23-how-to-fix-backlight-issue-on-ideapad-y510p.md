@@ -3,7 +3,7 @@ ID: 62886
 post_title: >
   How to fix backlight issue on IdeaPad
   y510p
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
