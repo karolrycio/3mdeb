@@ -1,7 +1,7 @@
 ---
 ID: 62866
 post_title: A little bit of fresh air
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
