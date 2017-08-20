@@ -1,7 +1,7 @@
 ---
 ID: 62766
 post_title: 'New background and not so big &#8220;coming back&#8221;'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
