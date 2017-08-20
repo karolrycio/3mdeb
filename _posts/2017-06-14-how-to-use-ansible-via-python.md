@@ -1,7 +1,7 @@
 ---
 ID: 63071
 post_title: How to use Ansible via Python
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
