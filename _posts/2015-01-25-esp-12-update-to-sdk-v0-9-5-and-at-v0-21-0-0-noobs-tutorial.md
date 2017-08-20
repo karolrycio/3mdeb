@@ -1,7 +1,7 @@
 ---
 ID: 62906
 post_title: 'ESP-12 update to SDK v0.9.5 and AT v0.21.0.0 &#8211; noobs tutorial'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
