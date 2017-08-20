@@ -1,12 +1,15 @@
 ---
-author: Piotr Król
+ID: 62749
+post_title: 'Mutt tutorial part 1 &#8211; setup IMAP account'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Mutt tutorial part 1 - setup IMAP account"
-post_date: 2012-05-13 11:43:00+02:00
-comments: true
-categories: Linux
+permalink: http://3mdeb.kleder.co/?p=62749
+published: false
+tags: [ ]
+categories:
+  - Linux
 ---
-
 Mutt is one of those programs that make people call you a linux geek, nerd or a 
 snob. This is because using TUI or command line tools in world of fancy GUI for 
 most people is wierd. What's so great about mutt? I probably still have not 
@@ -36,24 +39,24 @@ vim $HOME/.muttrc
 IMAP account configuration for looks like that:
 ```bash
 # unset important variables
-account-hook . "unset imap_user; unset imap_pass"
-account-hook "imaps://<account_name>@<imap_server_address>/" "\
-    set imap_user = <e-mail_address>
-        imap_pass = <e-mail_password>"
+account-hook . &quot;unset imap_user; unset imap_pass&quot;
+account-hook &quot;imaps://&lt;account_name&gt;@&lt;imap_server_address&gt;/&quot; &quot;
+    set imap_user = &lt;e-mail_address&gt;
+        imap_pass = &lt;e-mail_password&gt;&quot;
 
-# Setup for <e-mail_address>:
-set folder = imaps://<account_name>@<imap_server_address>/ 
+# Setup for &lt;e-mail_address&gt;:
+set folder = imaps://&lt;account_name&gt;@&lt;imap_server_address&gt;/ 
 # setup needed folders
-mailboxes = +INBOX =<folder_name>
+mailboxes = +INBOX =&lt;folder_name&gt;
 set spoolfile = +INBOX 
-folder-hook imaps://<account_name>@<imap_server_address>/ "\
-   set folder = imaps://<account_name>@<imap_server_address>/ 
+folder-hook imaps://&lt;account_name&gt;@&lt;imap_server_address&gt;/ &quot;
+   set folder = imaps://&lt;account_name&gt;@&lt;imap_server_address&gt;/ 
    spoolfile = +INBOX  
    postponed = +[Gmail]/Drafts
-   record = +[Gmail]/'Sent Mail' 
-   from = '<your_name> <e-mail_address> ' 
-   realname = '<real_name>' 
-   smtp_url = smtps://<account_name>@<smpt_server_address> 
+   record = +[Gmail]/&#039;Sent Mail&#039; 
+   from = &#039;&lt;your_name&gt; &lt;e-mail_address&gt; &#039; 
+   realname = &#039;&lt;real_name&gt;&#039; 
+   smtp_url = smtps://&lt;account_name&gt;@&lt;smpt_server_address&gt; 
    smtp_pass =  unset important variables
 ```
 `<account_name>` - for foo.bar@gmail.com it will be foo.bar 

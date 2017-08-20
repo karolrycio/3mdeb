@@ -1,14 +1,23 @@
 ---
-author: Piotr Król
+ID: 62734
+post_title: 'Building ARM toolchain &#8211; part 2: gcc and eglibc'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Building ARM toolchain - part 2: gcc and eglibc"
-post_date: 2012-04-12 23:54:00+02:00
-comments: true
-categories: Embedded
-tags: [gcc, eglibc, arm toolchain, arm, toolchain, build]
+permalink: >
+  http://3mdeb.kleder.co/embedded/building-arm-toolchain-part-2-gcc-and-eglibc/
 published: true
+post_date: 2012-04-12 23:54:00
+tags:
+  - toolchain
+  - gcc
+  - eglibc
+  - arm toolchain
+  - arm
+  - build
+categories:
+  - Embedded
 ---
-
 Unfortunately after few tries of cross compiling eglibc using different source 
 for instructions I alway end with hard to solve issues. Luckily, in the sources 
 of eglibc I noticed instructions for cross-compiling written long time ago by 
@@ -36,10 +45,10 @@ mkdir eglib-headers; cd eglib-headers
 ```
 4. Configure eglibc and preliminary objects:
 ```
-BUILD_CC=gcc CC=arm-unknown-linux-gnueabi-gcc CXX=arm-unknown-linux-gnueabi-cpp \
-AR=arm-unknown-linux-gnueabi-ar RANLIB=arm-unknown-linux-gnueabi-ranlib \
-../eglibc/libc/configure --prefix=/usr --with-headers=$TARGET/usr/include \
---build=x86_64-pc-linux-gnu --host=arm-unknown-linux-gnueabi --disable-profile \
+BUILD_CC=gcc CC=arm-unknown-linux-gnueabi-gcc CXX=arm-unknown-linux-gnueabi-cpp 
+AR=arm-unknown-linux-gnueabi-ar RANLIB=arm-unknown-linux-gnueabi-ranlib 
+../eglibc/libc/configure --prefix=/usr --with-headers=$TARGET/usr/include 
+--build=x86_64-pc-linux-gnu --host=arm-unknown-linux-gnueabi --disable-profile 
 --without-gd --without-cvs --enable-add-ons
 ```
 5. Install eglibc headers:
@@ -53,7 +62,7 @@ mkdir -p $TARGET/usr/lib make csu/subdir_lib cp csu/crt1.o csu/crti.o csu/crtn.o
 7. To produce libgcc_s.so we need libc.so, but only need its dummy version because
 we'll never use it. It doesn't matter what we will point as a libc.so we use /dev/null as C file.
 ```
-arm-unknown-linux-gnueabi-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o \
+arm-unknown-linux-gnueabi-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o 
 $TARGET/usr/lib/libc.so
 ```
 8. Get latest gcc sources using git repository mirror. Latest commit while writing
@@ -63,13 +72,13 @@ cd .. git clone git://repo.or.cz/official-gcc.git
 ```
 9. Now, we can build gcc which can compile eglibc.
 ```
-mkdir eglibc-gcc; cd eglibc-gcc ../official-gcc/configure --target=arm-unknown-linux-gnueabi \
---prefix=$TARGET/arm-x-tools --with-sysroot=$TARGET --disable-libssp \
---disable-libgomp --disable-libmudflap --enable-languages=c \
---with-gmp=$TARGET/arm-x-tools --with-mpfr=$TARGET/arm-x-tools \
---with-mpc=$TARGET/arm-x-tools --disable-libquadmath --build=$MACHTYPE \
---host=$MACHTYPE --with-local-prefix=$TARGET/arm-x-tools --disable-multilib \
---with-float=soft --with-pkgversion="pietrushnic" --enable-threads=no \
+mkdir eglibc-gcc; cd eglibc-gcc ../official-gcc/configure --target=arm-unknown-linux-gnueabi 
+--prefix=$TARGET/arm-x-tools --with-sysroot=$TARGET --disable-libssp 
+--disable-libgomp --disable-libmudflap --enable-languages=c 
+--with-gmp=$TARGET/arm-x-tools --with-mpfr=$TARGET/arm-x-tools 
+--with-mpc=$TARGET/arm-x-tools --disable-libquadmath --build=$MACHTYPE 
+--host=$MACHTYPE --with-local-prefix=$TARGET/arm-x-tools --disable-multilib 
+--with-float=soft --with-pkgversion=&quot;pietrushnic&quot; --enable-threads=no 
 --enable-target-optspace --disable-nls --enable-c99 --enable-long-long
 make -j4
 make install
@@ -77,10 +86,10 @@ make install
 10. Confugure and compile final version of eglibc.
 ```
 mkdir eglibc-final
-cd eglibc-final/ BUILD_CC=gcc CC=arm-unknown-linux-gnueabi-gcc CXX=arm-unknown-linux-gnueabi-cpp \
-AR=arm-unknown-linux-gnueabi-ar RANLIB=arm-unknown-linux-gnueabi-ranlib \
-../eglibc/libc/configure --prefix=/usr --with-headers=$TARGET/usr/include \
---build=x86_64-pc-linux-gnu --host=arm-unknown-linux-gnueabi --disable-profile \
+cd eglibc-final/ BUILD_CC=gcc CC=arm-unknown-linux-gnueabi-gcc CXX=arm-unknown-linux-gnueabi-cpp 
+AR=arm-unknown-linux-gnueabi-ar RANLIB=arm-unknown-linux-gnueabi-ranlib 
+../eglibc/libc/configure --prefix=/usr --with-headers=$TARGET/usr/include 
+--build=x86_64-pc-linux-gnu --host=arm-unknown-linux-gnueabi --disable-profile 
 --without-gd --without-cvs --enable-add-ons
 make
 make install install_root=$TARGET
@@ -98,22 +107,22 @@ make;make install
 cd ..
 mkdir final-gcc
 cd final-gcc
-../official-gcc/configure --target=arm-unknown-linux-gnueabi \
---prefix=$TARGET/arm-x-tools --with-sysroot=$TARGET --disable-libssp \
---disable-libgomp --disable-libmudflap --enable-languages=c,c++ --with-gmp=$TARGET/arm-x-tools \
---with-mpfr=$TARGET/arm-x-tools --with-mpc=$TARGET/arm-x-tools --disable-libquadmath \
---build=$MACHTYPE --host=$MACHTYPE --with-local-prefix=$TARGET/arm-x-tools --disable-multilib \
---with-float=soft --with-pkgversion="pietrushnic" --enable-threads=posix \
---enable-target-optspace --disable-nls --enable-c99 --enable-long-long \
---enable-__cxa_atexit --enable-symvers=gnu --with-libelf=$TARGET/arm-x-tools \
+../official-gcc/configure --target=arm-unknown-linux-gnueabi 
+--prefix=$TARGET/arm-x-tools --with-sysroot=$TARGET --disable-libssp 
+--disable-libgomp --disable-libmudflap --enable-languages=c,c++ --with-gmp=$TARGET/arm-x-tools 
+--with-mpfr=$TARGET/arm-x-tools --with-mpc=$TARGET/arm-x-tools --disable-libquadmath 
+--build=$MACHTYPE --host=$MACHTYPE --with-local-prefix=$TARGET/arm-x-tools --disable-multilib 
+--with-float=soft --with-pkgversion=&quot;pietrushnic&quot; --enable-threads=posix 
+--enable-target-optspace --disable-nls --enable-c99 --enable-long-long 
+--enable-__cxa_atexit --enable-symvers=gnu --with-libelf=$TARGET/arm-x-tools 
 --enable-lto
 make
 make install
 ```
 13. Few libraries should be copied manualy
 ```
-cp -d $TARGET/arm-x-tools/arm-unknown-linux-gnueabi/lib/libgcc\_s.so\* $TARGET/lib
-cp -d $TARGET/arm-x-tools/arm-unknown-linux-gnueabi/lib/libstdc++.so\* $TARGET/lib
+cp -d $TARGET/arm-x-tools/arm-unknown-linux-gnueabi/lib/libgcc_s.so* $TARGET/lib
+cp -d $TARGET/arm-x-tools/arm-unknown-linux-gnueabi/lib/libstdc++.so* $TARGET/lib
 ```
 14. Compile and install chrpath - this is useful tool to remove the rpath or runpath setting from binary.
 ```
@@ -121,50 +130,50 @@ cd ..
 sudo apt-get install libc6-i386 gcc-multilib
 apt-get source chrpath
 cd chrpath-0.13/ CFLAGS=-m32
-./configure --prefix=$TARGET/arm-x-tools \
+./configure --prefix=$TARGET/arm-x-tools 
 --program-prefix=arm-unknown-linux-gnueabi-
 make
 make install
 ```
 15. Strip debug symbols
 ```
-strip --strip-debug $TARGET/arm-x-tools/lib/* \
+strip --strip-debug $TARGET/arm-x-tools/lib/* 
 $TARGET/arm-x-tools/arm-unknown-linux-gnueabi/lib/* $TARGET/arm-x-tools/libexec/*
-strip --strip-unneeded $TARGET/arm-x-tools/bin/* \
+strip --strip-unneeded $TARGET/arm-x-tools/bin/* 
 $TARGET/arm-x-tools/arm-unknown-linux-gnueabi/bin/*
 arm-unknown-linux-gnueabi-strip --strip-debug $TARGET/lib/* $TARGET/usr/lib/*
 ```
 16. At the end simple test to find out if basic functionality works:
 ```c
-cat > hello.c << EOF 
-> #include <stdio.h>
-> int
-> main (int argc, char **argv) 
-> { 
-> puts ("Hello, world!"); 
-> return 0; 
-> } 
-> EOF
+cat &gt; hello.c &lt;&lt; EOF 
+&gt; #include &lt;stdio.h&gt;
+&gt; int
+&gt; main (int argc, char **argv) 
+&gt; { 
+&gt; puts (&quot;Hello, world!&quot;); 
+&gt; return 0; 
+&gt; } 
+&gt; EOF
 ```
 Try to cross compile C file:
 ```
 $TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-gcc -Wall hello.c -o hello
 ```
 ```cpp
-cat > c++-hello.cc <<EOF 
-> #include <iostream> 
-> int 
-> main (int argc, char **argv) 
-> { 
-> std::cout return 0; 
-> } 
-> EOF
+cat &gt; c++-hello.cc &lt;&lt;EOF 
+&gt; #include &lt;iostream&gt; 
+&gt; int 
+&gt; main (int argc, char **argv) 
+&gt; { 
+&gt; std::cout return 0; 
+&gt; } 
+&gt; EOF
 Try to cross compile C++ file:
 ```
-$TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-g++ -Wall c++-hello.cc -o \
+$TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-g++ -Wall c++-hello.cc -o 
 c++-hello
 ```
-Displays the information contained in the ELF header and in the file's segment headers:
+Displays the information contained in the ELF header and in the file&#039;s segment headers:
 ```
 $TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-readelf -hl hello
 $TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-readelf -hl c++-hello
@@ -191,7 +200,7 @@ ELF Header:
   (...)
   ```
 ```
-$TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-readelf -d \
+$TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-readelf -d 
 $TARGET/lib/libgcc_s.so.1
 ```
 Result should look like that:

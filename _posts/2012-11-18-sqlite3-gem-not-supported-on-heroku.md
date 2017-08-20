@@ -1,14 +1,17 @@
 ---
-author: Piotr Król
+ID: 62776
+post_title: Sqlite3 gem not supported on Heroku
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Sqlite3 gem not supported on Heroku"
-post_date: 2012-11-18 21:16:00+01:00
-comments: true
-categories: Rails
-keywords: [heroku, sqlite, ruby]
+permalink: >
+  http://3mdeb.kleder.co/rails/sqlite3-gem-not-supported-on-heroku/
 published: true
+post_date: 2012-11-18 21:16:00
+tags: [ ]
+categories:
+  - Rails
 ---
-
 When I tried to deploy second part of [RoR tutorial](http://ruby.railstutorial.org/chapters/a-demo-app#top)
 to Heroku I get this error:
 ```

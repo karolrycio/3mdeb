@@ -1,14 +1,17 @@
 ---
-author: Piotr Król
+ID: 62756
+post_title: 'Mutt tutorial part 3 &#8211; sidebar, URLs in e-mails'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Mutt tutorial part 3 - sidebar, URLs in e-mails"
-post_date: 2012-05-13 15:43:00+02:00
-comments: true
-categories: Linux
-keywords: [mutt, sidebar, linux]
+permalink: >
+  http://3mdeb.kleder.co/linux/mutt-tutorial-part-3-sidebar-urls-in-e-mails/
 published: true
+post_date: 2012-05-13 15:43:00
+tags: [ ]
+categories:
+  - Linux
 ---
-
 Information in this post came from [lunar linux page](http://www.lunar-linux.org/mutt-sidebar/). Kudos to its author. In this 
 post I want to discuss two topics: sidebar and how to open urls form inside 
 mutt. Sidebar is mutt feature delivered in mutt-patched package in Debian. It 
@@ -54,6 +57,6 @@ vim $HOME/.urlview
 In this file we define two things. First will be regular expression which match
 urls and second will be command line to run when regexp was matched. File looks like below:
 ```bash
-REGEXP (((https?|ftp|gopher)://|(mailto|file|news):)[^’ "]+|(www|web|w3).[-a-z0-9.]+)[^’ .,;":] COMMAND chromium %s
+REGEXP (((https?|ftp|gopher)://|(mailto|file|news):)[^’ &quot;]+|(www|web|w3).[-a-z0-9.]+)[^’ .,;&quot;:] COMMAND chromium %s
 ```
 Chromuim is my browser of choice but you can use firefox, lynx or anything you want.

@@ -1,14 +1,19 @@
 ---
-author: Piotr Król
+ID: 62771
+post_title: >
+  Prepare for Ruby on Rails on Debian
+  wheezy
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Prepare for Ruby on Rails on Debian wheezy"
-post_date: 2012-11-18 18:18:00+01:00
-comments: true
-Categories: Rails
-keywords: [ruby, rails, install, rvm, vim]
+permalink: >
+  http://3mdeb.kleder.co/uncategorized/prepare-for-ruby-on-rails-on-debian-wheezy/
 published: true
+post_date: 2012-11-18 18:18:00
+tags: [ ]
+categories:
+  - Uncategorized
 ---
-
 I start to learn Ruby on Rails. As always when you learn new programming 
 language toolchain is required. In this tutorial I will try to go through 
 toolchain preparation for my Debian wheezy. Of course I based on Vim as my 
@@ -75,7 +80,7 @@ For IronRuby, install the following: ironruby: /usr/bin/apt-get install curl
 mono-2.0-devel
 ```
 
-I need Ruby so copy&paste line for it and:
+I need Ruby so copy&amp;paste line for it and:
 
 ```bash
 sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl 

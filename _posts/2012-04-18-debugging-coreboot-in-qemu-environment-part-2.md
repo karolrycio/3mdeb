@@ -1,15 +1,20 @@
 ---
-author: Piotr Król
+ID: 62739
+post_title: 'Debugging coreboot in qemu environment &#8211; part 2'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Debugging coreboot in qemu environment - part 2"
-post_date: 2012-04-18 22:41:00+02:00
+permalink: >
+  http://3mdeb.kleder.co/coreboot/debugging-coreboot-in-qemu-environment-part-2/
 published: true
-comments: true
-categories: [Coreboot, QEMU]
-tags: [coreboot, qemu]
+post_date: 2012-04-18 22:41:00
+tags:
+  - coreboot
+  - qemu
+categories:
+  - Coreboot
+  - QEMU
 ---
-
-    
 In [previous post](/2012/03/12/debugging-coreboot-in-qemu-enviroment) 
 `coreboot` was configured and installed. Here we try to establish good debugging 
 environment for it. To create a good emulated environment to debug, research and 
@@ -34,7 +39,7 @@ file path/to/coreboot/build/bootblock.elf
 ```
   * use objdump to find out at what address .text, .bss and .data sections are:
 ```
-objdump -h src/coreboot/build/coreboot\_ram|grep -E "text|bss|\.data"
+objdump -h src/coreboot/build/coreboot_ram|grep -E &quot;text|bss|.data&quot;
 ```
 my output looks like that:
 ```
@@ -43,7 +48,7 @@ my output looks like that:
 ```
   * use above addresses to load symbols from `coreboot_ram` file in gdb:
 ```
-add-symbol-file src/coreboot/build/coreboot_ram 0x00100000 -s .data \
+add-symbol-file src/coreboot/build/coreboot_ram 0x00100000 -s .data 
 0x001174e8 -s .bss 0x001179c0
 ```
   * In another terminal or screen window

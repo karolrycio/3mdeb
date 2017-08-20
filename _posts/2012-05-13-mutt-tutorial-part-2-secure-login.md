@@ -1,14 +1,20 @@
 ---
-author: Piotr Król
+ID: 62751
+post_title: 'Mutt tutorial part 2 &#8211; secure login'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Mutt tutorial part 2 - secure login"
-post_date: 2012-05-13 14:13:00+02:00
-comments: true
-categories: Linux
-tags: [mutt, gpg, password]
+permalink: >
+  http://3mdeb.kleder.co/linux/mutt-tutorial-part-2-secure-login/
 published: true
+post_date: 2012-05-13 14:13:00
+tags:
+  - mutt
+  - gpg
+  - password
+categories:
+  - Linux
 ---
-
 This is second post of mutt tutorial series. As in the [previous post](/2012/05/13/mutt-tutorial-part-1-setup-imap-account)
 for below information I need to thank Kousik for posts about [gpg](http://nixtricks.wordpress.com/2009/10/04/introduction-to-encryption-of-files-using-gpg/)
 and [using it with mutt](http://nixtricks.wordpress.com/2010/05/05/mutt-configure-mutt-to-receive-email-via-imap-and-send-via-smtp/).
@@ -36,12 +42,12 @@ mkdir $HOME/.passwd
 Inside this directory I create text file with the script, which look like below:
 ```bash
 vim $HOME/.passwd/mutt.txt
-set my_isp1 = "password1"
-set my_isp2 = "password2"
-set my_isp3 = "password3"
+set my_isp1 = &quot;password1&quot;
+set my_isp2 = &quot;password2&quot;
+set my_isp3 = &quot;password3&quot;
 ```
 This script of course mean to set value of variable name `my_isp{1,2,3}` to some 
-password string. Remember to use `my\_` prefix because this is the way that user 
+password string. Remember to use `my_` prefix because this is the way that user 
 variables should be defined in mutt scripts. After writing this file we need to 
 encrypt it.
 ```bash
@@ -51,9 +57,9 @@ Now we should delete txt file. To use our newly created encrypted password scrip
 we need to add some lines to `$HOME/.muttrc`. So `vim $HOME/.muttrc`. Line that
 we need before sourcing encrypted scripts is declaration of variables in the script:
 ```bash
-set my_isp1 = ""
-set my_isp2 = "" 
-set my_isp3 = ""
+set my_isp1 = &quot;&quot;
+set my_isp2 = &quot;&quot; 
+set my_isp3 = &quot;&quot;
 ```
 After this line we can source and decrypt out file with the passwords:
 ```bash
