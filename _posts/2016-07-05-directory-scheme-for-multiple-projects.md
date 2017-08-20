@@ -1,7 +1,7 @@
 ---
 ID: 62961
 post_title: Directory scheme for multiple projects
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
