@@ -1,13 +1,18 @@
 ---
-author: Piotr Król
+ID: 62695
+post_title: 'Improve productivity by tracking work environment with git &#8211; vim'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Improve productivity by tracking work environment with git - vim"
-post_date: 2012-02-20 21:43:00+01:00
-comments: true
-categories: [Productivity, Linux]
+permalink: >
+  http://3mdeb.kleder.co/productivity/improve-productivity-by-tracking-work-environment-with-git-vim/
 published: true
+post_date: 2012-02-20 21:43:00
+tags: [ ]
+categories:
+  - Productivity
+  - Linux
 ---
-
 In this post I try to describe my vim configuration procedure and how it is 
 connected with git. The whole concept is based on keeping all the configuration 
 files in a separate directory. These files are connected using symbolic links in 
@@ -89,7 +94,7 @@ git submodule add https://github.com/vim-scripts/L9.git dotfiles/vim/bundle/l9
 ```
 Initialize and update submodules:  
 ```
-git submodule init && git submodule update
+git submodule init &amp;&amp; git submodule update
 ```
 Configuration I suggest to configure fuzzyfinder with accordance to example provided in help. 
 
@@ -115,5 +120,5 @@ tags*
 using it through putty, highlighted pattern could be changed by added below 
 lines to .vimrc (9 = black)
 ```
-" fuzzy-finder - fix colors highlight PmenuSel ctermbg=9
+&quot; fuzzy-finder - fix colors highlight PmenuSel ctermbg=9
 ```

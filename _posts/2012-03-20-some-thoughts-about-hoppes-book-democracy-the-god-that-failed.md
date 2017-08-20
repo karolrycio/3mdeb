@@ -1,13 +1,22 @@
 ---
-author: Piotr Król
+ID: 62719
+post_title: 'Some thoughts about Hoppe&#8217;s book Democracy &#8211; The God That Failed'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Some thoughts about Hoppe's book Democracy - The God That Failed"
-post_date: 2012-03-20 21:16:00+01:00
-categories: Books
+permalink: >
+  http://3mdeb.kleder.co/books/some-thoughts-about-hoppes-book-democracy-the-god-that-failed/
 published: true
-tags: [politics, Hoppe, libertarianism, thoughts, freedom]
+post_date: 2012-03-20 21:16:00
+tags:
+  - politics
+  - Hoppe
+  - libertarianism
+  - thoughts
+  - freedom
+categories:
+  - Books
 ---
-
 I began this article last year. Until now I wonder if anyone could be interested 
 in reading about book that I read. I saw great interesting in linux/embedded 
 stuff but what about different things that we met every day. What about 

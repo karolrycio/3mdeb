@@ -1,13 +1,23 @@
 ---
-author: Piotr Król
+ID: 62712
+post_title: >
+  Quick build of arm-unknown-linux-gnueabi
+  with crosstool-ng
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Quick build of arm-unknown-linux-gnueabi with crosstool-ng"
-post_date: 2012-03-14 23:42:00+01:00
-comments: true
-categories: [Embedded, Linux]
-tags: [crosstool-ng, embedded, linux, toolchain, arm-unknown-linux-gnueabi]
+permalink: http://3mdeb.kleder.co/?p=62712
+published: false
+tags:
+  - crosstool-ng
+  - embedded
+  - linux
+  - toolchain
+  - arm-unknown-linux-gnueabi
+categories:
+  - Linux
+  - Embedded
 ---
-
 You might be surprised at how much you have to make to correctly build 
 `arm-unknown-linux-gnueabi` config based toolchain with [crosstool-ng](http://crosstool-ng.org/). As you can 
 see examples of many open source projects, the man's work is a rare resource. 
@@ -41,7 +51,7 @@ It can take a lot of time. On my machine with 5k BogoMips it takes over 1h.
 * `gcj` - latest changeset `2916:6f758ed4c0b9` have trouble finding `gcj` binary,
 which it show using following message:
 ```
-[ERROR] Missing: 'x86_64-unknown-linux-gnu-gcj' or 'x86_64-unknown-linux-gnu-gcj' or 'gcj' : either needed!
+[ERROR] Missing: &#039;x86_64-unknown-linux-gnu-gcj&#039; or &#039;x86_64-unknown-linux-gnu-gcj&#039; or &#039;gcj&#039; : either needed!
 ```
 To workaround this install `gcj` and link binary like this:
 ```
@@ -55,10 +65,10 @@ apply below changes to workaround problems:
 @@ -4,7 +4,7 @@ # Downloading an non-existing file from sourceforge will give you an
  # HTML file containing an error message, instead of returning a 404.
  # Sigh... 
-- CT_GetFile "duma_${CT_DUMA_VERSION}" .tar.gz http://kent.dl.sourceforge.net/sourceforge/duma/ 
-+ CT_GetFile "duma_${CT_DUMA_VERSION}" .tar.gz http://downloads.sourceforge.net/project/duma/duma/2.5.15
+- CT_GetFile &quot;duma_${CT_DUMA_VERSION}&quot; .tar.gz http://kent.dl.sourceforge.net/sourceforge/duma/ 
++ CT_GetFile &quot;duma_${CT_DUMA_VERSION}&quot; .tar.gz http://downloads.sourceforge.net/project/duma/duma/2.5.15
  # Downloading from sourceforge may leave garbage, cleanup
- CT_DoExecLog ALL rm -f "${CT_TARBALLS_DIR}/showfiles.php"\* }
+ CT_DoExecLog ALL rm -f &quot;${CT_TARBALLS_DIR}/showfiles.php&quot;* }
 ```
 * `mawk` - if mawk return syntax error like this:
 ```
@@ -68,11 +78,11 @@ class -- [], [^] or [)
 It could be fixed in two ways. First is to change `line 19` in `/path/to/tmp/dir/.build/src/glibc-2.9/scripts/gen-sorted.awk`
 Is:
 ```
-sub(/\/[^/]+$/, "", subdir);
+sub(//[^/]+$/, &quot;&quot;, subdir);
 ```
 Should be:
 ```
-sub(/\/[^\/]+$/, "", subdir);
+sub(//[^/]+$/, &quot;&quot;, subdir);
 ```
 Or simply by installing gawk, reconfigure and recompile `crosstools-ng`.
 

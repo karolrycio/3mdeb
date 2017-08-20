@@ -1,15 +1,17 @@
 ---
-author: Piotr Król
+ID: 62724
+post_title: 'Building ARM toolchain &#8211; part 1: libs and binutils'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Building ARM toolchain - part 1: libs and binutils"
-post_date: 2012-03-20 23:25:00+01:00
-comments: true
-categories: Embedded
-keywords: [arm toolchain, toolchain, arm, build]
-description: How to build ARM toolchain
+permalink: >
+  http://3mdeb.kleder.co/embedded/building-arm-toolchain-part-1-libs-and-binutils/
 published: true
+post_date: 2012-03-20 23:25:00
+tags: [ ]
+categories:
+  - Embedded
 ---
-
 Searching the Internet for information on how to build arm toolchain from 
 scratch I realize that it is very hard to find  information about this matter 
 (and recent one even harder). I will try to fill this lack of information and 
@@ -58,7 +60,7 @@ hg clone http://gmplib.org:8000/gmp
 ```
 - compile 
 ```
-make && make check && make install
+make &amp;&amp; make check &amp;&amp; make install
 ```
 
   2. MPFR (_GNU Multiple Precision Floating-Point Reliably_) - version: r8103
@@ -72,11 +74,11 @@ autoreconf -i
 ```
 - configure 
 ```
-./configure --prefix=$TARGET/arm-x-tools --enable-thread-safe \ --with-gmp=$TARGET/arm-x-tools --disable-shared --enable-static
+./configure --prefix=$TARGET/arm-x-tools --enable-thread-safe  --with-gmp=$TARGET/arm-x-tools --disable-shared --enable-static
 ```
 - compile 
 ```
-make && make install
+make &amp;&amp; make install
 ```
 
   3. MPC (_Multiple Precision Complex_)- version: r1146
@@ -90,11 +92,11 @@ autoreconf -i
 ```
 - configure 
 ```
-./configure --prefix=$TARGET/arm-x-tools \ --with-gmp=$TARGET/arm-x-tools --with-mpfr=$TARGET/arm-x-tools \ --disable-shared --enable-static
+./configure --prefix=$TARGET/arm-x-tools  --with-gmp=$TARGET/arm-x-tools --with-mpfr=$TARGET/arm-x-tools  --disable-shared --enable-static
 ```
 - compile 
 ```
-make && make install
+make &amp;&amp; make install
 ```
 
 4. Binutils - collection of a GNU binary tools:
@@ -112,11 +114,11 @@ cvs -z 9 -d :pserver:anoncvs@sourceware.org:/cvs/src co binutils
 ```
 - configure
 ```
-LDFLAGS="-Wl,-rpath -Wl,$TARGET/arm-x-tools/lib" ./configure \
---build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu \
---target=arm-unknown-linux-gnueabi --prefix=$TARGET/arm-x-tools \
---disable-nls --disable-multilib --disable-werror --with-float=soft \
---with-gmp=$TARGET/arm-x-tools --with-mpfr=$TARGET/arm-x-tools \
+LDFLAGS=&quot;-Wl,-rpath -Wl,$TARGET/arm-x-tools/lib&quot; ./configure 
+--build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu 
+--target=arm-unknown-linux-gnueabi --prefix=$TARGET/arm-x-tools 
+--disable-nls --disable-multilib --disable-werror --with-float=soft 
+--with-gmp=$TARGET/arm-x-tools --with-mpfr=$TARGET/arm-x-tools 
 --with-mpc=$TARGET/arm-x-tools --with-sysroot=$TARGET
 ```
 - compile
@@ -129,7 +131,7 @@ ldd $TARGET/arm-x-tools/bin/arm-unknown-linux-gnueabi-ldd
 ```
 it should show that it use library compiled previously by us:
 ```
-libz.so.1 => /home/pietrushnic/sandbox/toolchain/arm-x-tools/lib/libz.so.1 \ (0x00007f0086cc5000)
+libz.so.1 =&gt; /home/pietrushnic/sandbox/toolchain/arm-x-tools/lib/libz.so.1  (0x00007f0086cc5000)
 ```
 
 This set gives us a solid base to build the compiler. However, it will be in the [next section](/2012/04/12/building-arm-toolchain-part-2-gcc-and).

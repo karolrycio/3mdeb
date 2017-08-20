@@ -1,14 +1,19 @@
 ---
-author: Piotr Król
+ID: 62707
+post_title: 'Debugging coreboot in qemu environment &#8211; part 1'
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Debugging coreboot in qemu environment - part 1"
-post_date: 2012-03-12 21:30:00+01:00
-comments: true
-categories: Coreboot
+permalink: >
+  http://3mdeb.kleder.co/coreboot/debugging-coreboot-in-qemu-environment-part-1/
 published: true
-tags: coreboot, qemu
+post_date: 2012-03-12 21:30:00
+tags:
+  - coreboot
+  - qemu
+categories:
+  - Coreboot
 ---
-
 First of all I use testing version of Debian - wheezy. Clone coreboot repository:  
 ```
 git clone http://review.coreboot.org/p/coreboot
@@ -17,13 +22,13 @@ cd coreboot; make menuconfig
 
 Configure FILO as apayload and use its latest version:
 ```
-Payload -> Add a payload -> FILO Payload -> FILO version -> HEAD
+Payload -&gt; Add a payload -&gt; FILO Payload -&gt; FILO version -&gt; HEAD
 ```
 Add verbose debugging messages:
 ```
-Debugging -> Check PIRQ table consistency Debugging -> Output verbose malloc debug messages
-Debugging -> Output verbose ACPI debug messages Debugging -> Enable debug messages for option ROM execution
-Debugging -> Built-in low-level shell Debugging -> Trace function calls
+Debugging -&gt; Check PIRQ table consistency Debugging -&gt; Output verbose malloc debug messages
+Debugging -&gt; Output verbose ACPI debug messages Debugging -&gt; Enable debug messages for option ROM execution
+Debugging -&gt; Built-in low-level shell Debugging -&gt; Trace function calls
 ```
 
 Try to build:
@@ -56,4 +61,4 @@ Type:
 Put cursor over `protected_start` and press `Ctrl-]`. If everything goes ok you 
 should jump to `build/mainboard/emulation/qemu-x86/bootblock.s` line 537.  
 
-In second article we dive into first phase of `coreboot` execution in emulated environment. 
+In second article we dive into first phase of `coreboot` execution in emulated environment.
