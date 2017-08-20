@@ -1,7 +1,7 @@
 ---
 ID: 62941
 post_title: 'Netcat &#8211; how to transfer files without scp or ftp'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
