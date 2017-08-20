@@ -1,7 +1,7 @@
 ---
 ID: 62761
 post_title: 'Mutt tutorial part 4 &#8211; html mails, address book and other useful features'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
