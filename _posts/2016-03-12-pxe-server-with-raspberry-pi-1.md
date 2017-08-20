@@ -1,13 +1,19 @@
 ---
-author: Piotr Król
+ID: 62946
+post_title: PXE server with Raspberry Pi 1
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "PXE server with Raspberry Pi 1"
-post_date: 2016-03-12 17:42:42 +0100
-comments: true
-categories: [RaspberryPi, PXE, iPXE]
+permalink: >
+  http://3mdeb.kleder.co/raspberrypi/pxe-server-with-raspberry-pi-1/
 published: true
+post_date: 2016-03-12 17:42:42
+tags: [ ]
+categories:
+  - RaspberryPi
+  - PXE
+  - iPXE
 ---
-
 Recent days we get the announcement about releasing Raspberry Pi 3. Those of
 you who play with embedded systems or just try to make things probably still
 got good old Raspberry Pi (1). Because during time old platforms loose value as
@@ -52,11 +58,11 @@ Change configuration according to your needs. My looks like that:
 ```
 # /etc/default/tftpd-hpa
 
-TFTP_USERNAME="tftp"
-TFTP_DIRECTORY="/srv/tftp"
-TFTP_ADDRESS="0.0.0.0:69"
-#TFTP_OPTIONS="--secure"
-TFTP_OPTIONS=""
+TFTP_USERNAME=&quot;tftp&quot;
+TFTP_DIRECTORY=&quot;/srv/tftp&quot;
+TFTP_ADDRESS=&quot;0.0.0.0:69&quot;
+#TFTP_OPTIONS=&quot;--secure&quot;
+TFTP_OPTIONS=&quot;&quot;
 ```
 
 Download netboot files for Debian, which we will use for testing purposes:
@@ -100,21 +106,21 @@ You can also assign client MAC to given IP address by adding:
 
 ```
 #static_lease 00:60:08:11:CE:4E 192.168.0.54
-static_lease <mac> <ip>
+static_lease &lt;mac&gt; &lt;ip&gt;
 ```
 
 Comment `DHCPD_ENABLE` in `/etc/default/udhcpd`:
 
 ```
 # Comment the following line to enable
-# DHCPD_ENABLED="no"
+# DHCPD_ENABLED=&quot;no&quot;
 
-# Options to pass to busybox' udhcpd.
+# Options to pass to busybox&#039; udhcpd.
 #
 # -S    Log to syslog
 # -f    run in foreground
 
-DHCPD_OPTS="-S"
+DHCPD_OPTS=&quot;-S&quot;
 ```
 
 Change `eth0` configuration to static IP:
@@ -151,25 +157,25 @@ iPXE initialising devices...ok
 
 iPXE 1.0.0+ (e303) -- Open Source Network Boot Firmware -- http://ipxe.org
 Features: DNS FTP HTTP HTTPS iSCSI NFS SLAM TFTP VLAN AoE ELF MBOOT NBI PXE SDI bzImage COMBOOT Menu PXEXT
-iPXE>  
+iPXE&gt;  
 ```
 
 First let's configure interface:
 
 ```
-iPXE> ifconf net0
+iPXE&gt; ifconf net0
 Configuring (net0 00:0d:b9:3f:9e:58)............... ok
-iPXE> dhcp net0
+iPXE&gt; dhcp net0
 Configuring (net0 00:0d:b9:3f:9e:58)............... ok
 ```
 
 And boot Debian installer:
 
 ```
-iPXE> autoboot
+iPXE&gt; autoboot
 net0: 00:0d:b9:3f:9e:58 using i210-2 on PCI01:00.0 (open)
   [Link:up, TX:20 TXE:0 RX:8 RXE:2]
-  [RXE: 2 x "The socket is not connected (http://ipxe.org/380f6001)"]
+  [RXE: 2 x &quot;The socket is not connected (http://ipxe.org/380f6001)&quot;]
 Configuring (net0 00:0d:b9:3f:9e:58)............... ok
 net0: 192.168.0.194/255.255.255.0 gw 192.168.10.2
 net0: fe80::20d:b9ff:fe3f:9e58/64
@@ -183,7 +189,7 @@ PXELINUX 6.03 PXE 20150819 Copyright (C) 1994-2014 H. Peter Anvin et al+--------
 | ^GDebian GNU/Linux installer boot menu |
 |---------------------------------------|
 | Install                               |
-| Advanced options                    > |
+| Advanced options                    &gt; |
 | Help                                  |
 | Install with speech synthesis         |
 |                                       |
@@ -202,4 +208,3 @@ server, so for future reference and for those confused with udhcpd and other
 tools configuration this post should be useful. Thanks for reading and as
 always please share if you think this post is valuable. If anything is not
 clear or I messed something please let me know in comments.
-

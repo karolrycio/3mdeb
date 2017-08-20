@@ -1,13 +1,17 @@
 ---
-author: Piotr Król
+ID: 62961
+post_title: Directory scheme for multiple projects
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "Directory scheme for multiple projects"
-post_date: 2016-07-05 23:31:33 +0200
-comments: true
-categories: Productivity
+permalink: >
+  http://3mdeb.kleder.co/productivity/directory-scheme-for-multiple-projects/
 published: true
+post_date: 2016-07-05 23:31:33
+tags: [ ]
+categories:
+  - Productivity
 ---
-
 How to keep clean organization while working on multiple projects ?
 -------------------------------------------------------------------
 
@@ -30,7 +34,7 @@ Based on that experience I created directory structure that work pretty good
 for above numbers. Scheme looks like this:
 
 ```
-${HOME}/projects/<year>/<customer>/<project-name>/{logs,images,releases,src}
+${HOME}/projects/&lt;year&gt;/&lt;customer&gt;/&lt;project-name&gt;/{logs,images,releases,src}
 ```
 
 

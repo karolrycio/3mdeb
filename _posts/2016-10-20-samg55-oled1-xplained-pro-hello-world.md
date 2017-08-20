@@ -1,13 +1,19 @@
 ---
-author: Kuba Ruczynski
+ID: 62976
+post_title: SAMG55 + OLED1 Xplained Pro Hello World!
+author: admin
+post_excerpt: ""
 layout: post
-post_title: "SAMG55 + OLED1 Xplained Pro Hello World!"
-post_date: 2016-10-20 00:00:00 +0200
-comments: true
-categories: [Embedded, Atmel, Samg55]
+permalink: >
+  http://3mdeb.kleder.co/embedded/samg55-oled1-xplained-pro-hello-world/
 published: true
+post_date: 2016-10-20 00:00:00
+tags: [ ]
+categories:
+  - Embedded
+  - Atmel
+  - Samg55
 ---
-
 SAMG55 - recognition in the field
 ---------------------------------
 
@@ -65,7 +71,7 @@ ssd1306_display_on();
 ssd1306_clear();
 ssd1306_set_column_address(40);
 ssd1306_set_page_address(2);
-ssd1306_write_text("Hello World");
+ssd1306_write_text(&quot;Hello World&quot;);
 ```
 
 But this will not work yet, you sill need to do some configuration.  Both files
@@ -106,13 +112,13 @@ while (1) {
         ssd1306_clear();
         ssd1306_set_column_address(40);
         ssd1306_set_page_address(2);
-        ssd1306_write_text("Function is active!");
-        printf("1 ");
+        ssd1306_write_text(&quot;Function is active!&quot;);
+        printf(&quot;1 &quot;);
     }else {
         ssd1306_clear();
         ssd1306_set_column_address(40);
         ssd1306_set_page_address(2);
-        ssd1306_write_text("Function is inactive!");
+        ssd1306_write_text(&quot;Function is inactive!&quot;);
     }
     mdelay(500);
 }
