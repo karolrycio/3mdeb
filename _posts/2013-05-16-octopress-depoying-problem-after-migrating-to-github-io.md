@@ -1,7 +1,7 @@
 ---
 ID: 62851
 post_title: 'Octopress depoying problem after migrating to *.github.io'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
