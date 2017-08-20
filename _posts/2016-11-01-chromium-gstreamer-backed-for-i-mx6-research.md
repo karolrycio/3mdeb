@@ -3,7 +3,7 @@ ID: 62971
 post_title: >
   Chromium GStreamer backed for i.MX6
   research
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
