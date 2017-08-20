@@ -1,7 +1,7 @@
 ---
 ID: 63061
 post_title: Installing OpenWRT on APU3 platform
-author: Piotr Król
+author: Kamil Wcisło
 post_excerpt: ""
 layout: post
 permalink: >
