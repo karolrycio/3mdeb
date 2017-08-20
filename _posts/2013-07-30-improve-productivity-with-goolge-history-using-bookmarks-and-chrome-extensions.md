@@ -3,7 +3,7 @@ ID: 62861
 post_title: >
   Improve productivity with Goolge history
   using bookmarks and Chrome extensions
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
