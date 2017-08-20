@@ -1,7 +1,7 @@
 ---
 ID: 62846
 post_title: 'Thunderbird to Mutt migration &#8211; tips &amp; tricks'
-author: admin
+author: Piotr Król
 post_excerpt: ""
 layout: post
 permalink: >
