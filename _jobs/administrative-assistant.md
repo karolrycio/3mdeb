@@ -1,12 +1,16 @@
 ---
-author: Piotr Król
-layout: job	
-post_title: "Administrative Assistant"
-post_date: 2017-08-21 11:10:00+01:00
-comments: false
+ID: 63171
+post_title: Administrative Assistant
+author: admin
+post_excerpt: ""
+layout: job
+permalink: >
+  http://3mdeb.kleder.co/job/administrative-assistant/
 published: true
+post_date: 2017-08-21 11:10:00
+tags: [ ]
+categories: [ ]
 ---
-
 ### Codzienne zadania:
 * Zbieranie danych, ich analiza, raportowanie, tworzenie pism, prezentacji oraz podsumowań,
 * Prowadzenie kalendarza, umawianie spotkań biznesowych, kontakt z interesantami,
@@ -26,5 +30,3 @@ published: true
 * Pracę w rozwijającej się firmie,
 * Zdobycie doświadczenia w zakresie funkcjonowania i zarządzania firmą IT,
 * Rozwinięcie umiejętności obsługi profesjonalnego oprogramowania ERP/CRM,
-
-    
