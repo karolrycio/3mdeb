@@ -53,7 +53,7 @@ PC Engines APU2C2 (GX-412-TC)
 PC Engines APU2C4 (GX-412-TC)
 PC Engines APU3A2 (GX-412-TC)
 
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Amlogic/h3>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Amlogic</h3>
 <p>ODROID-C1 (S805)</p>
 [/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
 <h3>Atmel</h3>
@@ -62,28 +62,47 @@ SAM G55 Xplained Pro (SAMG55J19A)
 SAM D21 Xplained Pro Evaluation Kit (SAMD21J18A)
 Arduino Pro Mini 328(Atmega328)
 
-[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>Broadcom</h3> 
-<p>Raspberry Pi 2 model B (BCM2836)
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]
+<h3>Broadcom</h3>
+Raspberry Pi 2 model B (BCM2836)
 Raspberry Pi 3 model 1B (BCM2837)
-Raspberry Pi Model A (BCM2835)</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Espressify</h3>
-<p>Adafruit Feather HUZZAH (ESP8266)
+Raspberry Pi Model A (BCM2835)
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
+<h3>Espressify</h3>
+Adafruit Feather HUZZAH (ESP8266)
 ESP-01 (ESP8266)
 ESP-12 (ESP8266)
 ESP-12-E (ESP8266)
-ESP-12-F (ESP8266)</p>
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>HiSilicon</h3>
-<p>HiKey LeMaker (Kirin 620)
+ESP-12-F (ESP8266)
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
+<h3>HiSilicon</h3>
+HiKey LeMaker (Kirin 620)
 Mini NVR (Hi3520)
-Mini NVR (Hi3535)</p>
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Intel</h3>
-<p>Various server CPU and PCH
-Atom x5-E8000</p>
-[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>Nordic</h3>
-<p>Nordic nRF52-DK (nRF52832)
-Waveshare BLE400 (nRF51822)</p>
+Mini NVR (Hi3535)
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
+<h3>Intel</h3>
+Various server CPU and PCH
+Atom x5-E8000
+
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]
+<h3>Nordic</h3>
+Nordic nRF52-DK (nRF52832)
+Waveshare BLE400 (nRF51822)
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>NXP/Freescale</h3>
+<p>SolidRun Hummingboard 2 Edge (i.MX6DL)
+SolidRun Hummingboard 2 Gate (i.MX6Q)
+Olimex LPC-P1343 (LPC1343)
+Kinetis KW41Z (KW41Z)
+FRDM-K64F (MK64FN1M0VLL12)
+Custom hardware</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Marvell</h3>
+<p>DB-88F7040 (Armada 7k)<br />
+DB-88F8040 (Armada 8k)</p>
 [/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>NXP/Freescale SolidRun Hummingboard 2 Edge (i.MX6DL) SolidRun Hummingboard 2 Gate (i.MX6Q) Olimex LPC-P1343 (LPC1343) Kinetis KW41Z (KW41Z) FRDM-K64F (MK64FN1M0VLL12) Custom hardware[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>Marvell DB-88F7040 (Armada 7k) DB-88F8040 (Armada 8k)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
 <h3>Rockchip FireFly RK3288 (RK3288) MarsBoard RK3066 (RK3288)[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]</h3>
 <h3>STMicroelectronics RedBear Duo (STM32F205) Nucleo-64 (STM32F411)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
 <h3>Texas Instruments BeagleBone Black (AM3358) CC3200 LaunchPad (CC3200) MSP430F5529 LaunchPad (MSP430F5529) MSP430FR5969 LaunchPad (MSP430FR5969) RedBearLab WiFi Mini v1.0 (CC3200) SensorTag CC2541 (CC2541) SensorTag CC2650 (CC2650) SimpleLink Wi-Fi CC3100 wireless network processor BoosterPack plug-in module Custom hardware[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][/vc_column_inner][vc_column_inner width="1/4"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="3" bottom_padding="3" back_color="color-lxmt" overlay_alpha="50" gutter_size="3" shift_y="0"][vc_column width="1/1"][vc_column_text]</h3>
