@@ -11,7 +11,9 @@ post_date: 2017-08-21 11:10:00
 tags: [ ]
 categories: [ ]
 ---
-#### Jesteśmy polską, szybko rozwijająca się firmą z branży IT. Pomagamy producentom produktów z różnych sektorów w tworzeniu oprogramowania dla systemów wbudowanych. Rekomendujemy technologie, budujemy prototypy oraz tworzymy dedykowane oprogramowanie. Obecnie poszukujemy **asystenta/asystentki** do pomocy w organizacji funkcjonowania przedsiębiorstwa aby wspólnie realizować postawione przed nami cele.
+Jesteśmy polską, szybko rozwijająca się firmą z branży IT. Pomagamy producentom produktów z różnych sektorów w tworzeniu oprogramowania dla systemów wbudowanych. Rekomendujemy technologie, budujemy prototypy oraz tworzymy dedykowane oprogramowanie. 
+
+Obecnie poszukujemy **asystenta/asystentki** do pomocy w organizacji funkcjonowania przedsiębiorstwa aby wspólnie realizować postawione przed nami cele.
 
 ### Codzienne zadania:
 * Zbieranie danych, ich analiza, raportowanie, tworzenie pism, prezentacji oraz podsumowań,
@@ -32,6 +34,8 @@ categories: [ ]
 * Pracę w rozwijającej się firmie,
 * Zdobycie doświadczenia w zakresie funkcjonowania i zarządzania firmą IT,
 * Rozwinięcie umiejętności obsługi profesjonalnego oprogramowania ERP/CRM,
+* Umowę o pracę / umowę o dzieło
+* Wynagrodzenie do 2 300 zł brutto
 
 Zainteresowanych prosimy o przesłanie CV wraz z poniższą adnotacją na adres: [contact@3mdeb.com](mailto:contact@3mdeb.com).
 
