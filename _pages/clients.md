@@ -21,15 +21,33 @@ categories: [ ]
 <h6 style="text-align: center">Industries</h6>
 [/vc_column_text][vc_column_text]
 <h2 style="text-align: center">Across all of these separate industries, throughout the entire world, we partner with our clients to bring innovative tech products to market.</h2>
-[/vc_column_text][vc_empty_space empty_h="3"][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list2"][vc_column_inner column_width_percent="100" gutter_size="3" overlay_alpha="50" border_style="solid" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="1/3"][vc_column_text]<h3>Information Technology and Services</h3>
-<p>We build robust and dependable solutions for IT companies looking to innovate</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]<h3>Computer Hardware</h3>
-<p>Our specialty is developing robust, high quality solutions for computer hardware innovators.</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]<h3>Computer Networking</h3>
-<p>The future is in computer networking. From IoT to cybersecurity, we provide useful solutions to computer networking firms.</p>
-[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list2"][vc_column_inner width="1/3"][vc_column_text]<h3>Computer Software</h3>
-<p>Trust 3mdeb to offer value and continuing excellence to computer software developers.</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]<h3>Consumer Electronics</h3>
-<p>A huge industry by any measure, innovative consumer electronics require reliable development on all levels.</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]<h3>Broadcast Media</h3>
-<p>Media companies can rely on us to code and program customized solutions for their needs.</p>[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list2"][vc_column_inner width="1/3"][vc_column_text]<h3>Internet</h3>
-<p>Our competency with new technology makes the iInternet accessible for devices in a constrained environment.</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][/vc_column_inner][vc_column_inner width="1/3"][/vc_column_inner][/vc_row_inner][vc_empty_space empty_h="1"][vc_column_text]
+[/vc_column_text][vc_empty_space empty_h="3"][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list2"][vc_column_inner column_width_percent="100" gutter_size="3" overlay_alpha="50" border_style="solid" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="1/3"][vc_column_text]
+<h3>Information Technology and Services</h3>
+We build robust and dependable solutions for IT companies looking to innovate
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]
+<h3>Computer Hardware</h3>
+Our specialty is developing robust, high quality solutions for computer hardware innovators.
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]
+<h3>Computer Networking</h3>
+The future is in computer networking. From IoT to cybersecurity, we provide useful solutions to computer networking firms.
+
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list2"][vc_column_inner width="1/3"][vc_column_text]
+<h3>Computer Software</h3>
+Trust 3mdeb to offer value and continuing excellence to computer software developers.
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]
+<h3>Consumer Electronics</h3>
+A huge industry by any measure, innovative consumer electronics require reliable development on all levels.
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]
+<h3>Broadcast Media</h3>
+Media companies can rely on us to code and program customized solutions for their needs.
+
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list2"][vc_column_inner width="1/3"][vc_column_text]<h3>Internet</h3>
+<p>Our competency with new technology makes the iInternet accessible for devices in a constrained environment.</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][/vc_column_inner][vc_column_inner width="1/3"][/vc_column_inner][/vc_row_inner][vc_empty_space empty_h="1"][vc_column_text]
 <p style="text-align: center">... also Gaming, Plastics industry, Education, Robotics, Telecomunications and more.</p>
 
 [/vc_column_text][vc_empty_space empty_h="2"][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="4" bottom_padding="4" back_color="color-lxmt" back_image="58779" back_repeat="no-repeat" back_attachment="fixed" back_position="center bottom" overlay_alpha="50" gutter_size="3" shift_y="0" back_size="initial"][vc_column column_width_percent="100" overlay_alpha="50" gutter_size="3" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="1/1"][vc_empty_space empty_h="3"][vc_column_text el_class="emb-section-heading"]
