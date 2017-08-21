@@ -113,10 +113,14 @@ DB-88F8040 (Armada 8k)
 FireFly RK3288 (RK3288)
 MarsBoard RK3066 (RK3288)
 
-[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>STMicroelectronics</h3>
-<p>RedBear Duo (STM32F205)
-Nucleo-64 (STM32F411)</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Texas Instruments</h3>
-<p>BeagleBone Black (AM3358)
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]
+<h3>STMicroelectronics</h3>
+RedBear Duo (STM32F205)
+Nucleo-64 (STM32F411)
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
+<h3>Texas Instruments</h3>
+BeagleBone Black (AM3358)
 CC3200 LaunchPad (CC3200)
 MSP430F5529 LaunchPad (MSP430F5529)
 MSP430FR5969 LaunchPad (MSP430FR5969)
@@ -125,20 +129,27 @@ SensorTag CC2541 (CC2541)
 SensorTag CC2650 (CC2650)
 SimpleLink Wi-Fi CC3100 wireless network processor
 BoosterPack plug-in module
-Custom hardware</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][/vc_column_inner][vc_column_inner width="1/4"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="3" bottom_padding="3" back_color="color-lxmt" overlay_alpha="50" gutter_size="3" shift_y="0"][vc_column width="1/1"][vc_column_text]</h3>
-<h4 style="text-align: center">
-  System emulation</h4>
-[/vc_column_text][vc_empty_space empty_h="2"][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/3"][vc_column_text]
-<h3>Simics [/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]</h3>
-<h3>QEMU [/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]</h3>
-<h3>Virtualbox [/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="3" bottom_padding="3" overlay_alpha="50" gutter_size="3" shift_y="0"][vc_column width="1/1"][vc_column_text]</h3>
-<h4 style="text-align: center">
-  Hardware hands-on experience (modules):</h4>
-[/vc_column_text][vc_empty_space empty_h="2"][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]
-<h3>Can MCP2515 MCP2551[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>Accelerometer and gyroscopes ST H3LIS331DL ST LSM6DS3 InvenSense MPU-6050[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>GSM SimCOM SIM900 Qualcomm MSM6290[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>WiFi Qualcomm-Atheros QCA9892 Atheros XSPAN[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="4" bottom_padding="4" back_color="color-128210" back_image="90" back_repeat="no-repeat" back_attachment="fixed" back_position="center center" overlay_alpha="50" gutter_size="3" shift_y="0" back_size="initial" el_class="emb-cta-section"][vc_column column_width_percent="100" overlay_alpha="50" gutter_size="3" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="1/1"][vc_row_inner][vc_column_inner column_width_use_pixel="yes" position_vertical="middle" align_horizontal="align_center" gutter_size="3" overlay_alpha="50" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="12/12" column_width_pixel="890"][vc_column_text]</h3>
+Custom hardware
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][/vc_column_inner][vc_column_inner width="1/4"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="3" bottom_padding="3" back_color="color-lxmt" overlay_alpha="50" gutter_size="3" shift_y="0"][vc_column width="1/1"][vc_column_text]<h4 style="text-align: center">System emulation</h4>
+[/vc_column_text][vc_empty_space empty_h="2"][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/3"][vc_column_text]<h3>Simics </h3>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]<h3>QEMU </h3>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/3"][vc_column_text]<h3>Virtualbox </h3>
+[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="3" bottom_padding="3" overlay_alpha="50" gutter_size="3" shift_y="0"][vc_column width="1/1"][vc_column_text]<h4 style="text-align: center">Hardware hands-on experience (modules):</h4>
+[/vc_column_text][vc_empty_space empty_h="2"][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>Can</h3>
+<p>MCP2515
+MCP2551</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Accelerometer and gyroscopes</h3>
+<p>ST H3LIS331DL
+ST LSM6DS3
+InvenSense MPU-6050</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>GSM</h3>
+<p>SimCOM SIM900
+Qualcomm MSM6290</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>WiFi</h3>
+<p>Qualcomm-Atheros QCA9892
+Atheros XSPAN</p>
+[/vc_column_text][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="4" bottom_padding="4" back_color="color-128210" back_image="90" back_repeat="no-repeat" back_attachment="fixed" back_position="center center" overlay_alpha="50" gutter_size="3" shift_y="0" back_size="initial" el_class="emb-cta-section"][vc_column column_width_percent="100" overlay_alpha="50" gutter_size="3" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="1/1"][vc_row_inner][vc_column_inner column_width_use_pixel="yes" position_vertical="middle" align_horizontal="align_center" gutter_size="3" overlay_alpha="50" medium_width="0" mobile_width="0" shift_x="0" shift_y="0" z_index="0" width="12/12" column_width_pixel="890"][vc_column_text]</h3>
 <h2 style="text-align: center">
   Begin the conversation by sending us a message today or <a href="http://3mdeb.kleder.co/about-us/">read more about us</a>.</h2>
 [/vc_column_text][uncode_block id="51" inside_column="yes"][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row]
