@@ -35,33 +35,53 @@ categories: [ ]
 <h2 style="text-align: center">We are dedicated to achieving mastery of today's most important technologies. Our familiarity with hardware drives the value we offer our clients.</h2>
 [/vc_column_text][/vc_column][/vc_row][vc_row row_height_percent="0" override_padding="yes" h_padding="2" top_padding="2" bottom_padding="3" overlay_alpha="50" gutter_size="3" shift_y="0"][vc_column width="1/1"][vc_column_text]
 <h4 style="text-align: center">Hardware hands-on experience (CPU/SoC)</h4>
-[/vc_column_text][vc_empty_space empty_h="2"][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>Allwinner</h3>
-<p>BananaPi M2+ (H3)<br />
-Cubieboard1 (A10)<br />
-Cubietruck (A20)<br />
-Olimex A20-OLinuXino-MICRO (A20)<br />
-Orange Pi One (H3)<br />
-Orange Pi PC Plus (H3)<br />
-NanoPi M1 (H3) Custom hardware</p>
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>AMD</h3>
-<p>PC Engines APU1D (G series T40E APU)
+[/vc_column_text][vc_empty_space empty_h="2"][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]
+<h3>Allwinner</h3>
+BananaPi M2+ (H3)
+Cubieboard1 (A10)
+Cubietruck (A20)
+Olimex A20-OLinuXino-MICRO (A20)
+Orange Pi One (H3)
+Orange Pi PC Plus (H3)
+NanoPi M1 (H3) Custom hardware
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
+<h3>AMD</h3>
+PC Engines APU1D (G series T40E APU)
 PC Engines APU2A4 (GX-412-TC)
 PC Engines APU2C2 (GX-412-TC)
 PC Engines APU2C4 (GX-412-TC)
-PC Engines APU3A2 (GX-412-TC)</p>
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Amlogic
+PC Engines APU3A2 (GX-412-TC)
+
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Amlogic/h3>
 <p>ODROID-C1 (S805)</p>
-[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Atmel</h3>
-<p>Arduino Duemilanove (ATmega328P)
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]
+<h3>Atmel</h3>
+Arduino Duemilanove (ATmega328P)
 SAM G55 Xplained Pro (SAMG55J19A)
 SAM D21 Xplained Pro Evaluation Kit (SAMD21J18A)
-Arduino Pro Mini 328(Atmega328)</p>
-[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>Broadcom Raspberry Pi 2 model B (BCM2836) Raspberry Pi 3 model 1B (BCM2837) Raspberry Pi Model A (BCM2835)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>Espressify Adafruit Feather HUZZAH (ESP8266) ESP-01 (ESP8266) ESP-12 (ESP8266) ESP-12-E (ESP8266) ESP-12-F (ESP8266)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>HiSilicon HiKey LeMaker (Kirin 620) Mini NVR (Hi3520) Mini NVR (Hi3535)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>Intel Various server CPU and PCH Atom x5-E8000[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]</h3>
-<h3>Nordic Nordic nRF52-DK (nRF52832) Waveshare BLE400 (nRF51822)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
+Arduino Pro Mini 328(Atmega328)
+
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>Broadcom</h3> 
+<p>Raspberry Pi 2 model B (BCM2836)
+Raspberry Pi 3 model 1B (BCM2837)
+Raspberry Pi Model A (BCM2835)</p>[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Espressify</h3>
+<p>Adafruit Feather HUZZAH (ESP8266)
+ESP-01 (ESP8266)
+ESP-12 (ESP8266)
+ESP-12-E (ESP8266)
+ESP-12-F (ESP8266)</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>HiSilicon</h3>
+<p>HiKey LeMaker (Kirin 620)
+Mini NVR (Hi3520)
+Mini NVR (Hi3535)</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]<h3>Intel</h3>
+<p>Various server CPU and PCH
+Atom x5-E8000</p>
+[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]<h3>Nordic</h3>
+<p>Nordic nRF52-DK (nRF52832)
+Waveshare BLE400 (nRF51822)</p>
+[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
 <h3>NXP/Freescale SolidRun Hummingboard 2 Edge (i.MX6DL) SolidRun Hummingboard 2 Gate (i.MX6Q) Olimex LPC-P1343 (LPC1343) Kinetis KW41Z (KW41Z) FRDM-K64F (MK64FN1M0VLL12) Custom hardware[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
 <h3>Marvell DB-88F7040 (Armada 7k) DB-88F8040 (Armada 8k)[/vc_column_text][/vc_column_inner][vc_column_inner width="1/4"][vc_column_text]</h3>
 <h3>Rockchip FireFly RK3288 (RK3288) MarsBoard RK3066 (RK3288)[/vc_column_text][/vc_column_inner][/vc_row_inner][vc_row_inner row_inner_height_percent="0" overlay_alpha="50" gutter_size="3" shift_y="0" el_class="emb-block-list"][vc_column_inner width="1/4"][vc_column_text]</h3>
