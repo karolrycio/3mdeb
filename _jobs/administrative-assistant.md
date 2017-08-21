@@ -11,6 +11,8 @@ post_date: 2017-08-21 11:10:00
 tags: [ ]
 categories: [ ]
 ---
+#### Szybko rozwijająca się firma z branży IT poszukuje asystenta/asystentki do pomocy w organizacji funkcjonowania przedsiębiorstwa.
+
 ### Codzienne zadania:
 * Zbieranie danych, ich analiza, raportowanie, tworzenie pism, prezentacji oraz podsumowań,
 * Prowadzenie kalendarza, umawianie spotkań biznesowych, kontakt z interesantami,
